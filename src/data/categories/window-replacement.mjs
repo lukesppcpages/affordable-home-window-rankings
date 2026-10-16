@@ -1,0 +1,314 @@
+// Window replacement category: all page copy, rankings and partner settings.
+// Presentation components never hard-code brand facts — edit them here.
+//
+// Content rules (from the project brief):
+// - Scores are Affordable Home editorial scores, supplied by the business.
+//   They are not customer review averages or test results.
+// - Do not add warranties, financing, timelines, discounts or coverage claims
+//   until they are confirmed. Put unconfirmed items in `pending` instead:
+//   they appear in the draft build and are stripped from production.
+// - `cta.verified: false` means the destination is a placeholder supplied in
+//   the brief and must be confirmed (and tracking params added) before launch.
+
+export default {
+  slug: 'window-replacement',
+  name: 'Window Replacement',
+  updated: { label: 'October 2026', iso: '2026-10-01' },
+
+  meta: {
+    title: 'Best Window Replacement Companies of 2026 | Affordable Home',
+    description:
+      'Compare leading window replacement companies, explore ratings and reviews, and find the right window replacement provider for your home.',
+    ogImage: 'images/power-home-window-installation-1200.webp',
+  },
+
+  hero: {
+    headline: 'Best Window Replacement Companies of 2026',
+    intro:
+      "Replacing your windows is a big investment. We've brought together leading window replacement companies to help you compare your options and find the right fit for your home.",
+  },
+
+  scoreLabel: 'Affordable Home Score',
+
+  brands: [
+    {
+      id: 'power-home-remodeling',
+      rank: 1,
+      name: 'Power Home Remodeling',
+      score: 10.0,
+      featured: true,
+      distinction: 'Best Overall',
+      logo: { src: 'images/brands/power-home.webp', width: 198, height: 240 },
+      image: {
+        src: 'images/power-home-window-installation-1200.webp',
+        srcSmall: 'images/power-home-window-installation-640.webp',
+        width: 1200,
+        height: 800,
+        alt: 'Two Power Home Remodeling installers fitting a new window into a home',
+      },
+      cta: { url: 'https://powerhrgdeals.com/', verified: false },
+      bullets: [
+        'One company handles consultation, measuring and installation',
+        'Also replaces roofing, siding, doors and attic insulation',
+        'In-home consultation with a project quote',
+      ],
+      summary:
+        'A large full-service exterior remodeler that manages window projects from the first visit through installation.',
+      review: {
+        overview:
+          'Power Home Remodeling is a full-service exterior remodeling company founded in 1992. Window replacement sits alongside roofing, siding, doors and insulation, so homeowners planning more than one exterior project can work with a single company. Projects start with an in-home consultation, where the home is measured and a quote is prepared.',
+        strengths: [
+          'One point of contact from consultation through installation',
+          'Can coordinate windows with roofing, siding or door work',
+          'Established company with decades in exterior remodeling',
+        ],
+        considerations: [
+          'Available only in the markets Power serves — confirm your area first',
+          'Pricing is quoted after an in-home visit, so plan for an appointment',
+        ],
+        bestFor:
+          'Homeowners who want one company accountable for the whole project, especially if windows are part of a larger exterior upgrade.',
+      },
+      pending: [
+        'Window product lines and styles offered (confirm with Power)',
+        'Product and labor warranty terms',
+        'Financing options and terms',
+        'Current service area / states served',
+      ],
+    },
+    {
+      id: 'champion-windows',
+      rank: 2,
+      name: 'Champion Windows',
+      score: 9.7,
+      distinction: 'Best for Factory-Direct Windows',
+      logo: { src: 'images/brands/champion.svg', width: 288, height: 109 },
+      cta: { url: 'https://championwindowdeals.com/', verified: false },
+      bullets: [
+        'Manufactures its own vinyl replacement windows',
+        'Sells and installs factory-direct',
+        'Also offers sunrooms, siding and entry doors',
+      ],
+      summary:
+        'A long-running manufacturer that sells and installs its own windows rather than reselling other brands.',
+      review: {
+        overview:
+          'Champion has made windows since 1953 and sells them directly to homeowners, handling the in-home consultation and installation itself. Because it builds its own product, the buying process stays with one company from quote to install.',
+        strengths: [
+          'Manufacturer-direct: no separate retailer or dealer in the middle',
+          'Single company responsible for product and installation',
+          'Broader exterior lineup including sunrooms and siding',
+        ],
+        considerations: [
+          "Product choice is limited to Champion's own windows",
+          'Availability depends on local showroom coverage',
+        ],
+        bestFor:
+          'Homeowners who prefer buying straight from the manufacturer and want vinyl replacement windows.',
+      },
+      pending: ['Warranty terms', 'Financing options', 'Current service area'],
+    },
+    {
+      id: 'dabella',
+      rank: 3,
+      name: 'DaBella',
+      score: 9.6,
+      distinction: 'Best for Bundled Exterior Projects',
+      logo: { src: 'images/brands/dabella.svg', width: 262, height: 57 },
+      cta: { url: 'https://dabelladeals.us/window-replacement/', verified: false },
+      bullets: [
+        'Replacement windows plus roofing, siding and gutters',
+        'Free in-home estimates',
+        'Also handles bathroom remodeling',
+      ],
+      summary:
+        'A multi-service home improvement company that can pair window replacement with other exterior work.',
+      review: {
+        overview:
+          'DaBella offers window replacement as part of a broader home improvement lineup that includes roofing, siding, gutters and bathroom remodeling. Projects begin with a free in-home estimate.',
+        strengths: [
+          'Can combine windows with other exterior projects',
+          'Free in-home estimate to scope the work',
+          'Broad service menu under one company',
+        ],
+        considerations: [
+          'Service area is still growing — confirm availability for your address',
+          'Ask which window brands and product lines are offered locally',
+        ],
+        bestFor:
+          'Homeowners planning several exterior upgrades who want one company to quote them together.',
+      },
+      pending: ['Window brands/product lines', 'Warranty terms', 'Financing options', 'States served'],
+    },
+    {
+      id: 'renewal-by-andersen',
+      rank: 4,
+      name: 'Renewal by Andersen',
+      score: 9.5,
+      distinction: 'Best for Composite Windows',
+      logo: { src: 'images/brands/renewal-by-andersen.webp', width: 472, height: 160 },
+      cta: { url: 'https://www.renewalbyandersen.com/', verified: false },
+      bullets: [
+        'Full-service replacement division of Andersen',
+        'Fibrex composite frames, an alternative to vinyl',
+        'Designs, builds and installs its own windows',
+      ],
+      summary:
+        "Andersen's full-service replacement brand, built around its own Fibrex composite windows.",
+      review: {
+        overview:
+          'Renewal by Andersen is the full-service window replacement division of Andersen Corporation, which dates to 1903. It manufactures its own windows — most using Fibrex, a wood-fiber and vinyl composite — and manages the sale and installation.',
+        strengths: [
+          'Backed by one of the best-known U.S. window manufacturers',
+          'Composite frame material as an alternative to standard vinyl',
+          'Product and installation handled by the same organization',
+        ],
+        considerations: [
+          'Often positioned as a premium option — compare detailed quotes',
+          "Product selection centers on the company's own window lines",
+        ],
+        bestFor:
+          'Homeowners who want a nationally recognized manufacturer and are interested in composite window frames.',
+      },
+      pending: ['Warranty terms', 'Financing options'],
+    },
+    {
+      id: 'windows-usa',
+      rank: 5,
+      name: 'Windows USA',
+      score: 9.5,
+      distinction: 'Best Regional Specialist',
+      logo: { src: 'images/brands/windows-usa.webp', width: 300, height: 96 },
+      cta: { url: 'https://windowsusdeals.com/', verified: false },
+      bullets: [
+        'Window replacement specialist',
+        'In-home consultation and professional installation',
+        'Regional company serving the Southern U.S.',
+      ],
+      summary:
+        'A window-focused replacement company serving homeowners across parts of the South.',
+      review: {
+        overview:
+          'Windows USA focuses on replacement windows for homeowners in the Southern U.S. It provides in-home consultations and handles installation.',
+        strengths: [
+          'Specializes in window replacement',
+          'Consultation and installation from one company',
+          'Regional focus on Southern homes and climates',
+        ],
+        considerations: [
+          'Not available nationwide — check whether your area is covered',
+          'Ask which window styles and glass options are available',
+        ],
+        bestFor: 'Homeowners in its Southern service area looking for a window-focused specialist.',
+      },
+      pending: [
+        'Confirm states served',
+        'Confirm whether windows are manufactured in-house',
+        'Window product lines and energy-efficiency options',
+        'Warranty terms',
+        'Financing options',
+      ],
+    },
+    {
+      id: 'lowes',
+      rank: 6,
+      name: "Lowe's",
+      score: 9.4,
+      distinction: 'Best for Brand Selection',
+      logo: { src: 'images/brands/lowes.webp', width: 351, height: 160 },
+      cta: { url: 'https://www.lowes.com/search?searchTerm=windows', verified: false },
+      bullets: [
+        'Compare several window brands in one place',
+        "Installation arranged through Lowe's",
+        'Nationwide stores for in-person help',
+      ],
+      summary:
+        'A national home improvement retailer where you can compare multiple window brands and arrange installation.',
+      review: {
+        overview:
+          "Lowe's sells replacement windows from several manufacturers and can arrange installation through its installation services program. It's a practical way to compare brands side by side, in store or online.",
+        strengths: [
+          'Wide selection of window brands and price points',
+          'Shop online or in a local store',
+          'Purchase and installation arranged through one retailer',
+        ],
+        considerations: [
+          'Installation is typically performed by independent local installers',
+          'Experience can vary by store and installer',
+        ],
+        bestFor:
+          'Homeowners who want to compare several window brands and prefer shopping with a national retailer.',
+      },
+      pending: ['Installation warranty terms', 'Financing / credit options'],
+    },
+  ],
+
+  education: {
+    heading: 'What to Look for in a Window Replacement Company',
+    intro:
+      'Choosing the right window company goes beyond comparing prices. Here are a few important factors to consider before making your decision.',
+    items: [
+      {
+        title: 'Window Quality & Efficiency',
+        body: 'Look for materials, glass options, and energy-efficiency features that fit your home and climate.',
+      },
+      {
+        title: 'Installation Experience',
+        body: 'Understand who performs the installation and what the process includes.',
+      },
+      {
+        title: 'Warranty Coverage',
+        body: 'Compare product and labor warranties, including exclusions and limitations.',
+      },
+      {
+        title: 'Pricing & Financing',
+        body: 'Request a detailed estimate and understand the total project cost before committing.',
+      },
+    ],
+  },
+
+  methodology: {
+    heading: 'How We Evaluate Window Replacement Companies',
+    intro:
+      'These are the factors Affordable Home considers when evaluating window replacement companies. Each one reflects a question homeowners should be able to answer before signing a contract.',
+    criteria: [
+      { title: 'Product selection and quality', body: 'Range of window styles, frame materials and glass options available.' },
+      { title: 'Installation services', body: 'Who installs the windows and how the project is managed from measurement to cleanup.' },
+      { title: 'Warranty terms', body: 'What product and labor warranties cover, for how long, and what they exclude.' },
+      { title: 'Pricing transparency', body: 'How clearly quotes explain total cost, and what financing is available.' },
+      { title: 'Customer experience', body: 'How easy the company is to work with, from scheduling to follow-up.' },
+      { title: 'Service availability', body: 'Where the company operates and how widely homeowners can access it.' },
+    ],
+    note:
+      'Rankings and Affordable Home Scores are editorial assessments. They are not customer review averages, and they are not the result of product testing. Affordable Home may be compensated by companies on this page.',
+    draftNote:
+      'Before launch: the scores shown were supplied for this page. Finalize and document the scoring methodology so every score can be substantiated.',
+  },
+
+  faqs: [
+    {
+      q: 'How much does window replacement cost?',
+      a: 'It depends on the number and size of windows, frame material, glass package, window style and how much work the openings need, plus local labor rates. The most reliable number is an itemized quote for your home. Getting estimates from more than one company makes it easier to compare.',
+    },
+    {
+      q: 'How do I choose the best window replacement company?',
+      a: 'Compare the window products offered, who performs the installation, what the product and labor warranties cover, and whether the quote clearly lists the total cost. Confirm the company is licensed and insured where required, and that it serves your area.',
+    },
+    {
+      q: 'Are energy-efficient windows worth it?',
+      a: 'They can improve comfort by reducing drafts and heat transfer, and may lower heating and cooling costs. How much you save depends on your climate, your current windows and your home. Look for ENERGY STAR certification for your climate zone and compare the U-factor and Solar Heat Gain Coefficient ratings.',
+    },
+    {
+      q: 'How long does window installation take?',
+      a: 'There are two timelines: lead time for custom-sized windows to be made, and the installation itself. Both vary with the number of windows, product availability and the condition of the openings. Ask each company for an estimated schedule for your project.',
+    },
+    {
+      q: 'Should I replace all my windows at once?',
+      a: 'Not necessarily. Replacing everything at once can simplify scheduling and give the home a consistent look, while a phased approach spreads out the cost. Many homeowners start with windows that are damaged, drafty or hardest to operate.',
+    },
+    {
+      q: 'Do window replacement companies offer financing?',
+      a: 'Many do, but terms vary by company, lender and credit approval. Ask for the interest rate, any promotional period and the total cost of financing in writing before you sign.',
+    },
+  ],
+};

@@ -1,0 +1,14 @@
+{
+  "name": "affordable-home-rankings",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Affordable Home home-services comparison pages (static build, no runtime dependencies).",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:draft": "node build.mjs --draft",
+    "serve": "python3 -m http.server 4321 --directory dist",
+    "serve:draft": "python3 -m http.server 4322 --directory dist-draft"
+  },
+  "engines": { "node": ">=18" }
+}
