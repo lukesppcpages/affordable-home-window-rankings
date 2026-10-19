@@ -51,7 +51,7 @@ export const site = {
   // attached to every analytics event.
   experiments: {
     variantId: 'control',
-    ctaLabel: 'Get a Free Quote',
+    ctaLabel: 'Get Quote',
     reviewLabel: 'Read Review',
     featuredReviewLabel: 'Read Full Review',
     featuredFlagLabel: 'Our #1 Top Pick',

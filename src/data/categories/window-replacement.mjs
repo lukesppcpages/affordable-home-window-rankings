@@ -36,6 +36,8 @@ export default {
   },
 
   scoreLabel: 'Affordable Home Score',
+  // Heading above the repeated #1 card after the rankings. null = no repeat.
+  topPickRepeat: 'Our Top Rated Window Company',
 
   brands: [
     {

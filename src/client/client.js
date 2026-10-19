@@ -53,7 +53,12 @@
   AH.addAdapter = function (fn) { if (typeof fn === 'function') adapters.push(fn); };
 
   function brandProps(el) {
-    return { brand: el.getAttribute('data-brand'), brand_rank: Number(el.getAttribute('data-rank')) };
+    var card = el.closest('[data-placement]');
+    return {
+      brand: el.getAttribute('data-brand'),
+      brand_rank: Number(el.getAttribute('data-rank')),
+      placement: card ? card.getAttribute('data-placement') : 'list',
+    };
   }
 
   /* ---------- Campaign attribution passthrough ---------- */
@@ -106,7 +111,7 @@
     panel.hidden = !open;
     if (open) {
       var card = btn.closest('[data-brand]');
-      track('review_expand', brandProps(card), 'review:' + card.getAttribute('data-brand'));
+      track('review_expand', brandProps(card), 'review:' + card.id);
     }
   });
   var toggles = document.querySelectorAll('[data-review-toggle]');
@@ -130,7 +135,7 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var card = entry.target;
-        track('ranking_impression', brandProps(card), 'imp:' + card.getAttribute('data-brand'));
+        track('ranking_impression', brandProps(card), 'imp:' + card.id);
         io.unobserve(card);
       });
     }, { threshold: cfg.impressionThreshold || 0.5 });

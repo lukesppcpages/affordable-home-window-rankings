@@ -30,13 +30,13 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 
 | Event | Fires | Fields |
 | --- | --- | --- |
-| `ah_ranking_impression` | once per card, when 50% visible | `brand`, `brand_rank` |
-| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `cta_position` (`featured_card` / `ranking_card` / `review_panel`) |
-| `ah_review_expand` | first open per brand | `brand`, `brand_rank` |
+| `ah_ranking_impression` | once per card, when 50% visible | `brand`, `brand_rank`, `placement` |
+| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `placement`, `cta_position` (`featured_card` / `ranking_card` / `review_panel` / `repeat_card` / `repeat_review_panel`) |
+| `ah_review_expand` | first open per card | `brand`, `brand_rank`, `placement` |
 | `ah_faq_open` | first open per question | `faq_index` |
 | `ah_scroll_depth` | once each at 25/50/75/90% | `percent` |
 
-All events also carry `page_category`, `page_variant`, `device_type`, `event_timestamp`. No personal data is collected. Incoming `utm_*`, `gclid`, `gbraid`, `wbraid`, `msclkid`, `fbclid` are copied onto partner links; nothing else from the URL is passed on.
+`placement` is `list` for the main rankings or `repeat` for the #1 card repeated after them. All events also carry `page_category`, `page_variant`, `device_type`, `event_timestamp`. No personal data is collected. Incoming `utm_*`, `gclid`, `gbraid`, `wbraid`, `msclkid`, `fbclid` are copied onto partner links; nothing else from the URL is passed on.
 
 **Status:** hooks are built and were checked in the browser (events reach `dataLayer`, dedupe works, params pass through). No analytics platform is connected yet.
 

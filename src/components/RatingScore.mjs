@@ -7,12 +7,12 @@ export function scoreWord(score) {
   return 'Very Good';
 }
 
-export function RatingScore({ score, label, featured = false }) {
+// The score label is read to screen readers but not shown on the card.
+export function RatingScore({ score, label }) {
   const value = score.toFixed(1);
   return html`
-<div class="score${featured ? ' score--featured' : ''}">
+<div class="score">
   <span class="score__word">${scoreWord(score)}</span>
-  <span class="score__value">${value}</span>
-  <span class="score__label">${label}</span>
+  <span class="score__value">${value}<span class="visually-hidden"> ${label}</span></span>
 </div>`;
 }

@@ -114,6 +114,8 @@ margin-top: 12px; font-size: 13px; color: var(--muted);
 .hero__meta-sep { width: 3px; height: 3px; border-radius: 50%; background: #cbd5e1; }
 .rankings { background: var(--bg); border-top: 1px solid var(--border); padding: 16px 0 40px; }
 .rankings__list { display: grid; gap: 14px; }
+.top-repeat { margin-top: 40px; }
+.top-repeat__title { margin-bottom: 14px; text-align: center; font-size: clamp(22px, 5vw, 28px); font-weight: 800; color: var(--navy-900); letter-spacing: -0.02em; }
 .rankings__note { margin-top: 18px; font-size: 13px; color: var(--muted); text-align: center; line-height: 1.5; }
 .rankings__note a { color: var(--muted); }
 .rc {
@@ -166,15 +168,7 @@ width: 124px; height: 52px; flex: none;
 .rc__summary { display: none; }
 .score { display: flex; flex-direction: column; align-items: flex-end; text-align: right; line-height: 1.1; }
 .score__word { font-size: 12px; font-weight: 600; color: var(--muted); }
-.score__value { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy-900); font-variant-numeric: tabular-nums; margin: 1px 0 2px; }
-.score__label { font-size: 12px; font-weight: 500; color: var(--muted); white-space: nowrap; }
-.score--featured {
-padding: 8px 12px; border-radius: var(--radius-sm);
-background: var(--navy); color: #fff;
-}
-.score--featured .score__word { color: #ffb08f; }
-.score--featured .score__value { color: #fff; font-size: 32px; }
-.score--featured .score__label { color: #d4dcec; }
+.score__value { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy-900); font-variant-numeric: tabular-nums; margin-top: 2px; }
 .btn {
 display: inline-flex; align-items: center; justify-content: center; gap: 8px;
 min-height: 52px; padding: 0 22px;
@@ -242,8 +236,8 @@ background: var(--navy-50); border-radius: var(--radius-sm);
 font-size: 14.5px; color: var(--navy-900); line-height: 1.55;
 }
 .methodology__note .icon { color: var(--navy); margin-top: 1px; }
-.faq .section__title { margin-bottom: 16px; }
-.faq__list { border-top: 1px solid var(--border); max-width: 820px; }
+.faq .section__title { margin-bottom: 16px; text-align: center; }
+.faq__list { border-top: 1px solid var(--border); max-width: 820px; margin: 0 auto; }
 .faq__item { border-bottom: 1px solid var(--border); }
 .faq__q {
 display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -255,11 +249,11 @@ font-size: 16px; font-weight: 600; cursor: pointer; list-style: none;
 .faq__icon { color: var(--navy); transition: transform 0.2s ease; }
 .faq__item[open] .faq__icon { transform: rotate(45deg); }
 .faq__a { padding: 0 32px 18px 0; font-size: 15.5px; color: #475569; }
-.site-footer { background: var(--navy-900); color: #cbd5e1; padding: 40px 0 28px; font-size: 14px; }
-.site-footer__top { display: grid; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
-.site-footer__brand img { height: 22px; width: auto; }
-.site-footer__brand p { margin-top: 12px; max-width: 46ch; line-height: 1.6; }
-.site-footer__links { display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: -10px; }
+.site-footer { background: var(--navy-900); color: #cbd5e1; padding: 40px 0 28px; font-size: 14px; text-align: center; }
+.site-footer__top { display: grid; justify-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.site-footer__brand img { height: 22px; width: auto; margin: 0 auto; }
+.site-footer__brand p { margin: 12px auto 0; max-width: 52ch; line-height: 1.6; }
+.site-footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 4px; }
 .site-footer__links a, .site-footer__links span {
 display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px;
 color: #e2e8f0; text-decoration: none; font-weight: 500;
@@ -267,7 +261,7 @@ color: #e2e8f0; text-decoration: none; font-weight: 500;
 .site-footer__links a:hover { color: #fff; text-decoration: underline; }
 .site-footer__disclosure { padding: 22px 0; outline: none; }
 .site-footer__disclosure h2 { font-size: 15px; color: #fff; margin-bottom: 8px; letter-spacing: 0; }
-.site-footer__disclosure p { line-height: 1.65; max-width: 80ch; }
+.site-footer__disclosure p { line-height: 1.65; max-width: 80ch; margin: 0 auto; }
 .site-footer__disclosure:target h2 { color: #ffb08f; }
 .site-footer__copy { font-size: 13px; color: #94a3b8; }
 .draft-banner { background: #fef3c7; color: #78350f; font-size: 13px; padding: 8px 16px; text-align: center; }
@@ -289,8 +283,6 @@ background: #fffbeb; color: #78350f; font-size: 13.5px;
 .logo-box--mark { width: 44px; }
 .rc__brand { gap: 8px; }
 .score__value { font-size: 26px; }
-.score--featured .score__value { font-size: 28px; }
-.score__label { font-size: 11.5px; }
 }
 @media (min-width: 768px) {
 :root { --gutter: 24px; }
@@ -301,6 +293,7 @@ background: #fffbeb; color: #78350f; font-size: 13.5px;
 .hero__meta { margin-top: 16px; }
 .rankings { padding: 28px 0 56px; }
 .rankings__list { gap: 18px; }
+.top-repeat { margin-top: 56px; }
 .rc__main {
 grid-template-columns: 116px minmax(0, 1fr) 196px;
 grid-template-rows: auto 1fr;
@@ -326,8 +319,7 @@ padding-right: 20px; border-right: 1px solid var(--border); align-self: stretch;
 .rc__score { align-self: end; }
 .score { align-items: center; text-align: center; }
 .score__value { font-size: 36px; }
-.score--featured { padding: 10px 14px; }
-.score--featured .score__value { font-size: 40px; }
+.rc__actions { align-self: start; margin-top: 10px; }
 .rc__actions { align-self: start; margin-top: 10px; }
 .btn--cta { font-size: 16px; padding: 0 12px; gap: 6px; white-space: nowrap; }
 .rc__toggle { font-size: 14.5px; }
@@ -337,8 +329,6 @@ padding-right: 20px; border-right: 1px solid var(--border); align-self: stretch;
 .section { padding: 64px 0; }
 .education__grid { grid-template-columns: 1fr 1fr; column-gap: 48px; }
 .methodology__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-.site-footer__top { grid-template-columns: 1fr auto; align-items: start; }
-.site-footer__links { justify-content: flex-end; max-width: 420px; }
 }
 @media (min-width: 1024px) {
 .hero { padding: 40px 0 36px; }
@@ -410,9 +400,8 @@ html { scroll-behavior: auto; }
   <div class="container">
     <h2 id="rankings-title" class="visually-hidden">Best Window Replacement Companies of 2026 — Rankings</h2>
     <ol class="rankings__list" data-density="comfortable">
-      
-<li class="rc-item">
-<article class="rc rc--featured" id="power-home-remodeling" data-brand="power-home-remodeling" data-rank="1" aria-labelledby="power-home-remodeling-name">
+      <li class="rc-item">
+<article class="rc rc--featured" id="power-home-remodeling" data-brand="power-home-remodeling" data-rank="1" data-placement="list" aria-labelledby="power-home-remodeling-name">
   
   <div class="rc__flag">Our #1 Top Pick</div>
   <div class="rc__main">
@@ -433,14 +422,13 @@ html { scroll-behavior: auto; }
     </div>
     <div class="rc__score">
       
-<div class="score score--featured">
+<div class="score">
   <span class="score__word">Exceptional</span>
-  <span class="score__value">10.0</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">10.0<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="featured_card">Get a Free Quote<span class="visually-hidden"> from Power Home Remodeling</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="featured_card">Get Quote<span class="visually-hidden"> from Power Home Remodeling</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       
     </div>
   </div>
@@ -465,13 +453,11 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="review_panel">Get a Free Quote from Power Home Remodeling<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="review_panel">Get Quote from Power Home Remodeling<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
-</article>
-</li>
-<li class="rc-item">
-<article class="rc" id="champion-windows" data-brand="champion-windows" data-rank="2" aria-labelledby="champion-windows-name">
+</article></li><li class="rc-item">
+<article class="rc" id="champion-windows" data-brand="champion-windows" data-rank="2" data-placement="list" aria-labelledby="champion-windows-name">
   
   <div class="rc__main">
     <div class="rc__brand">
@@ -493,12 +479,11 @@ html { scroll-behavior: auto; }
       
 <div class="score">
   <span class="score__word">Excellent</span>
-  <span class="score__value">9.7</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">9.7<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://championwindowdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="champion-windows" data-rank="2" data-position="ranking_card">Get a Free Quote<span class="visually-hidden"> from Champion Windows</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://championwindowdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="champion-windows" data-rank="2" data-position="ranking_card">Get Quote<span class="visually-hidden"> from Champion Windows</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-champion-windows" data-review-toggle>
         <span>Read Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -523,13 +508,11 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://championwindowdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="champion-windows" data-rank="2" data-position="review_panel">Get a Free Quote from Champion Windows<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://championwindowdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="champion-windows" data-rank="2" data-position="review_panel">Get Quote from Champion Windows<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
-</article>
-</li>
-<li class="rc-item">
-<article class="rc" id="dabella" data-brand="dabella" data-rank="3" aria-labelledby="dabella-name">
+</article></li><li class="rc-item">
+<article class="rc" id="dabella" data-brand="dabella" data-rank="3" data-placement="list" aria-labelledby="dabella-name">
   
   <div class="rc__main">
     <div class="rc__brand">
@@ -551,12 +534,11 @@ html { scroll-behavior: auto; }
       
 <div class="score">
   <span class="score__word">Excellent</span>
-  <span class="score__value">9.6</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">9.6<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://dabelladeals.us/window-replacement/" target="_blank" rel="sponsored noopener" data-outbound data-brand="dabella" data-rank="3" data-position="ranking_card">Get a Free Quote<span class="visually-hidden"> from DaBella</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://dabelladeals.us/window-replacement/" target="_blank" rel="sponsored noopener" data-outbound data-brand="dabella" data-rank="3" data-position="ranking_card">Get Quote<span class="visually-hidden"> from DaBella</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-dabella" data-review-toggle>
         <span>Read Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -581,13 +563,11 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://dabelladeals.us/window-replacement/" target="_blank" rel="sponsored noopener" data-outbound data-brand="dabella" data-rank="3" data-position="review_panel">Get a Free Quote from DaBella<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://dabelladeals.us/window-replacement/" target="_blank" rel="sponsored noopener" data-outbound data-brand="dabella" data-rank="3" data-position="review_panel">Get Quote from DaBella<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
-</article>
-</li>
-<li class="rc-item">
-<article class="rc" id="renewal-by-andersen" data-brand="renewal-by-andersen" data-rank="4" aria-labelledby="renewal-by-andersen-name">
+</article></li><li class="rc-item">
+<article class="rc" id="renewal-by-andersen" data-brand="renewal-by-andersen" data-rank="4" data-placement="list" aria-labelledby="renewal-by-andersen-name">
   
   <div class="rc__main">
     <div class="rc__brand">
@@ -609,12 +589,11 @@ html { scroll-behavior: auto; }
       
 <div class="score">
   <span class="score__word">Excellent</span>
-  <span class="score__value">9.5</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">9.5<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://www.renewalbyandersen.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="renewal-by-andersen" data-rank="4" data-position="ranking_card">Get a Free Quote<span class="visually-hidden"> from Renewal by Andersen</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://www.renewalbyandersen.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="renewal-by-andersen" data-rank="4" data-position="ranking_card">Get Quote<span class="visually-hidden"> from Renewal by Andersen</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-renewal-by-andersen" data-review-toggle>
         <span>Read Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -639,13 +618,11 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://www.renewalbyandersen.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="renewal-by-andersen" data-rank="4" data-position="review_panel">Get a Free Quote from Renewal by Andersen<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://www.renewalbyandersen.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="renewal-by-andersen" data-rank="4" data-position="review_panel">Get Quote from Renewal by Andersen<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
-</article>
-</li>
-<li class="rc-item">
-<article class="rc" id="windows-usa" data-brand="windows-usa" data-rank="5" aria-labelledby="windows-usa-name">
+</article></li><li class="rc-item">
+<article class="rc" id="windows-usa" data-brand="windows-usa" data-rank="5" data-placement="list" aria-labelledby="windows-usa-name">
   
   <div class="rc__main">
     <div class="rc__brand">
@@ -667,12 +644,11 @@ html { scroll-behavior: auto; }
       
 <div class="score">
   <span class="score__word">Excellent</span>
-  <span class="score__value">9.5</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">9.5<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://windowsusdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="windows-usa" data-rank="5" data-position="ranking_card">Get a Free Quote<span class="visually-hidden"> from Windows USA</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://windowsusdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="windows-usa" data-rank="5" data-position="ranking_card">Get Quote<span class="visually-hidden"> from Windows USA</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-windows-usa" data-review-toggle>
         <span>Read Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -697,13 +673,11 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://windowsusdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="windows-usa" data-rank="5" data-position="review_panel">Get a Free Quote from Windows USA<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://windowsusdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="windows-usa" data-rank="5" data-position="review_panel">Get Quote from Windows USA<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
-</article>
-</li>
-<li class="rc-item">
-<article class="rc" id="lowes" data-brand="lowes" data-rank="6" aria-labelledby="lowes-name">
+</article></li><li class="rc-item">
+<article class="rc" id="lowes" data-brand="lowes" data-rank="6" data-placement="list" aria-labelledby="lowes-name">
   
   <div class="rc__main">
     <div class="rc__brand">
@@ -725,12 +699,11 @@ html { scroll-behavior: auto; }
       
 <div class="score">
   <span class="score__word">Very Good</span>
-  <span class="score__value">9.4</span>
-  <span class="score__label">Affordable Home Score</span>
+  <span class="score__value">9.4<span class="visually-hidden"> Affordable Home Score</span></span>
 </div>
     </div>
     <div class="rc__actions">
-      <a class="btn btn--cta " href="https://www.lowes.com/search?searchTerm=windows" target="_blank" rel="sponsored noopener" data-outbound data-brand="lowes" data-rank="6" data-position="ranking_card">Get a Free Quote<span class="visually-hidden"> from Lowe&#39;s</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="btn btn--cta " href="https://www.lowes.com/search?searchTerm=windows" target="_blank" rel="sponsored noopener" data-outbound data-brand="lowes" data-rank="6" data-position="ranking_card">Get Quote<span class="visually-hidden"> from Lowe&#39;s</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-lowes" data-review-toggle>
         <span>Read Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
       </button>
@@ -755,12 +728,72 @@ html { scroll-behavior: auto; }
   </div>
   
   <div class="review__footer">
-    <a class="btn btn--cta " href="https://www.lowes.com/search?searchTerm=windows" target="_blank" rel="sponsored noopener" data-outbound data-brand="lowes" data-rank="6" data-position="review_panel">Get a Free Quote from Lowe&#39;s<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a class="btn btn--cta " href="https://www.lowes.com/search?searchTerm=windows" target="_blank" rel="sponsored noopener" data-outbound data-brand="lowes" data-rank="6" data-position="review_panel">Get Quote from Lowe&#39;s<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+</div>
+</article></li>
+    </ol>
+    
+    <div class="top-repeat" aria-labelledby="top-repeat-title">
+      <h2 id="top-repeat-title" class="top-repeat__title">Our Top Rated Window Company</h2>
+      
+<article class="rc rc--featured" id="power-home-remodeling-repeat" data-brand="power-home-remodeling" data-rank="1" data-placement="repeat" aria-labelledby="power-home-remodeling-repeat-name">
+  
+  <div class="rc__flag">Our #1 Top Pick</div>
+  <div class="rc__main">
+    <div class="rc__brand">
+      <span class="rc__rank" aria-label="Rank 1">1</span>
+      
+<div class="logo-box logo-box--mark">
+  <img src="images/brands/power-home.webp" alt="Power Home Remodeling logo" width="198" height="240" loading=&quot;lazy&quot; decoding="async">
+</div>
+    </div>
+    <div class="rc__body">
+      <p class="rc__distinction">Best Overall</p>
+      <h3 class="rc__name" id="power-home-remodeling-repeat-name">Power Home Remodeling</h3>
+      <ul class="rc__bullets">
+        <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>One company handles consultation, measuring and installation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Also replaces roofing, siding, doors and attic insulation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>In-home consultation with a project quote</span></li>
+      </ul>
+      <p class="rc__summary">A large full-service exterior remodeler that manages window projects from the first visit through installation.</p>
+    </div>
+    <div class="rc__score">
+      
+<div class="score">
+  <span class="score__word">Exceptional</span>
+  <span class="score__value">10.0<span class="visually-hidden"> Affordable Home Score</span></span>
+</div>
+    </div>
+    <div class="rc__actions">
+      <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="repeat_card">Get Quote<span class="visually-hidden"> from Power Home Remodeling</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      
+    </div>
+  </div>
+  <button type="button" class="rc__toggle rc__toggle--bar" aria-expanded="false" aria-controls="review-power-home-remodeling-repeat" data-review-toggle>
+        <span>Read Full Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+  
+<div class="review" id="review-power-home-remodeling-repeat" role="region" aria-label="Power Home Remodeling review" hidden>
+  <div class="review__grid">
+    <div class="review__main">
+      <h4 class="review__heading">Overview</h4>
+      <p>Power Home Remodeling is a full-service exterior remodeling company founded in 1992. Window replacement sits alongside roofing, siding, doors and insulation, so homeowners planning more than one exterior project can work with a single company. Projects start with an in-home consultation, where the home is measured and a quote is prepared.</p>
+      <h4 class="review__heading">Best suited for</h4>
+      <p>Homeowners who want one company accountable for the whole project, especially if windows are part of a larger exterior upgrade.</p>
+    </div>
+    <div class="review__lists">
+      <h4 class="review__heading">Key strengths</h4>
+      <ul class="review__list review__list--pro"><li>One point of contact from consultation through installation</li><li>Can coordinate windows with roofing, siding or door work</li><li>Established company with decades in exterior remodeling</li></ul>
+      <h4 class="review__heading">Things to consider</h4>
+      <ul class="review__list review__list--con"><li>Available only in the markets Power serves — confirm your area first</li><li>Pricing is quoted after an in-home visit, so plan for an appointment</li></ul>
+    </div>
+  </div>
+  
+  <div class="review__footer">
+    <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="repeat_review_panel">Get Quote from Power Home Remodeling<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
   </div>
 </div>
 </article>
-</li>
-    </ol>
+    </div>
     <p class="rankings__note">Scores are <a href="#methodology">Affordable Home editorial ratings</a>, not customer review averages. We may be compensated when you click partner links. <a href="#disclosure">Advertising Disclosure</a></p>
   </div>
 </section>
