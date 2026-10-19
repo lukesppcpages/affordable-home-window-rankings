@@ -13,6 +13,7 @@ export function MethodologySection({ category, draft }) {
     <ul class="methodology__grid">
       ${m.criteria.map((c) => html`
       <li class="methodology__item">
+        ${c.icon ? html`<span class="methodology__icon">${icon(c.icon, { size: 20 })}</span>` : ''}
         <h3 class="methodology__title">${c.title}</h3>
         <p>${c.body}</p>
       </li>`)}

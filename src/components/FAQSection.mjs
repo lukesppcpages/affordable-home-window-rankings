@@ -7,7 +7,7 @@ export function FAQSection({ category }) {
   return html`
 <section class="section faq" id="faq" aria-labelledby="faq-title">
   <div class="container">
-    <h2 id="faq-title" class="section__title">Frequently Asked Questions</h2>
+    <h2 id="faq-title" class="section__title">${category.faqHeading || 'Frequently Asked Questions'}</h2>
     <div class="faq__list">
       ${category.faqs.map((f, i) => html`
       <details class="faq__item" name="faq" data-faq-index="${i + 1}">

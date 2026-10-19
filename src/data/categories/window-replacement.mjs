@@ -274,18 +274,20 @@ export default {
     intro:
       'These are the factors Affordable Home considers when evaluating window replacement companies. Each one reflects a question homeowners should be able to answer before signing a contract.',
     criteria: [
-      { title: 'Product selection and quality', body: 'Range of window styles, frame materials and glass options available.' },
-      { title: 'Installation services', body: 'Who installs the windows and how the project is managed from measurement to cleanup.' },
-      { title: 'Warranty terms', body: 'What product and labor warranties cover, for how long, and what they exclude.' },
-      { title: 'Pricing transparency', body: 'How clearly quotes explain total cost, and what financing is available.' },
-      { title: 'Customer experience', body: 'How easy the company is to work with, from scheduling to follow-up.' },
-      { title: 'Service availability', body: 'Where the company operates and how widely homeowners can access it.' },
+      { icon: 'app-window', title: 'Product selection and quality', body: 'Range of window styles, frame materials and glass options available.' },
+      { icon: 'wrench', title: 'Installation services', body: 'Who installs the windows and how the project is managed from measurement to cleanup.' },
+      { icon: 'shield-check', title: 'Warranty terms', body: 'What product and labor warranties cover, for how long, and what they exclude.' },
+      { icon: 'receipt', title: 'Pricing transparency', body: 'How clearly quotes explain total cost, and what financing is available.' },
+      { icon: 'messages-square', title: 'Customer experience', body: 'How easy the company is to work with, from scheduling to follow-up.' },
+      { icon: 'map-pin', title: 'Service availability', body: 'Where the company operates and how widely homeowners can access it.' },
     ],
     note:
       'Rankings and Affordable Home Scores are editorial assessments. They are not customer review averages, and they are not the result of product testing. Affordable Home may be compensated by companies on this page.',
     draftNote:
       'Before launch: the scores shown were supplied for this page. Finalize and document the scoring methodology so every score can be substantiated.',
   },
+
+  faqHeading: 'Important FAQs',
 
   faqs: [
     {
