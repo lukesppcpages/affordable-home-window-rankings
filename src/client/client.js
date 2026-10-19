@@ -119,6 +119,23 @@
     toggles[t].setAttribute('data-label', toggles[t].querySelector('span').textContent);
   }
 
+  /* ---------- Header menu: close on link click, outside click or Escape ---------- */
+  var menu = document.querySelector('[data-site-menu]');
+  if (menu) {
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) menu.open = false;
+    });
+    document.addEventListener('click', function (e) {
+      if (menu.open && !menu.contains(e.target)) menu.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary').focus();
+      }
+    });
+  }
+
   /* ---------- FAQ: one open at a time (fallback for browsers without <details name>) ---------- */
   var faqs = document.querySelectorAll('details[name="faq"]');
   for (var f = 0; f < faqs.length; f++) {

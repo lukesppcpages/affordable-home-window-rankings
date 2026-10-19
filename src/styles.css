@@ -77,36 +77,50 @@ button { font: inherit; color: inherit; }
 .icon { flex: none; }
 
 /* ---------- Header ---------- */
-.site-header { background: var(--white); border-bottom: 1px solid var(--border); }
+.site-header { position: relative; z-index: 20; background: var(--white); border-bottom: 1px solid var(--border); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
 .site-header__logo { display: inline-flex; align-items: center; min-height: 44px; }
 .site-header__logo img { height: 20px; width: auto; }
-.site-header__nav { display: flex; gap: 0; }
-.site-header__nav a {
-  display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px;
-  font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; border-radius: 8px;
+.site-menu { position: relative; }
+.site-menu__toggle {
+  display: grid; place-items: center; width: 44px; height: 44px; margin-right: -10px;
+  border-radius: 10px; color: var(--navy-900); cursor: pointer; list-style: none;
+}
+.site-menu__toggle::-webkit-details-marker { display: none; }
+.site-menu__toggle:hover { background: var(--navy-50); }
+.site-menu__close, .site-menu[open] .site-menu__open { display: none; }
+.site-menu[open] .site-menu__close { display: block; }
+.site-menu__panel {
+  position: absolute; top: calc(100% + 8px); right: -10px; min-width: 240px; padding: 6px;
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 12px 32px -12px rgba(15, 23, 42, 0.28);
+}
+.site-menu__panel a {
+  display: flex; align-items: center; min-height: 44px; padding: 0 12px;
+  font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; border-radius: 8px;
   white-space: nowrap;
 }
-.site-header__nav a:hover { color: var(--navy); background: var(--navy-50); }
+.site-menu__panel a:hover { color: var(--navy); background: var(--navy-50); }
 
 /* ---------- Hero ---------- */
 .hero { padding: 18px 0 16px; background: var(--white); }
 .hero__media { display: none; }
 .hero__title {
-  font-size: clamp(26px, 6.6vw, 44px);
+  font-size: clamp(30px, 8.8vw, 40px);
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.12;
   color: var(--navy-900);
   max-width: 20ch;
 }
-.hero__intro { margin-top: 10px; font-size: 15px; line-height: 1.55; color: #475569; max-width: 62ch; }
+.hero__intro { display: none; margin-top: 10px; font-size: 15px; line-height: 1.55; color: #475569; max-width: 62ch; }
 .hero__meta {
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
-  margin-top: 12px; font-size: 13px; color: var(--muted);
+  margin-top: 10px; font-size: 13px; color: var(--muted);
 }
 .hero__meta a { color: var(--muted); font-weight: 500; }
 .hero__meta a:hover { color: var(--navy); }
+.hero__meta-desktop { display: none; }
 .hero__meta-sep { width: 3px; height: 3px; border-radius: 50%; background: #cbd5e1; }
 
 /* ---------- Rankings ---------- */
@@ -310,11 +324,7 @@ button { font: inherit; color: inherit; }
 /* ==========================================================================
    Small phones (<= 360px): keep logo + score on one row
    ========================================================================== */
-@media (max-width: 400px) {
-  .site-header__nav a { padding: 0 8px; font-size: 13.5px; }
-}
 @media (max-width: 360px) {
-  .site-header__nav a[href='#faq'] { display: none; }
   .logo-box { width: 100px; height: 44px; }
   .logo-box--mark { width: 44px; }
   .rc__brand { gap: 8px; }
@@ -329,7 +339,10 @@ button { font: inherit; color: inherit; }
   .site-header__inner { min-height: 68px; }
   .site-header__logo img { height: 26px; }
   .hero { padding: 36px 0 30px; }
-  .hero__intro { font-size: 17px; margin-top: 14px; }
+  .hero__title { font-size: clamp(34px, 4.4vw, 44px); }
+  .hero__intro { display: block; font-size: 17px; margin-top: 14px; }
+  .hero__meta-desktop { display: inline; }
+  .hero__meta-sep.hero__meta-desktop { display: block; }
   .hero__meta { margin-top: 16px; }
   .rankings { padding: 28px 0 56px; }
   .rankings__list { gap: 18px; }
