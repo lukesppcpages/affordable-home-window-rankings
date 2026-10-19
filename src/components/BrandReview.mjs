@@ -5,9 +5,6 @@ import { CtaButton } from './CtaButton.mjs';
 // Hidden until "Read Review" is pressed (shown by default without JS).
 export function BrandReview({ brand, site, base, draft }) {
   const { review } = brand;
-  const photo = brand.image
-    ? html`<img class="review__photo" src="${base}${brand.image.srcSmall}" srcset="${base}${brand.image.srcSmall} 640w, ${base}${brand.image.src} 1200w" sizes="(min-width: 768px) 320px, 100vw" alt="${brand.image.alt}" width="${brand.image.width}" height="${brand.image.height}" loading="lazy" decoding="async">`
-    : '';
   const pending = draft && brand.pending?.length
     ? html`<div class="draft-flag"><strong>Pending verification (draft only):</strong><ul>${brand.pending.map((p) => html`<li>${p}</li>`)}</ul></div>`
     : '';
@@ -16,7 +13,6 @@ export function BrandReview({ brand, site, base, draft }) {
 <div class="review" id="review-${brand.id}" role="region" aria-label="${brand.name} review" hidden>
   <div class="review__grid">
     <div class="review__main">
-      ${photo}
       <h4 class="review__heading">Overview</h4>
       <p>${review.overview}</p>
       <h4 class="review__heading">Best suited for</h4>

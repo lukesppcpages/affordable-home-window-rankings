@@ -11,16 +11,15 @@ import { BrandReview } from './BrandReview.mjs';
 // Zones: brand (rank + logo) | body (name + bullets) | side (score + actions)
 // On mobile the side zone splits: score sits beside the logo, actions go full width.
 export function RankingCard(props) {
-  const { brand, category, site, base, draft, featured = false, media = '', flag = '' } = props;
+  const { brand, category, site, base, draft, featured = false, flag = '' } = props;
   const exp = site.experiments;
   const eager = brand.rank <= 2;
 
   return html`
 <li class="rc-item">
-<article class="rc${featured ? ' rc--featured' : ''}${media ? ' rc--has-media' : ''}" id="${brand.id}" data-brand="${brand.id}" data-rank="${brand.rank}" aria-labelledby="${brand.id}-name">
+<article class="rc${featured ? ' rc--featured' : ''}" id="${brand.id}" data-brand="${brand.id}" data-rank="${brand.rank}" aria-labelledby="${brand.id}-name">
   ${flag}
   <div class="rc__main">
-    ${media}
     <div class="rc__brand">
       <span class="rc__rank" aria-label="Rank ${brand.rank}">${brand.rank}</span>
       ${BrandLogo({ brand, base, eager })}
@@ -38,12 +37,17 @@ export function RankingCard(props) {
     </div>
     <div class="rc__actions">
       ${CtaButton({ brand, position: featured ? 'featured_card' : 'ranking_card', site })}
-      <button type="button" class="rc__toggle" aria-expanded="false" aria-controls="review-${brand.id}" data-review-toggle>
-        <span>${exp.reviewLabel}</span>${icon('chevron-down', { size: 18, className: 'rc__toggle-icon' })}
-      </button>
+      ${featured ? '' : reviewToggle(brand, exp.reviewLabel)}
     </div>
   </div>
+  ${featured ? reviewToggle(brand, exp.featuredReviewLabel, ' rc__toggle--bar') : ''}
   ${BrandReview({ brand, site, base, draft })}
 </article>
 </li>`;
+}
+
+function reviewToggle(brand, label, modifier = '') {
+  return html`<button type="button" class="rc__toggle${modifier}" aria-expanded="false" aria-controls="review-${brand.id}" data-review-toggle>
+        <span>${label}</span>${icon('chevron-down', { size: 18, className: 'rc__toggle-icon' })}
+      </button>`;
 }

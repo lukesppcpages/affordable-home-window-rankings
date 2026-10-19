@@ -23,6 +23,13 @@ export default {
   },
 
   hero: {
+    image: {
+      src: 'images/hero-home-1100.webp',
+      srcSmall: 'images/hero-home-640.webp',
+      width: 1100,
+      height: 619,
+      alt: 'Two-story suburban home with white-trimmed windows in warm evening light',
+    },
     headline: 'Best Window Replacement Companies of 2026',
     intro:
       "Replacing your windows is a big investment. We've brought together leading window replacement companies to help you compare your options and find the right fit for your home.",
@@ -39,13 +46,6 @@ export default {
       featured: true,
       distinction: 'Best Overall',
       logo: { src: 'images/brands/power-home.webp', width: 198, height: 240 },
-      image: {
-        src: 'images/power-home-window-installation-1200.webp',
-        srcSmall: 'images/power-home-window-installation-640.webp',
-        width: 1200,
-        height: 800,
-        alt: 'Two Power Home Remodeling installers fitting a new window into a home',
-      },
       cta: { url: 'https://powerhrgdeals.com/', verified: false },
       bullets: [
         'One company handles consultation, measuring and installation',

@@ -53,7 +53,8 @@ export const site = {
     variantId: 'control',
     ctaLabel: 'Get a Free Quote',
     reviewLabel: 'Read Review',
-    featuredLayout: 'photo', // 'photo' | 'compact'
+    featuredReviewLabel: 'Read Full Review',
+    featuredFlagLabel: 'Our #1 Top Pick',
     cardDensity: 'comfortable', // 'comfortable' | 'compact'
   },
 };
