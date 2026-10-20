@@ -52,7 +52,7 @@ line-gap-override: 0%;
 --font: 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 76px; }
 body {
 margin: 0;
 font-family: var(--font);
@@ -83,7 +83,7 @@ background: var(--navy); color: #fff; border-radius: 8px; font-weight: 600; text
 }
 .skip-link:focus { top: 8px; color: #fff; }
 .icon { flex: none; }
-.site-header { position: relative; z-index: 20; background: var(--white); border-bottom: 1px solid var(--border); }
+.site-header { position: sticky; top: 0; z-index: 30; background: var(--white); border-bottom: 1px solid var(--border); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
 .site-header__logo { display: inline-flex; align-items: center; min-height: 44px; }
 .site-header__logo img { height: 20px; width: auto; }
@@ -329,9 +329,8 @@ color: #e2e8f0; text-decoration: none; font-weight: 500;
 }
 .site-footer__links a:hover { color: #fff; text-decoration: underline; }
 .site-footer__disclosure { padding: 22px 0; outline: none; }
-.site-footer__disclosure h2 { font-size: 15px; color: #fff; margin-bottom: 8px; letter-spacing: 0; }
 .site-footer__disclosure p { line-height: 1.65; max-width: 80ch; margin: 0 auto; font-size: 13px; font-weight: 300; color: #b6c0cf; }
-.site-footer__disclosure:target h2 { color: #ffb08f; }
+.site-footer__disclosure strong { font-weight: 600; color: #e2e8f0; }
 .site-footer__copy { font-size: 13px; color: #94a3b8; }
 .draft-banner { background: #fef3c7; color: #78350f; font-size: 13px; padding: 8px 16px; text-align: center; }
 .draft-flag {
@@ -351,6 +350,7 @@ background: #fffbeb; color: #78350f; font-size: 13.5px;
 }
 @media (min-width: 768px) {
 :root { --gutter: 24px; }
+html { scroll-padding-top: 84px; }
 .site-header__inner { min-height: 68px; }
 .site-header__logo img { height: 26px; }
 .hero { padding: 36px 0 30px; }
@@ -442,7 +442,7 @@ grid-template-areas:
 html { scroll-behavior: auto; }
 *, *::before, *::after { transition: none !important; animation: none !important; }
 }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Best Window Replacement Companies of 2026","itemListOrder":"https://schema.org/ItemListOrderAscending","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"name":"Power Home Remodeling"},{"@type":"ListItem","position":2,"name":"Champion Windows"},{"@type":"ListItem","position":3,"name":"DaBella"},{"@type":"ListItem","position":4,"name":"Renewal by Andersen"},{"@type":"ListItem","position":5,"name":"Windows USA"},{"@type":"ListItem","position":6,"name":"Lowe's"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does window replacement cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the number and size of windows, frame material, glass package, window style and how much work the openings need, plus local labor rates. The most reliable number is an itemized quote for your home. Getting estimates from more than one company makes it easier to compare."}},{"@type":"Question","name":"How do I choose the best window replacement company?","acceptedAnswer":{"@type":"Answer","text":"Compare the window products offered, who performs the installation, what the product and labor warranties cover, and whether the quote clearly lists the total cost. Confirm the company is licensed and insured where required, and that it serves your area."}},{"@type":"Question","name":"Are energy-efficient windows worth it?","acceptedAnswer":{"@type":"Answer","text":"They can improve comfort by reducing drafts and heat transfer, and may lower heating and cooling costs. How much you save depends on your climate, your current windows and your home. Look for ENERGY STAR certification for your climate zone and compare the U-factor and Solar Heat Gain Coefficient ratings."}},{"@type":"Question","name":"How long does window installation take?","acceptedAnswer":{"@type":"Answer","text":"There are two timelines: lead time for custom-sized windows to be made, and the installation itself. Both vary with the number of windows, product availability and the condition of the openings. Ask each company for an estimated schedule for your project."}},{"@type":"Question","name":"Should I replace all my windows at once?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Replacing everything at once can simplify scheduling and give the home a consistent look, while a phased approach spreads out the cost. Many homeowners start with windows that are damaged, drafty or hardest to operate."}},{"@type":"Question","name":"Do window replacement companies offer financing?","acceptedAnswer":{"@type":"Answer","text":"Many do, but terms vary by company, lender and credit approval. Ask for the interest rate, any promotional period and the total cost of financing in writing before you sign."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Best Window Replacement Companies of 2026","itemListOrder":"https://schema.org/ItemListOrderAscending","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"name":"Power Home Remodeling"},{"@type":"ListItem","position":2,"name":"Champion Windows"},{"@type":"ListItem","position":3,"name":"DaBella"},{"@type":"ListItem","position":4,"name":"Renewal by Andersen"},{"@type":"ListItem","position":5,"name":"Windows USA"},{"@type":"ListItem","position":6,"name":"Lowe's"}]}</script>
 <script src="../assets/client.js" defer></script>
 </head>
 <body>
@@ -460,7 +460,7 @@ html { scroll-behavior: auto; }
         <svg class="icon site-menu__open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></svg><svg class="icon site-menu__close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </summary>
       <nav class="site-menu__panel" aria-label="Page sections">
-        <ul><li><a href="#rankings">Window Replacement Rankings</a></li><li><a href="#what-to-look-for">What to Look For</a></li><li><a href="#power-home-review">#1 Company Review</a></li><li><a href="#methodology">How We Rank</a></li><li><a href="#faq">FAQs</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
+        <ul><li><a href="#rankings">Window Replacement Rankings</a></li><li><a href="#what-to-look-for">What to Look For</a></li><li><a href="#power-home-review">#1 Company Review</a></li><li><a href="#methodology">How We Rank</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
       </nav>
     </details>
   </div>
@@ -992,38 +992,6 @@ html { scroll-behavior: auto; }
   </div>
 </section>
 
-<section class="section faq" id="faq" aria-labelledby="faq-title">
-  <div class="container">
-    <h2 id="faq-title" class="section__title">Important FAQs</h2>
-    <div class="faq__list">
-      
-      <details class="faq__item" name="faq" data-faq-index="1">
-        <summary class="faq__q"><span>How much does window replacement cost?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>It depends on the number and size of windows, frame material, glass package, window style and how much work the openings need, plus local labor rates. The most reliable number is an itemized quote for your home. Getting estimates from more than one company makes it easier to compare.</p></div>
-      </details>
-      <details class="faq__item" name="faq" data-faq-index="2">
-        <summary class="faq__q"><span>How do I choose the best window replacement company?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>Compare the window products offered, who performs the installation, what the product and labor warranties cover, and whether the quote clearly lists the total cost. Confirm the company is licensed and insured where required, and that it serves your area.</p></div>
-      </details>
-      <details class="faq__item" name="faq" data-faq-index="3">
-        <summary class="faq__q"><span>Are energy-efficient windows worth it?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>They can improve comfort by reducing drafts and heat transfer, and may lower heating and cooling costs. How much you save depends on your climate, your current windows and your home. Look for ENERGY STAR certification for your climate zone and compare the U-factor and Solar Heat Gain Coefficient ratings.</p></div>
-      </details>
-      <details class="faq__item" name="faq" data-faq-index="4">
-        <summary class="faq__q"><span>How long does window installation take?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>There are two timelines: lead time for custom-sized windows to be made, and the installation itself. Both vary with the number of windows, product availability and the condition of the openings. Ask each company for an estimated schedule for your project.</p></div>
-      </details>
-      <details class="faq__item" name="faq" data-faq-index="5">
-        <summary class="faq__q"><span>Should I replace all my windows at once?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>Not necessarily. Replacing everything at once can simplify scheduling and give the home a consistent look, while a phased approach spreads out the cost. Many homeowners start with windows that are damaged, drafty or hardest to operate.</p></div>
-      </details>
-      <details class="faq__item" name="faq" data-faq-index="6">
-        <summary class="faq__q"><span>Do window replacement companies offer financing?</span><svg class="icon faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
-        <div class="faq__a"><p>Many do, but terms vary by company, lender and credit approval. Ask for the interest rate, any promotional period and the total cost of financing in writing before you sign.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer class="site-footer">
@@ -1035,8 +1003,7 @@ html { scroll-behavior: auto; }
       
     </div>
     <div class="site-footer__disclosure" id="disclosure" tabindex="-1">
-      <h2>Advertising Disclosure</h2>
-      <p>Affordable Home may receive compensation when you click on links or request services through companies featured on our website. Compensation may influence which companies appear and how they are presented. Our rankings are editorial assessments and are not customer review averages.</p>
+      <p><strong>Advertising Disclosure:</strong> Affordable Home may receive compensation when you click on links or request services through companies featured on our website. Compensation may influence which companies appear and how they are presented. Our rankings are editorial assessments and are not customer review averages.</p>
     </div>
     <p class="site-footer__copy">&copy; 2026 Affordable Home. All rights reserved.</p>
   </div>

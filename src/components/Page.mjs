@@ -11,7 +11,7 @@ import { Footer } from './Footer.mjs';
 // JSON for <script> blocks: escape "<" so content can never close the tag.
 const json = (value) => raw(JSON.stringify(value).replace(/</g, '\\u003c'));
 
-// Structured data limited to facts: the ordered list of companies and the FAQ.
+// Structured data limited to facts: the ordered list of companies and the FAQ (if any).
 // No Review/AggregateRating markup — scores are editorial, not customer reviews.
 function structuredData({ category, pageUrl }) {
   const brands = [...category.brands].sort((a, b) => a.rank - b.rank);
@@ -29,7 +29,7 @@ function structuredData({ category, pageUrl }) {
         ...(pageUrl ? { url: `${pageUrl}#${b.id}` } : {}),
       })),
     },
-    {
+    category.faqs?.length && {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: category.faqs.map((f) => ({
@@ -38,7 +38,7 @@ function structuredData({ category, pageUrl }) {
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
     },
-  ];
+  ].filter(Boolean);
 }
 
 export function Page(ctx) {
@@ -92,7 +92,7 @@ ${RankingsList(ctx)}
 ${EducationSection(ctx)}
 ${DeepReview(ctx)}
 ${MethodologySection(ctx)}
-${FAQSection(ctx)}
+${category.faqs?.length ? FAQSection(ctx) : ''}
 </main>
 ${Footer(ctx)}
 </body>

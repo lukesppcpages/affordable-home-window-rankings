@@ -11,7 +11,7 @@ export function Header({ site, base, category }) {
     ['#what-to-look-for', 'What to Look For'],
     review && [`#${review.deepReview.anchor}`, '#1 Company Review'],
     ['#methodology', 'How We Rank'],
-    ['#faq', 'FAQs'],
+    category.faqs?.length && ['#faq', 'FAQs'],
     ['#disclosure', 'Advertising Disclosure'],
   ].filter(Boolean);
   return html`

@@ -43,7 +43,8 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
+/* scroll-padding keeps anchor targets clear of the sticky header */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 76px; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -77,7 +78,7 @@ button { font: inherit; color: inherit; }
 .icon { flex: none; }
 
 /* ---------- Header ---------- */
-.site-header { position: relative; z-index: 20; background: var(--white); border-bottom: 1px solid var(--border); }
+.site-header { position: sticky; top: 0; z-index: 30; background: var(--white); border-bottom: 1px solid var(--border); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
 .site-header__logo { display: inline-flex; align-items: center; min-height: 44px; }
 .site-header__logo img { height: 20px; width: auto; }
@@ -361,9 +362,8 @@ a.rc__toggle--bar { text-decoration: none; }
 }
 .site-footer__links a:hover { color: #fff; text-decoration: underline; }
 .site-footer__disclosure { padding: 22px 0; outline: none; }
-.site-footer__disclosure h2 { font-size: 15px; color: #fff; margin-bottom: 8px; letter-spacing: 0; }
 .site-footer__disclosure p { line-height: 1.65; max-width: 80ch; margin: 0 auto; font-size: 13px; font-weight: 300; color: #b6c0cf; }
-.site-footer__disclosure:target h2 { color: #ffb08f; }
+.site-footer__disclosure strong { font-weight: 600; color: #e2e8f0; }
 .site-footer__copy { font-size: 13px; color: #94a3b8; }
 
 /* ---------- Draft-only helpers ---------- */
@@ -395,6 +395,7 @@ a.rc__toggle--bar { text-decoration: none; }
    ========================================================================== */
 @media (min-width: 768px) {
   :root { --gutter: 24px; }
+  html { scroll-padding-top: 84px; }
   .site-header__inner { min-height: 68px; }
   .site-header__logo img { height: 26px; }
   .hero { padding: 36px 0 30px; }

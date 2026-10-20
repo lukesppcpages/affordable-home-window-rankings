@@ -355,32 +355,4 @@ export default {
       'Before launch: the scores shown were supplied for this page. Finalize and document the scoring methodology so every score can be substantiated.',
   },
 
-  faqHeading: 'Important FAQs',
-
-  faqs: [
-    {
-      q: 'How much does window replacement cost?',
-      a: 'It depends on the number and size of windows, frame material, glass package, window style and how much work the openings need, plus local labor rates. The most reliable number is an itemized quote for your home. Getting estimates from more than one company makes it easier to compare.',
-    },
-    {
-      q: 'How do I choose the best window replacement company?',
-      a: 'Compare the window products offered, who performs the installation, what the product and labor warranties cover, and whether the quote clearly lists the total cost. Confirm the company is licensed and insured where required, and that it serves your area.',
-    },
-    {
-      q: 'Are energy-efficient windows worth it?',
-      a: 'They can improve comfort by reducing drafts and heat transfer, and may lower heating and cooling costs. How much you save depends on your climate, your current windows and your home. Look for ENERGY STAR certification for your climate zone and compare the U-factor and Solar Heat Gain Coefficient ratings.',
-    },
-    {
-      q: 'How long does window installation take?',
-      a: 'There are two timelines: lead time for custom-sized windows to be made, and the installation itself. Both vary with the number of windows, product availability and the condition of the openings. Ask each company for an estimated schedule for your project.',
-    },
-    {
-      q: 'Should I replace all my windows at once?',
-      a: 'Not necessarily. Replacing everything at once can simplify scheduling and give the home a consistent look, while a phased approach spreads out the cost. Many homeowners start with windows that are damaged, drafty or hardest to operate.',
-    },
-    {
-      q: 'Do window replacement companies offer financing?',
-      a: 'Many do, but terms vary by company, lender and credit approval. Ask for the interest rate, any promotional period and the total cost of financing in writing before you sign.',
-    },
-  ],
 };
