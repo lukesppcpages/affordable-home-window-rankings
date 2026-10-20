@@ -60,7 +60,10 @@ async function build() {
     if (category.slug === defaultCategory) targets.push({ dir: '', base: '' });
     for (const { dir, base } of targets) {
       const pageUrl = site.siteUrl ? `${site.siteUrl}/${dir ? dir + '/' : ''}` : null;
-      const page = String(Page({ site, category, css, base, pageUrl, draft }));
+      // A category can override site settings (e.g. CTA label, disclosure copy).
+      const o = category.siteOverrides || {};
+      const pageSite = { ...site, ...o, experiments: { ...site.experiments, ...(o.experiments || {}) } };
+      const page = String(Page({ site: pageSite, category, css, base, pageUrl, draft }));
       await mkdir(join(out, dir), { recursive: true });
       await writeFile(join(out, dir, 'index.html'), page);
       console.log(`  ✔ ${join(draft ? 'dist-draft' : 'dist', dir, 'index.html')}  (${(page.length / 1024).toFixed(1)} KB)`);

@@ -4,6 +4,7 @@ import { BrandLogo } from './BrandLogo.mjs';
 import { RatingScore } from './RatingScore.mjs';
 import { CtaButton } from './CtaButton.mjs';
 import { BrandReview } from './BrandReview.mjs';
+import { serviceLabels } from '../data/services.mjs';
 
 // Shared card for every ranked brand. FeaturedRankingCard wraps this with the
 // "Our Top Pick" treatment so both stay structurally identical.
@@ -32,6 +33,7 @@ export function RankingCard(props) {
     <div class="rc__body">
       <p class="rc__distinction">${brand.distinction}</p>
       <h3 class="rc__name" id="${uid}-name">${brand.name}</h3>
+      ${brand.services?.length ? html`<p class="rc__services"><span>Services:</span> ${serviceLabels(brand.services).join(' · ')}</p>` : ''}
       <ul class="rc__bullets">
         ${brand.bullets.map((b) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${b}</span></li>`)}
       </ul>

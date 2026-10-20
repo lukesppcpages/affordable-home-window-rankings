@@ -27,7 +27,7 @@ export function BrandReview({ brand, site, draft, uid = brand.id, placement = 'l
   </div>
   ${pending}
   <div class="review__footer">
-    ${CtaButton({ brand, position: placement === 'list' ? 'review_panel' : `${placement}_review_panel`, site, label: `${site.experiments.ctaLabel} from ${shortName(brand)}` })}
+    ${CtaButton({ brand, position: placement === 'list' ? 'review_panel' : `${placement}_review_panel`, site, label: brand.cta?.label || `${site.experiments.ctaLabel} from ${shortName(brand)}` })}
   </div>
 </div>`;
 }

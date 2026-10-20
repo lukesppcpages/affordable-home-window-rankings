@@ -18,6 +18,10 @@ export const site = {
     height: 175,
   },
 
+  // Full disclosure shown in the footer.
+  disclosure:
+    'Affordable Home may receive compensation when you click on links or request services through companies featured on our website. Compensation may influence which companies appear and how they are presented. Our rankings are editorial assessments and are not customer review averages.',
+
   // Short disclosure shown in the lightbox opened from the hero link.
   disclosureShort:
     'Affordable Home may receive compensation from featured companies, which may influence their placement and visibility on our website.',

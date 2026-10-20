@@ -33,6 +33,18 @@ export function DeepReview(ctx) {
       ${r.facts.map((f) => html`<div class="dr__fact"><dt>${f.label}</dt><dd>${f.value}</dd></div>`)}
     </dl>` : ''}
 
+    ${r.services ? html`
+    <div class="dr__services">
+      <h3 class="dr__h3">${r.services.title}</h3>
+      <div class="dr__services-grid">
+        ${r.services.items.map((s) => html`
+        <div class="dr__service">
+          <h4>${s.name}</h4>
+          <p>${s.body}</p>
+        </div>`)}
+      </div>
+    </div>` : ''}
+
     ${r.quality ? html`
     <div class="dr__quality">
       ${r.quality.title ? html`<h3 class="dr__h3">${r.quality.title}</h3>` : ''}
@@ -76,9 +88,18 @@ export function DeepReview(ctx) {
       </div>
     </div>
 
+    ${r.warranty ? html`
+    <div class="dr__warranty">
+      <h3 class="dr__h3">${r.warranty.title}</h3>
+      <div class="dr__warranty-grid">
+        ${r.warranty.items.map((w) => html`<div class="dr__warranty-item"><h4>${w.title}</h4><p>${w.body}</p></div>`)}
+      </div>
+      ${r.warranty.note ? html`<p class="dr__warranty-note">${icon('info', { size: 18 })}<span>${r.warranty.note}</span></p>` : ''}
+    </div>` : ''}
+
     <div class="dr__proscons">
       <div class="dr__pros">
-        <h3 class="dr__h3">Pros</h3>
+        <h3 class="dr__h3">${r.prosTitle || 'Pros'}</h3>
         <ul>${r.pros.map((p) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
       </div>
       <div class="dr__cons">
@@ -99,7 +120,8 @@ export function DeepReview(ctx) {
         ${CtaButton({ brand, position: 'deep_review_verdict', site, label: `${site.experiments.ctaLabel} from ${brand.shortName || brand.name}` })}
       </div>
     </div>` : ''}
-    ${brand.offerCallout && brand.offer ? html`<div class="dr__offer">${OfferCard({ brand, site, base, position: 'review_offer_callout' })}</div>` : ''}
+    ${r.finalCta ? html`<div class="dr__offer">${OfferCard({ brand, site, base, position: 'review_final_cta', kicker: r.finalCta.title, text: r.finalCta.body, label: r.finalCta.ctaLabel, variant: 'cta' })}</div>` : ''}
+    ${!r.finalCta && brand.offerCallout && brand.offer ? html`<div class="dr__offer">${OfferCard({ brand, site, base, position: 'review_offer_callout' })}</div>` : ''}
     ${pending}
   </div>
 </section>`;

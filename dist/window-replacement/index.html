@@ -175,6 +175,8 @@ width: 124px; height: 52px; flex: none;
 .logo-box--mark { width: 52px; }
 .rc__distinction { font-size: 13px; font-weight: 600; color: var(--navy); }
 .rc__name { margin-top: 2px; font-size: 19px; font-weight: 700; }
+.rc__services { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.rc__services span { font-weight: 600; color: var(--text); }
 .rc__bullets { display: grid; gap: 7px; margin-top: 10px; }
 .rc__bullets li { display: flex; gap: 9px; font-size: 15px; line-height: 1.45; color: #334155; }
 .rc__bullets .icon { margin-top: 1px; color: var(--green); }
@@ -255,6 +257,18 @@ a.rc__toggle--bar { text-decoration: none; }
 .dr__quality-head .icon { color: #fff; margin: 0; }
 .dr__quality + .dr__h3 { margin-top: 40px; margin-bottom: 16px; }
 .dr__highlights { display: grid; gap: 12px; }
+.dr__services { margin-top: 36px; }
+.dr__services-grid { display: grid; gap: 12px; margin-top: 16px; }
+.dr__service { padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.dr__service h4 { font-size: 17px; font-weight: 800; color: var(--navy-900); }
+.dr__service p { margin-top: 6px; font-size: 15px; line-height: 1.55; color: #475569; }
+.dr__warranty { margin-top: 44px; }
+.dr__warranty-grid { display: grid; gap: 12px; margin-top: 16px; }
+.dr__warranty-item { padding: 18px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+.dr__warranty-item h4 { font-size: 16.5px; font-weight: 700; color: var(--text); }
+.dr__warranty-item p { margin-top: 6px; font-size: 15px; line-height: 1.55; color: #475569; }
+.dr__warranty-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; font-size: 14.5px; line-height: 1.55; color: var(--navy-900); }
+.dr__warranty-note .icon { color: var(--navy); margin-top: 2px; }
 .dr__highlight { display: flex; gap: 14px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
 .dr__icon { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--navy); color: #fff; }
 .dr__highlight h4, .dr__steps h4 { font-size: 16.5px; font-weight: 700; color: var(--text); }
@@ -334,6 +348,8 @@ box-shadow: 0 10px 30px -14px rgba(15, 23, 42, 0.25);
 .offer__text { margin-top: 2px; font-size: 18px; font-weight: 800; line-height: 1.3; color: var(--navy-900); }
 .offer__card .btn--cta { grid-column: 1 / -1; }
 .dr__offer { margin-top: 44px; }
+.offer__card--cta .offer__kicker { font-size: 19px; font-weight: 800; color: var(--navy-900); }
+.offer__card--cta .offer__text { margin-top: 4px; font-size: 15px; font-weight: 400; line-height: 1.5; color: #475569; }
 .modal {
 width: min(440px, calc(100% - 32px)); padding: 0; border: 0; border-radius: var(--radius);
 box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.45); color: var(--text);
@@ -423,6 +439,7 @@ grid-template-areas:
 'brand body .';
 }
 .btn--cta { font-size: 16px; padding: 0 12px; gap: 6px; white-space: nowrap; }
+.rc__actions .btn--cta { white-space: normal; padding: 8px 12px; }
 .rc__toggle { font-size: 14.5px; }
 .review { padding: 22px 24px 24px; }
 .review__grid { grid-template-columns: 1.15fr 1fr; gap: 28px; }
@@ -434,6 +451,11 @@ grid-template-areas:
 .dr__fact:last-child { border-right: 0; }
 .dr__highlights { grid-template-columns: 1fr 1fr; gap: 14px; }
 .dr__quality-cols { grid-template-columns: 1fr 1fr; gap: 18px; }
+.dr__services-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+.dr__service { padding: 22px 24px; }
+.dr__warranty-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+.offer__card--cta .offer__kicker { font-size: 22px; }
+.offer__card--cta .offer__text { font-size: 16px; }
 .dr__quality-col { padding: 24px 26px; }
 .dr__app { grid-template-columns: 260px 1fr; gap: 32px; padding: 28px 36px; }
 .dr__app-media img { width: 100%; }
@@ -542,6 +564,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best Overall</p>
       <h3 class="rc__name" id="power-home-remodeling-name">Power Home Remodeling</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>One company handles consultation, measuring and installation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Also replaces roofing, siding, doors and attic insulation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>In-home consultation with a project quote</span></li>
       </ul>
@@ -578,6 +601,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best for Factory-Direct Windows</p>
       <h3 class="rc__name" id="champion-windows-name">Champion Windows</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Manufactures its own vinyl replacement windows</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Sells and installs factory-direct</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Also offers sunrooms, siding and entry doors</span></li>
       </ul>
@@ -634,6 +658,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best for Bundled Exterior Projects</p>
       <h3 class="rc__name" id="dabella-name">DaBella</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Replacement windows plus roofing, siding and gutters</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Free in-home estimates</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Also handles bathroom remodeling</span></li>
       </ul>
@@ -690,6 +715,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best for Composite Windows</p>
       <h3 class="rc__name" id="renewal-by-andersen-name">Renewal by Andersen</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Full-service replacement division of Andersen</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Fibrex composite frames, an alternative to vinyl</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Designs, builds and installs its own windows</span></li>
       </ul>
@@ -746,6 +772,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best for Brand Selection</p>
       <h3 class="rc__name" id="lowes-name">Lowe&#39;s</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Compare several window brands in one place</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Installation arranged through Lowe&#39;s</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Nationwide stores for in-person help</span></li>
       </ul>
@@ -808,6 +835,7 @@ html { scroll-behavior: auto; }
     <div class="rc__body">
       <p class="rc__distinction">Best Overall</p>
       <h3 class="rc__name" id="power-home-remodeling-repeat-name">Power Home Remodeling</h3>
+      
       <ul class="rc__bullets">
         <li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>One company handles consultation, measuring and installation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Also replaces roofing, siding, doors and attic insulation</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>In-home consultation with a project quote</span></li>
       </ul>
@@ -882,6 +910,8 @@ html { scroll-behavior: auto; }
     
 
     
+
+    
     <div class="dr__quality">
       
       
@@ -920,6 +950,8 @@ html { scroll-behavior: auto; }
       </div>
     </div>
 
+    
+
     <div class="dr__proscons">
       <div class="dr__pros">
         <h3 class="dr__h3">Pros</h3>
@@ -931,6 +963,7 @@ html { scroll-behavior: auto; }
       </div>
     </div>
 
+    
     
     <div class="dr__offer">
     <div class="offer__card">

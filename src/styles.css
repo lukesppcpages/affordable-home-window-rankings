@@ -183,6 +183,8 @@ button { font: inherit; color: inherit; }
 
 .rc__distinction { font-size: 13px; font-weight: 600; color: var(--navy); }
 .rc__name { margin-top: 2px; font-size: 19px; font-weight: 700; }
+.rc__services { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.rc__services span { font-weight: 600; color: var(--text); }
 .rc__bullets { display: grid; gap: 7px; margin-top: 10px; }
 .rc__bullets li { display: flex; gap: 9px; font-size: 15px; line-height: 1.45; color: #334155; }
 .rc__bullets .icon { margin-top: 1px; color: var(--green); }
@@ -274,6 +276,18 @@ a.rc__toggle--bar { text-decoration: none; }
 .dr__quality-head .icon { color: #fff; margin: 0; }
 .dr__quality + .dr__h3 { margin-top: 40px; margin-bottom: 16px; }
 .dr__highlights { display: grid; gap: 12px; }
+.dr__services { margin-top: 36px; }
+.dr__services-grid { display: grid; gap: 12px; margin-top: 16px; }
+.dr__service { padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.dr__service h4 { font-size: 17px; font-weight: 800; color: var(--navy-900); }
+.dr__service p { margin-top: 6px; font-size: 15px; line-height: 1.55; color: #475569; }
+.dr__warranty { margin-top: 44px; }
+.dr__warranty-grid { display: grid; gap: 12px; margin-top: 16px; }
+.dr__warranty-item { padding: 18px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+.dr__warranty-item h4 { font-size: 16.5px; font-weight: 700; color: var(--text); }
+.dr__warranty-item p { margin-top: 6px; font-size: 15px; line-height: 1.55; color: #475569; }
+.dr__warranty-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; font-size: 14.5px; line-height: 1.55; color: var(--navy-900); }
+.dr__warranty-note .icon { color: var(--navy); margin-top: 2px; }
 .dr__highlight { display: flex; gap: 14px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
 .dr__icon { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--navy); color: #fff; }
 .dr__highlight h4, .dr__steps h4 { font-size: 16.5px; font-weight: 700; color: var(--text); }
@@ -367,6 +381,8 @@ a.rc__toggle--bar { text-decoration: none; }
 .offer__text { margin-top: 2px; font-size: 18px; font-weight: 800; line-height: 1.3; color: var(--navy-900); }
 .offer__card .btn--cta { grid-column: 1 / -1; }
 .dr__offer { margin-top: 44px; }
+.offer__card--cta .offer__kicker { font-size: 19px; font-weight: 800; color: var(--navy-900); }
+.offer__card--cta .offer__text { margin-top: 4px; font-size: 15px; font-weight: 400; line-height: 1.5; color: #475569; }
 
 /* ---------- Disclosure lightbox ---------- */
 .modal {
@@ -474,6 +490,8 @@ a.rc__toggle--bar { text-decoration: none; }
       'brand body .';
   }
   .btn--cta { font-size: 16px; padding: 0 12px; gap: 6px; white-space: nowrap; }
+  /* Longer partner labels (e.g. "Explore Installation Services") wrap inside the side column */
+  .rc__actions .btn--cta { white-space: normal; padding: 8px 12px; }
   .rc__toggle { font-size: 14.5px; }
 
   .review { padding: 22px 24px 24px; }
@@ -487,6 +505,11 @@ a.rc__toggle--bar { text-decoration: none; }
   .dr__fact:last-child { border-right: 0; }
   .dr__highlights { grid-template-columns: 1fr 1fr; gap: 14px; }
   .dr__quality-cols { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .dr__services-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .dr__service { padding: 22px 24px; }
+  .dr__warranty-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .offer__card--cta .offer__kicker { font-size: 22px; }
+  .offer__card--cta .offer__text { font-size: 16px; }
   .dr__quality-col { padding: 24px 26px; }
   .dr__app { grid-template-columns: 260px 1fr; gap: 32px; padding: 28px 36px; }
   .dr__app-media img { width: 100%; }

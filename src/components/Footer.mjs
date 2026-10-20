@@ -28,7 +28,7 @@ export function Footer({ site, base, draft }) {
       </nav>` : ''}
     </div>
     <div class="site-footer__disclosure" id="disclosure" tabindex="-1">
-      <p><strong>Advertising Disclosure:</strong> Affordable Home may receive compensation when you click on links or request services through companies featured on our website. Compensation may influence which companies appear and how they are presented. Our rankings are editorial assessments and are not customer review averages.</p>
+      <p><strong>Advertising Disclosure:</strong> ${site.disclosure}</p>
     </div>
     <p class="site-footer__copy">&copy; ${year} ${site.brandName}. All rights reserved.</p>
   </div>

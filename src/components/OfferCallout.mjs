@@ -6,15 +6,15 @@ import { CtaButton } from './CtaButton.mjs';
 // the in-depth review (OfferCard) and again above the footer (OfferCallout).
 export const offerBrand = (category) => category.brands.find((b) => b.offerCallout && b.offer);
 
-export function OfferCard({ brand, site, base, position }) {
+export function OfferCard({ brand, site, base, position, kicker = brand.offerCallout?.kicker, text = brand.offer, label, variant = '' }) {
   return html`
-    <div class="offer__card">
+    <div class="offer__card${variant ? ` offer__card--${variant}` : ''}">
       <div class="offer__logo">${BrandLogo({ brand, base })}</div>
       <div class="offer__copy">
-        <p class="offer__kicker">${brand.offerCallout.kicker}</p>
-        <p class="offer__text">${brand.offer}</p>
+        <p class="offer__kicker">${kicker}</p>
+        <p class="offer__text">${text}</p>
       </div>
-      ${CtaButton({ brand, position, site })}
+      ${CtaButton({ brand, position, site, label })}
     </div>`;
 }
 

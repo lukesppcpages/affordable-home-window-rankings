@@ -68,3 +68,26 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 - The featured photo is served only at ≥1024px (`<picture>` source), so phones never download it.
 - No Review/AggregateRating structured data — scores are editorial. Only `ItemList` and `FAQPage` are emitted.
 - Affordable Home logo is the existing `logo.svg` from the window-replacement project; the favicon is a crop of its house mark.
+
+---
+
+## Home Remodeling page (`/home-remodeling/`)
+
+Second category built from the same components: `src/data/categories/home-remodeling.mjs`. Page-specific settings (CTA label "Get Free Quote", disclosure copy) are in its `siteOverrides`; service labels come from `src/data/services.mjs`. The window page's markup is unchanged by this addition.
+
+### Sources (checked October 2026)
+- powerhrg.com/services (+ FAQ) — services; partners ProVia (doors), GAF & CertainTeed (roofing), Pella & ProVia (windows); 28 territories / 25 states
+- powerhrg.com/services/windows · /roofing · /siding · /doors — product specifications quoted in the review
+- powerhrg.com/support/warranties — limited lifetime labor warranty; manufacturer warranties; 30-day transfer
+- powerhrg.com/support/our-process — consultation, estimate valid up to one year, Project Pulse
+- powerhrg.com/careers/partner-with-power — Power "partnered with independent installers" since 1992
+- dabella.us, /siding, /windows, /warranty — GAF Master Elite, James Hardie Elite Preferred, Alside, TandoStone, Fairfield & Glasswing; warranties (2-yr roofing / 1-yr siding & windows workmanship + manufacturer)
+- Lowe's installation pages (lowes.com blocks automated fetches; confirmed via search summaries) — independent licensed, insured, background-checked installers; 1-year labor warranty for most categories
+
+### Open items
+- [ ] Power CTA: confirm `powerhrgdeals.com` is approved for a multi-service page
+- [ ] DaBella CTA: placeholder `dabella.us` — `dabelladeals.us` redirects to a windows-only page
+- [ ] Lowe's CTA: confirm `lowes.com/l/install/exterior` or supply an affiliate link
+- [ ] No promotional offer shown — add only if Power approves one for this page
+- [ ] Document the editorial rationale for the 10.0 / 9.7 / 9.5 scores
+- [ ] Re-verify Lowe's details directly on lowes.com before launch

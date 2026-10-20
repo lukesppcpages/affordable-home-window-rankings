@@ -5,7 +5,8 @@ import { html, raw } from '../lib/html.mjs';
 export function CtaButton({ brand, position, site, label, className = '' }) {
   const url = brand.cta?.url;
   const common = `data-outbound data-brand="${brand.id}" data-rank="${brand.rank}" data-position="${position}"`;
-  const text = label || site.experiments.ctaLabel;
+  // Priority: explicit label > brand-specific label > page-wide label.
+  const text = label || brand.cta?.label || site.experiments.ctaLabel;
   const srText = label ? '' : html`<span class="visually-hidden"> from ${brand.name}</span>`;
 
   if (!url) {
