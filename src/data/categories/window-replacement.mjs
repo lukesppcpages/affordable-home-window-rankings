@@ -244,45 +244,8 @@ export default {
       pending: ['Warranty terms', 'Financing options'],
     },
     {
-      id: 'windows-usa',
-      rank: 5,
-      name: 'Windows USA',
-      score: 9.5,
-      distinction: 'Best Regional Specialist',
-      logo: { src: 'images/brands/windows-usa.webp', width: 300, height: 96 },
-      cta: { url: 'https://windowsusdeals.com/', verified: false },
-      bullets: [
-        'Window replacement specialist',
-        'In-home consultation and professional installation',
-        'Regional company serving the Southern U.S.',
-      ],
-      summary:
-        'A window-focused replacement company serving homeowners across parts of the South.',
-      review: {
-        overview:
-          'Windows USA focuses on replacement windows for homeowners in the Southern U.S. It provides in-home consultations and handles installation.',
-        strengths: [
-          'Specializes in window replacement',
-          'Consultation and installation from one company',
-          'Regional focus on Southern homes and climates',
-        ],
-        considerations: [
-          'Not available nationwide — check whether your area is covered',
-          'Ask which window styles and glass options are available',
-        ],
-        bestFor: 'Homeowners in its Southern service area looking for a window-focused specialist.',
-      },
-      pending: [
-        'Confirm states served',
-        'Confirm whether windows are manufactured in-house',
-        'Window product lines and energy-efficiency options',
-        'Warranty terms',
-        'Financing options',
-      ],
-    },
-    {
       id: 'lowes',
-      rank: 6,
+      rank: 5,
       name: "Lowe's",
       score: 9.4,
       distinction: 'Best for Brand Selection',

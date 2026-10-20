@@ -51,14 +51,13 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 - [ ] `site.siteUrl` — needed for canonical URL, `og:url`, `og:image`
 - [ ] Footer links: About, Contact, Privacy Policy, Terms of Use (hidden until set; a privacy policy is required for Google Ads)
 - [ ] `site.analytics.gtmId`, then connect and test the affiliate tracking adapter
-- [ ] Confirm all six CTA URLs (currently placeholders from the brief, `verified: false`) and add partner tracking parameters
+- [ ] Confirm all five CTA URLs (currently placeholders from the brief, `verified: false`) and add partner tracking parameters
 
 **Content to verify** (listed per brand under `pending` in the data file; visible in the draft build)
 - **Power in-page review** (`deepReview` in the data file) uses claims carried over from the ServiceReview partner section — confirm with Power before scaling spend: limited lifetime warranty (wording + coverage), installers are Power employees not subcontractors, energy-efficient glass packages, Project Pulse app features
 - Warranty terms and financing for the other brands — deliberately not stated
 - Power Home: product lines/styles offered, current service area
 - Champion, DaBella: service area; DaBella window brands offered
-- Windows USA: states served, whether windows are made in-house, product lines
 - Also confirm the facts currently stated: Power founded 1992; Champion making windows since 1953; Andersen dating to 1903 and Fibrex composite; Lowe's using independent installers
 
 **Methodology**
