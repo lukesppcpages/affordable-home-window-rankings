@@ -186,6 +186,7 @@ button { font: inherit; color: inherit; }
 .rc__bullets li { display: flex; gap: 9px; font-size: 15px; line-height: 1.45; color: #334155; }
 .rc__bullets .icon { margin-top: 1px; color: var(--green); }
 .rc__summary { display: none; }
+.rc__offer { margin-top: 12px; font-size: 16px; font-weight: 800; color: var(--navy-900); }
 
 /* Score */
 .score { display: flex; flex-direction: column; align-items: flex-end; text-align: right; line-height: 1.1; }

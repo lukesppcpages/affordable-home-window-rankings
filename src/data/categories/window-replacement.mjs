@@ -55,8 +55,8 @@ export default {
         'Also replaces roofing, siding, doors and attic insulation',
         'In-home consultation with a project quote',
       ],
-      summary:
-        'A large full-service exterior remodeler that manages window projects from the first visit through installation.',
+      // Shown bold under the bullets on every screen size (replaces the summary).
+      offer: '$0 Down + No Payments For 2 Years',
       // In-page review (replaces the dropdown for this brand). "Read Full Review"
       // on both Power cards jumps here.
       deepReview: {
@@ -142,7 +142,7 @@ export default {
         'Confirm: heat-reflective glass, leak-resistant construction, and range of styles/colors/finishes',
         'Confirm: Project Pulse app features listed',
         'Window product lines and styles offered',
-        'Financing options and terms',
+        'Confirm the "$0 Down + No Payments For 2 Years" offer with Power, plus required fine print (e.g. subject to credit approval)',
         'Current service area / states served',
       ],
     },

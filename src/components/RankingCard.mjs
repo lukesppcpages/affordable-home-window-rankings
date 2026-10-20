@@ -35,6 +35,7 @@ export function RankingCard(props) {
       <ul class="rc__bullets">
         ${brand.bullets.map((b) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${b}</span></li>`)}
       </ul>
+      ${brand.offer ? html`<p class="rc__offer">${brand.offer}</p>` : ''}
       ${brand.summary ? html`<p class="rc__summary">${brand.summary}</p>` : ''}
     </div>
     <div class="rc__score">
