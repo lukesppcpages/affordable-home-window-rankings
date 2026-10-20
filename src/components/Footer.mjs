@@ -9,11 +9,12 @@ const LINKS = [
 
 export function Footer({ site, base, draft }) {
   const year = new Date().getFullYear();
+  // Only configured links render (unconfigured ones show in the draft build).
   const links = LINKS.map(([key, label]) => {
     const href = site.links[key];
     if (href) return html`<li><a href="${href}">${label}</a></li>`;
     return draft ? html`<li><span class="is-unconfigured-link" title="URL not configured">${label}</span></li>` : '';
-  });
+  }).filter(Boolean);
 
   return html`
 <footer class="site-footer">
@@ -21,14 +22,10 @@ export function Footer({ site, base, draft }) {
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <img src="${base}${site.logo.srcOnDark}" alt="${site.brandName}" width="${site.logo.width}" height="${site.logo.height}" loading="lazy">
-        <p>${site.description}</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="site-footer__links">
-          ${links}
-          <li><a href="#disclosure">Advertising Disclosure</a></li>
-        </ul>
-      </nav>
+      ${links.length ? html`<nav aria-label="Footer">
+        <ul class="site-footer__links">${links}</ul>
+      </nav>` : ''}
     </div>
     <div class="site-footer__disclosure" id="disclosure" tabindex="-1">
       <h2>Advertising Disclosure</h2>
