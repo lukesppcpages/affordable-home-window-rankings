@@ -246,7 +246,7 @@ a.rc__toggle--bar { text-decoration: none; }
 /* ---------- In-page featured review ---------- */
 .dr { padding: 48px 0 56px; background: var(--white); border-top: 1px solid var(--border); scroll-margin-top: 0; }
 .dr__intro { display: grid; gap: 22px; }
-.dr__intro-media img, .dr__process-media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
+.dr__intro-media img, .dr__process-media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .dr__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--orange-cta); }
 .dr__title { margin-top: 8px; font-size: clamp(25px, 5.6vw, 34px); font-weight: 800; letter-spacing: -0.02em; color: var(--navy-900); }
 .dr__lead { margin-top: 12px; font-size: 16.5px; line-height: 1.65; color: #334155; }
@@ -511,7 +511,7 @@ a.rc__toggle--bar { text-decoration: none; }
   .hero { padding: 40px 0 36px; }
   .hero--has-image .hero__inner { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 56px; align-items: center; }
   .hero__media { display: block; }
-  .hero__media img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+  .hero__media img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; box-shadow: var(--shadow); }
   .rc__main { grid-template-columns: 172px minmax(0, 1fr) 210px; gap: 6px 32px; padding: 26px 28px 24px 26px; }
   .rc__brand { padding-right: 28px; }
   .logo-box { width: 150px; height: 64px; }
