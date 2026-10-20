@@ -39,7 +39,7 @@ export function DeepReview(ctx) {
       <div class="dr__quality-cols">
         ${r.quality.columns.map((c) => html`
         <div class="dr__quality-col">
-          <div class="dr__quality-head"><span class="dr__icon">${icon(c.icon, { size: 22 })}</span><h4>${c.title}</h4></div>
+          <div class="dr__quality-head">${c.icon ? html`<span class="dr__icon">${icon(c.icon, { size: 22 })}</span>` : ''}<h4>${c.title}</h4></div>
           <ul>${c.points.map((p) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
         </div>`)}
       </div>

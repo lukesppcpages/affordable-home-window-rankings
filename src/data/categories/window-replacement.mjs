@@ -63,7 +63,7 @@ export default {
         anchor: 'power-home-review',
         title: 'Why Power Earned Our Top Spot',
         intro: [
-          "Power Home Remodeling takes our top spot by delivering on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.",
+          "Power Home Remodeling delivers on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.",
           "But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.",
         ],
         heroImage: {
@@ -76,7 +76,6 @@ export default {
         quality: {
           columns: [
             {
-              icon: 'app-window',
               title: 'The Windows',
               points: [
                 'Custom-built to the exact measurements of each opening',
@@ -86,7 +85,6 @@ export default {
               ],
             },
             {
-              icon: 'wrench',
               title: 'The Installation & Service',
               points: [
                 'Specialists who show you real options in your home, not just a brochure',

@@ -3,7 +3,7 @@ import { html } from '../lib/html.mjs';
 export function EducationSection({ category }) {
   const { education } = category;
   return html`
-<section class="section education" aria-labelledby="education-title">
+<section class="section education" id="what-to-look-for" aria-labelledby="education-title">
   <div class="container">
     <div class="section__head">
       <h2 id="education-title" class="section__title">${education.heading}</h2>

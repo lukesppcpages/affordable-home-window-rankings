@@ -431,7 +431,15 @@ a.rc__toggle--bar { text-decoration: none; }
   .score { align-items: center; text-align: center; }
   .score__value { font-size: 36px; }
   .rc__actions { align-self: start; margin-top: 10px; }
-      .rc__actions { align-self: start; margin-top: 10px; }
+  /* #1 card: score + CTA centered vertically as a group */
+  .rc--featured .rc__main {
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+      'brand body .'
+      'brand body score'
+      'brand body actions'
+      'brand body .';
+  }
   .btn--cta { font-size: 16px; padding: 0 12px; gap: 6px; white-space: nowrap; }
   .rc__toggle { font-size: 14.5px; }
 

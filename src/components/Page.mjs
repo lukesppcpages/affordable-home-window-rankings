@@ -89,8 +89,8 @@ ${Header(ctx)}
 <main id="main">
 ${HeroSection(ctx)}
 ${RankingsList(ctx)}
-${DeepReview(ctx)}
 ${EducationSection(ctx)}
+${DeepReview(ctx)}
 ${MethodologySection(ctx)}
 ${FAQSection(ctx)}
 </main>

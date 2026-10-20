@@ -8,6 +8,7 @@ export function Header({ site, base, category }) {
   const review = category.brands.find((b) => b.deepReview);
   const links = [
     ['#rankings', `${category.name} Rankings`],
+    ['#what-to-look-for', 'What to Look For'],
     review && [`#${review.deepReview.anchor}`, '#1 Company Review'],
     ['#methodology', 'How We Rank'],
     ['#faq', 'FAQs'],

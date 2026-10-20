@@ -386,7 +386,14 @@ padding-right: 20px; border-right: 1px solid var(--border); align-self: stretch;
 .score { align-items: center; text-align: center; }
 .score__value { font-size: 36px; }
 .rc__actions { align-self: start; margin-top: 10px; }
-.rc__actions { align-self: start; margin-top: 10px; }
+.rc--featured .rc__main {
+grid-template-rows: 1fr auto auto 1fr;
+grid-template-areas:
+'brand body .'
+'brand body score'
+'brand body actions'
+'brand body .';
+}
 .btn--cta { font-size: 16px; padding: 0 12px; gap: 6px; white-space: nowrap; }
 .rc__toggle { font-size: 14.5px; }
 .review { padding: 22px 24px 24px; }
@@ -453,7 +460,7 @@ html { scroll-behavior: auto; }
         <svg class="icon site-menu__open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></svg><svg class="icon site-menu__close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </summary>
       <nav class="site-menu__panel" aria-label="Page sections">
-        <ul><li><a href="#rankings">Window Replacement Rankings</a></li><li><a href="#power-home-review">#1 Company Review</a></li><li><a href="#methodology">How We Rank</a></li><li><a href="#faq">FAQs</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
+        <ul><li><a href="#rankings">Window Replacement Rankings</a></li><li><a href="#what-to-look-for">What to Look For</a></li><li><a href="#power-home-review">#1 Company Review</a></li><li><a href="#methodology">How We Rank</a></li><li><a href="#faq">FAQs</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
       </nav>
     </details>
   </div>
@@ -841,6 +848,38 @@ html { scroll-behavior: auto; }
   </div>
 </section>
 
+<section class="section education" id="what-to-look-for" aria-labelledby="education-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="education-title" class="section__title">What to Look for in a Window Replacement Company</h2>
+      <p class="section__intro">Choosing the right window company goes beyond comparing prices. Here are a few important factors to consider before making your decision.</p>
+    </div>
+    <div class="education__grid">
+      
+      <div class="education__item">
+        <span class="education__num" aria-hidden="true">01</span>
+        <h3 class="education__title">Window Quality &amp; Efficiency</h3>
+        <p>Look for materials, glass options, and energy-efficiency features that fit your home and climate.</p>
+      </div>
+      <div class="education__item">
+        <span class="education__num" aria-hidden="true">02</span>
+        <h3 class="education__title">Installation Experience</h3>
+        <p>Understand who performs the installation and what the process includes.</p>
+      </div>
+      <div class="education__item">
+        <span class="education__num" aria-hidden="true">03</span>
+        <h3 class="education__title">Warranty Coverage</h3>
+        <p>Compare product and labor warranties, including exclusions and limitations.</p>
+      </div>
+      <div class="education__item">
+        <span class="education__num" aria-hidden="true">04</span>
+        <h3 class="education__title">Pricing &amp; Financing</h3>
+        <p>Request a detailed estimate and understand the total project cost before committing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="dr" id="power-home-review" aria-labelledby="power-home-review-title" data-brand="power-home-remodeling" data-rank="1" data-placement="deep_review">
   <div class="container">
     <div class="dr__intro">
@@ -848,7 +887,7 @@ html { scroll-behavior: auto; }
       <div class="dr__intro-copy">
         
         <h2 class="dr__title" id="power-home-review-title">Why Power Earned Our Top Spot</h2>
-        <p class="dr__lead">Power Home Remodeling takes our top spot by delivering on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.</p><p class="dr__lead">But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.</p>
+        <p class="dr__lead">Power Home Remodeling delivers on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.</p><p class="dr__lead">But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.</p>
       </div>
     </div>
 
@@ -861,11 +900,11 @@ html { scroll-behavior: auto; }
       <div class="dr__quality-cols">
         
         <div class="dr__quality-col">
-          <div class="dr__quality-head"><span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg></span><h4>The Windows</h4></div>
+          <div class="dr__quality-head"><h4>The Windows</h4></div>
           <ul><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Custom-built to the exact measurements of each opening</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Energy-efficient, heat-reflective glass for year-round comfort</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Leak-resistant construction that keeps drafts and moisture out</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>A wide range of styles, colors and finishes to match your home</span></li></ul>
         </div>
         <div class="dr__quality-col">
-          <div class="dr__quality-head"><span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><h4>The Installation &amp; Service</h4></div>
+          <div class="dr__quality-head"><h4>The Installation &amp; Service</h4></div>
           <ul><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Specialists who show you real options in your home, not just a brochure</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Trained Power crews on install day — never subcontractors</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Careful removal, a precise fit and proper sealing on every opening</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Full cleanup and a final walkthrough before the crew leaves</span></li></ul>
         </div>
       </div>
@@ -906,38 +945,6 @@ html { scroll-behavior: auto; }
 
     
     
-  </div>
-</section>
-
-<section class="section education" aria-labelledby="education-title">
-  <div class="container">
-    <div class="section__head">
-      <h2 id="education-title" class="section__title">What to Look for in a Window Replacement Company</h2>
-      <p class="section__intro">Choosing the right window company goes beyond comparing prices. Here are a few important factors to consider before making your decision.</p>
-    </div>
-    <div class="education__grid">
-      
-      <div class="education__item">
-        <span class="education__num" aria-hidden="true">01</span>
-        <h3 class="education__title">Window Quality &amp; Efficiency</h3>
-        <p>Look for materials, glass options, and energy-efficiency features that fit your home and climate.</p>
-      </div>
-      <div class="education__item">
-        <span class="education__num" aria-hidden="true">02</span>
-        <h3 class="education__title">Installation Experience</h3>
-        <p>Understand who performs the installation and what the process includes.</p>
-      </div>
-      <div class="education__item">
-        <span class="education__num" aria-hidden="true">03</span>
-        <h3 class="education__title">Warranty Coverage</h3>
-        <p>Compare product and labor warranties, including exclusions and limitations.</p>
-      </div>
-      <div class="education__item">
-        <span class="education__num" aria-hidden="true">04</span>
-        <h3 class="education__title">Pricing &amp; Financing</h3>
-        <p>Request a detailed estimate and understand the total project cost before committing.</p>
-      </div>
-    </div>
   </div>
 </section>
 
