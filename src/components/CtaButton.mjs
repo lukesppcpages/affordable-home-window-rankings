@@ -1,5 +1,4 @@
 import { html, raw } from '../lib/html.mjs';
-import { icon } from '../lib/icons.mjs';
 
 // The single primary button style. Every partner click goes through here so
 // tracking attributes and link behaviour stay consistent.
@@ -14,5 +13,5 @@ export function CtaButton({ brand, position, site, label, className = '' }) {
     return html`<a class="btn btn--cta is-unconfigured ${className}" href="#" role="button" aria-disabled="true" ${raw(common)} data-unconfigured title="Destination URL not configured">${text}${srText}</a>`;
   }
   const target = site.outbound.openInNewTab ? ' target="_blank"' : '';
-  return html`<a class="btn btn--cta ${className}" href="${url}"${raw(target)} rel="sponsored noopener" ${raw(common)}>${text}${srText}${icon('arrow-right', { size: 18, className: 'btn__icon' })}</a>`;
+  return html`<a class="btn btn--cta ${className}" href="${url}"${raw(target)} rel="sponsored noopener" ${raw(common)}>${text}${srText}</a>`;
 }

@@ -61,10 +61,10 @@ export default {
       // on both Power cards jumps here.
       deepReview: {
         anchor: 'power-home-review',
-        title: 'Why Power Home Earned Our Top Spot',
+        title: 'Why Power Earned Our Top Spot',
         intro: [
-          "Power earned our top spot the straightforward way: great windows, installed right. Each window is custom-built for its opening and engineered for energy efficiency, with heat-reflective glass and tight, leak-resistant seals that keep drafts out and comfort in.",
-          "Then there's the installation — where a lot of good windows go wrong. Power's own trained crews handle it, not subcontractors, so the craftsmanship matches the product. Add a limited lifetime warranty and one team accountable from the first visit to the final walkthrough, and it's easy to see why Power has grown into one of the country's largest exterior remodelers since 1992.",
+          "Power Home Remodeling takes our top spot by delivering on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.",
+          "But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.",
         ],
         heroImage: {
           src: 'images/power-home/power-truck-1024.webp',
@@ -105,29 +105,6 @@ export default {
             },
           ],
         },
-        highlightsTitle: 'What Sets Power Home Remodeling Apart',
-        highlights: [
-          {
-            icon: 'users',
-            title: 'Installed by its own trained crews',
-            body: "Power employs and trains its own installers instead of handing jobs to subcontractors, so the quality you're promised in the consultation is the quality that shows up at your door.",
-          },
-          {
-            icon: 'shield-check',
-            title: 'Backed by a limited lifetime warranty',
-            body: "Coverage is built to last as long as you own the home — the kind of long-term protection that's hard to find when the seller and the installer are different companies.",
-          },
-          {
-            icon: 'messages-square',
-            title: 'Service that shows up as promised',
-            body: "From the first appointment to the final walkthrough, Power runs the project on a clear schedule — and keeps you informed at every step instead of leaving you to chase updates.",
-          },
-          {
-            icon: 'house',
-            title: 'One team for your whole exterior',
-            body: 'Planning more than windows? The same company can handle roofing, siding, doors and insulation, with the same standard of workmanship on every project.',
-          },
-        ],
         process: {
           title: 'What a Power Project Looks Like',
           image: {

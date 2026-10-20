@@ -204,8 +204,6 @@ button { font: inherit; color: inherit; }
 .btn--cta:hover { background: var(--orange-cta-hover); color: #fff; }
 .btn--cta:active { transform: translateY(1px); }
 .btn--cta:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
-.btn__icon { transition: transform 0.15s ease; }
-.btn--cta:hover .btn__icon { transform: translateX(2px); }
 .rc--featured .btn--cta { min-height: 54px; box-shadow: 0 6px 16px -6px rgba(236, 90, 34, 0.55); }
 
 .rc__toggle {

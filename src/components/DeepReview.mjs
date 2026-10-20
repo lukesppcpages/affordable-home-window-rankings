@@ -49,6 +49,7 @@ export function DeepReview(ctx) {
       </div>
     </div>` : ''}
 
+    ${r.highlights ? html`
     <h3 class="dr__h3">${r.highlightsTitle}</h3>
     <div class="dr__highlights">
       ${r.highlights.map((h) => html`
@@ -56,7 +57,7 @@ export function DeepReview(ctx) {
         <span class="dr__icon">${icon(h.icon, { size: 22 })}</span>
         <div><h4>${h.title}</h4><p>${h.body}</p></div>
       </div>`)}
-    </div>
+    </div>` : ''}
 
     <div class="dr__process">
       <div class="dr__process-media">${img(r.process.image, '(min-width: 1024px) 520px, 100vw')}</div>
