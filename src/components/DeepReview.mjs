@@ -1,7 +1,7 @@
 import { html } from '../lib/html.mjs';
 import { icon } from '../lib/icons.mjs';
 import { BrandLogo } from './BrandLogo.mjs';
-import { RatingScore, scoreWord } from './RatingScore.mjs';
+import { RatingScore } from './RatingScore.mjs';
 import { CtaButton } from './CtaButton.mjs';
 
 // Full in-page review for the featured brand (the brand with `deepReview`
@@ -25,10 +25,6 @@ export function DeepReview(ctx) {
         ${r.eyebrow ? html`<p class="dr__eyebrow">${r.eyebrow}</p>` : ''}
         <h2 class="dr__title" id="${r.anchor}-title">${r.title}</h2>
         ${r.intro.map((p) => html`<p class="dr__lead">${p}</p>`)}
-        <div class="dr__intro-cta">
-          <div class="dr__score"><span class="dr__score-value">${brand.score.toFixed(1)}</span><span class="dr__score-word">${scoreWord(brand.score)}<span class="visually-hidden"> ${category.scoreLabel}</span></span></div>
-          ${CtaButton({ brand, position: 'deep_review_intro', site })}
-        </div>
       </div>
     </div>
 
@@ -38,7 +34,7 @@ export function DeepReview(ctx) {
 
     ${r.quality ? html`
     <div class="dr__quality">
-      <h3 class="dr__h3">${r.quality.title}</h3>
+      ${r.quality.title ? html`<h3 class="dr__h3">${r.quality.title}</h3>` : ''}
       ${r.quality.intro ? html`<p class="dr__quality-intro">${r.quality.intro}</p>` : ''}
       <div class="dr__quality-cols">
         ${r.quality.columns.map((c) => html`

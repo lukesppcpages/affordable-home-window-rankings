@@ -231,11 +231,6 @@ a.rc__toggle--bar { text-decoration: none; }
 .dr__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--orange-cta); }
 .dr__title { margin-top: 8px; font-size: clamp(25px, 5.6vw, 34px); font-weight: 800; letter-spacing: -0.02em; color: var(--navy-900); }
 .dr__lead { margin-top: 12px; font-size: 16.5px; line-height: 1.65; color: #334155; }
-.dr__intro-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 20px; }
-.dr__intro-cta .btn--cta { width: auto; flex: 1 1 200px; }
-.dr__score { display: flex; align-items: baseline; gap: 8px; }
-.dr__score-value { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy-900); }
-.dr__score-word { font-size: 14px; font-weight: 600; color: var(--muted); }
 .dr__facts { display: grid; grid-template-columns: 1fr 1fr; margin: 32px 0 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .dr__fact { padding: 14px 16px; border-top: 1px solid var(--border); }
 .dr__fact:nth-child(-n + 2) { border-top: 0; }
@@ -245,7 +240,8 @@ a.rc__toggle--bar { text-decoration: none; }
 .dr__h3 { font-size: clamp(20px, 4.6vw, 24px); font-weight: 800; color: var(--navy-900); letter-spacing: -0.015em; }
 .dr__highlights + *, .dr__facts + .dr__h3 { margin-top: 40px; }
 .dr__facts + .dr__h3 { margin-bottom: 16px; }
-.dr__quality { margin-top: 40px; }
+.dr__quality { margin-top: 32px; }
+.dr__quality-cols:first-child { margin-top: 0; }
 .dr__quality-intro { margin-top: 8px; font-size: 16px; color: #475569; max-width: 68ch; }
 .dr__quality-cols { display: grid; gap: 14px; margin-top: 18px; }
 .dr__quality-col { padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
@@ -457,7 +453,7 @@ html { scroll-behavior: auto; }
         <svg class="icon site-menu__open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></svg><svg class="icon site-menu__close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </summary>
       <nav class="site-menu__panel" aria-label="Page sections">
-        <ul><li><a href="#methodology">How We Rank</a></li><li><a href="#faq">FAQs</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
+        <ul><li><a href="#rankings">Window Replacement Rankings</a></li><li><a href="#power-home-review">#1 Company Review</a></li><li><a href="#methodology">How We Rank</a></li><li><a href="#faq">FAQs</a></li><li><a href="#disclosure">Advertising Disclosure</a></li></ul>
       </nav>
     </details>
   </div>
@@ -853,10 +849,6 @@ html { scroll-behavior: auto; }
         
         <h2 class="dr__title" id="power-home-review-title">Why Power Earned Our Top Spot</h2>
         <p class="dr__lead">Power Home Remodeling takes our top spot by delivering on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.</p><p class="dr__lead">But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.</p>
-        <div class="dr__intro-cta">
-          <div class="dr__score"><span class="dr__score-value">10.0</span><span class="dr__score-word">Exceptional<span class="visually-hidden"> Affordable Home Score</span></span></div>
-          <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="deep_review_intro">Get Quote<span class="visually-hidden"> from Power Home Remodeling</span></a>
-        </div>
       </div>
     </div>
 
@@ -866,8 +858,8 @@ html { scroll-behavior: auto; }
 
     
     <div class="dr__quality">
-      <h3 class="dr__h3">Quality You Can See and Feel</h3>
-      <p class="dr__quality-intro">A window is only as good as the product and the people who install it. Power delivers on both.</p>
+      
+      
       <div class="dr__quality-cols">
         
         <div class="dr__quality-col">

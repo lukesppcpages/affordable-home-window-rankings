@@ -80,8 +80,6 @@ export default {
           { label: 'Warranty', value: 'Limited lifetime' },
         ],
         quality: {
-          title: 'Quality You Can See and Feel',
-          intro: "A window is only as good as the product and the people who install it. Power delivers on both.",
           columns: [
             {
               icon: 'app-window',
