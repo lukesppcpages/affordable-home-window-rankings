@@ -28,9 +28,9 @@ export function DeepReview(ctx) {
       </div>
     </div>
 
-    <dl class="dr__facts">
+    ${r.facts ? html`<dl class="dr__facts">
       ${r.facts.map((f) => html`<div class="dr__fact"><dt>${f.label}</dt><dd>${f.value}</dd></div>`)}
-    </dl>
+    </dl>` : ''}
 
     ${r.quality ? html`
     <div class="dr__quality">
@@ -86,7 +86,7 @@ export function DeepReview(ctx) {
       </div>
     </div>
 
-    <div class="dr__verdict">
+    ${r.verdict ? html`<div class="dr__verdict">
       <div class="dr__verdict-copy">
         <h3 class="dr__h3">${r.verdict.title}</h3>
         <p>${r.verdict.body}</p>
@@ -97,7 +97,7 @@ export function DeepReview(ctx) {
         ${RatingScore({ score: brand.score, label: category.scoreLabel })}
         ${CtaButton({ brand, position: 'deep_review_verdict', site, label: `${site.experiments.ctaLabel} from ${brand.shortName || brand.name}` })}
       </div>
-    </div>
+    </div>` : ''}
     ${pending}
   </div>
 </section>`;

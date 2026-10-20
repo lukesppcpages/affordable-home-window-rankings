@@ -31,7 +31,7 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 | Event | Fires | Fields |
 | --- | --- | --- |
 | `ah_ranking_impression` | once per card, when 50% visible | `brand`, `brand_rank`, `placement` |
-| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `placement`, `cta_position` (`featured_card` / `ranking_card` / `review_panel` / `repeat_card` / `deep_review_verdict`) |
+| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `placement`, `cta_position` (`featured_card` / `ranking_card` / `review_panel` / `repeat_card`) |
 | `ah_review_expand` | first open per card | `brand`, `brand_rank`, `placement` |
 | `ah_review_jump` | "Read Full Review" click to the in-page Power review | `brand`, `brand_rank`, `placement` |
 | `ah_deep_review_view` | once, when the in-page review scrolls into view | `brand`, `brand_rank` |

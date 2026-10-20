@@ -73,12 +73,6 @@ export default {
           height: 683,
           alt: 'Power Home Remodeling logo on the hood of a company service vehicle',
         },
-        facts: [
-          { label: 'In business since', value: '1992' },
-          { label: 'Windows', value: 'Custom, energy-efficient' },
-          { label: 'Installation', value: 'In-house Power crews' },
-          { label: 'Warranty', value: 'Limited lifetime' },
-        ],
         quality: {
           columns: [
             {
@@ -143,11 +137,6 @@ export default {
         cons: [
           'Pricing comes from an in-home visit rather than an instant online estimate. This helps Power provide accurate pricing and avoid surprises later on.',
         ],
-        verdict: {
-          title: 'The Bottom Line',
-          body: "If you want high-quality, energy-efficient windows installed by crews who take pride in the work — without managing contractors or chasing updates — Power is the easiest recommendation on this list. It's the company we'd call first.",
-          bestFor: 'Homeowners who want premium, energy-efficient windows, expert installation and one company accountable from start to finish.',
-        },
       },
       pending: [
         'Confirm with Power (carried over from ServiceReview copy): limited lifetime warranty wording and what it covers',
