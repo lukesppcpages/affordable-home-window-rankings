@@ -334,6 +334,19 @@ box-shadow: 0 10px 30px -14px rgba(15, 23, 42, 0.25);
 .offer__text { margin-top: 2px; font-size: 18px; font-weight: 800; line-height: 1.3; color: var(--navy-900); }
 .offer__card .btn--cta { grid-column: 1 / -1; }
 .dr__offer { margin-top: 44px; }
+.modal {
+width: min(440px, calc(100% - 32px)); padding: 0; border: 0; border-radius: var(--radius);
+box-shadow: 0 24px 60px -20px rgba(15, 23, 42, 0.45); color: var(--text);
+}
+.modal::backdrop { background: rgba(15, 23, 42, 0.55); }
+.modal__body { position: relative; padding: 28px 24px 24px; }
+.modal__title { font-size: 18px; font-weight: 800; color: var(--navy-900); padding-right: 32px; }
+.modal__body p { margin-top: 10px; font-size: 15.5px; line-height: 1.6; color: #475569; }
+.modal__close {
+position: absolute; top: 10px; right: 10px; display: grid; place-items: center;
+width: 44px; height: 44px; border: 0; border-radius: 10px; background: none; color: var(--muted); cursor: pointer;
+}
+.modal__close:hover { background: var(--navy-50); color: var(--navy-900); }
 .site-footer { background: var(--navy-900); color: #cbd5e1; padding: 40px 0 28px; font-size: 14px; text-align: center; }
 .site-footer__top { display: grid; justify-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
 .site-footer__brand img { height: 22px; width: auto; margin: 0 auto; }
@@ -497,7 +510,7 @@ html { scroll-behavior: auto; }
       <p class="hero__meta">
         <span>Updated <time datetime="2026-10-01">October 2026</time></span>
         <span class="hero__meta-sep" aria-hidden="true"></span>
-        <a href="#disclosure">Advertising Disclosure</a>
+        <a href="#disclosure" data-disclosure-open aria-haspopup="dialog">Advertising Disclosure</a>
       </p>
     </div>
     
@@ -1012,5 +1025,13 @@ html { scroll-behavior: auto; }
     <p class="site-footer__copy">&copy; 2026 Affordable Home. All rights reserved.</p>
   </div>
 </footer>
+
+<dialog class="modal" id="disclosure-dialog" aria-labelledby="disclosure-dialog-title">
+  <div class="modal__body">
+    <button type="button" class="modal__close" data-dialog-close aria-label="Close"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <h2 class="modal__title" id="disclosure-dialog-title">Advertising Disclosure</h2>
+    <p>Affordable Home may receive compensation from featured companies, which may influence their placement and visibility on our website.</p>
+  </div>
+</dialog>
 </body>
 </html>

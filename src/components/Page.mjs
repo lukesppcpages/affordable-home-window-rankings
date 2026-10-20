@@ -4,6 +4,7 @@ import { HeroSection } from './HeroSection.mjs';
 import { RankingsList } from './RankingsList.mjs';
 import { DeepReview } from './DeepReview.mjs';
 import { OfferCallout } from './OfferCallout.mjs';
+import { DisclosureDialog } from './DisclosureDialog.mjs';
 import { EducationSection } from './EducationSection.mjs';
 import { MethodologySection } from './MethodologySection.mjs';
 import { FAQSection } from './FAQSection.mjs';
@@ -97,6 +98,7 @@ ${category.faqs?.length ? FAQSection(ctx) : ''}
 ${OfferCallout(ctx)}
 </main>
 ${Footer(ctx)}
+${DisclosureDialog(ctx)}
 </body>
 </html>
 `;

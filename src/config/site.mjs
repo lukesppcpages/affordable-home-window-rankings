@@ -18,6 +18,10 @@ export const site = {
     height: 175,
   },
 
+  // Short disclosure shown in the lightbox opened from the hero link.
+  disclosureShort:
+    'Affordable Home may receive compensation from featured companies, which may influence their placement and visibility on our website.',
+
   // Footer links. null = not configured: omitted from the production build.
   links: {
     about: null,

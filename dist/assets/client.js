@@ -137,6 +137,21 @@
     }
   }
 
+  /* ---------- Advertising disclosure lightbox ---------- */
+  var dialog = document.getElementById('disclosure-dialog');
+  if (dialog && typeof dialog.showModal === 'function') {
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('[data-disclosure-open]')) {
+        e.preventDefault();
+        dialog.showModal();
+      } else if (e.target.closest && e.target.closest('[data-dialog-close]')) {
+        dialog.close();
+      } else if (e.target === dialog) {
+        dialog.close(); // click on the backdrop
+      }
+    });
+  }
+
   /* ---------- Header menu: close on link click, outside click or Escape ---------- */
   var menu = document.querySelector('[data-site-menu]');
   if (menu) {

@@ -16,7 +16,7 @@ export function HeroSection({ category, base }) {
       <p class="hero__meta">
         <span>Updated <time datetime="${updated.iso}">${updated.label}</time></span>
         <span class="hero__meta-sep" aria-hidden="true"></span>
-        <a href="#disclosure">Advertising Disclosure</a>
+        <a href="#disclosure" data-disclosure-open aria-haspopup="dialog">Advertising Disclosure</a>
       </p>
     </div>
     ${img ? html`
