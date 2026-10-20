@@ -3,6 +3,7 @@ import { icon } from '../lib/icons.mjs';
 import { BrandLogo } from './BrandLogo.mjs';
 import { RatingScore } from './RatingScore.mjs';
 import { CtaButton } from './CtaButton.mjs';
+import { OfferCard } from './OfferCallout.mjs';
 
 // Full in-page review for the featured brand (the brand with `deepReview`
 // data). Both "Read Full Review" links on that brand's cards jump here.
@@ -98,6 +99,7 @@ export function DeepReview(ctx) {
         ${CtaButton({ brand, position: 'deep_review_verdict', site, label: `${site.experiments.ctaLabel} from ${brand.shortName || brand.name}` })}
       </div>
     </div>` : ''}
+    ${brand.offerCallout && brand.offer ? html`<div class="dr__offer">${OfferCard({ brand, site, base, position: 'review_offer_callout' })}</div>` : ''}
     ${pending}
   </div>
 </section>`;
