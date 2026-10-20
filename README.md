@@ -31,8 +31,10 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 | Event | Fires | Fields |
 | --- | --- | --- |
 | `ah_ranking_impression` | once per card, when 50% visible | `brand`, `brand_rank`, `placement` |
-| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `placement`, `cta_position` (`featured_card` / `ranking_card` / `review_panel` / `repeat_card` / `repeat_review_panel`) |
+| `ah_cta_click` | each partner click (double-clicks ignored) | `brand`, `brand_rank`, `placement`, `cta_position` (`featured_card` / `ranking_card` / `review_panel` / `repeat_card` / `deep_review_intro` / `deep_review_verdict`) |
 | `ah_review_expand` | first open per card | `brand`, `brand_rank`, `placement` |
+| `ah_review_jump` | "Read Full Review" click to the in-page Power review | `brand`, `brand_rank`, `placement` |
+| `ah_deep_review_view` | once, when the in-page review scrolls into view | `brand`, `brand_rank` |
 | `ah_faq_open` | first open per question | `faq_index` |
 | `ah_scroll_depth` | once each at 25/50/75/90% | `percent` |
 
@@ -52,7 +54,8 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 - [ ] Confirm all six CTA URLs (currently placeholders from the brief, `verified: false`) and add partner tracking parameters
 
 **Content to verify** (listed per brand under `pending` in the data file; visible in the draft build)
-- Warranty terms and financing for every brand — deliberately not stated anywhere on the page
+- **Power in-page review** (`deepReview` in the data file) uses claims carried over from the ServiceReview partner section — confirm with Power before scaling spend: limited lifetime warranty (wording + coverage), installers are Power employees not subcontractors, energy-efficient glass packages, Project Pulse app features
+- Warranty terms and financing for the other brands — deliberately not stated
 - Power Home: product lines/styles offered, current service area
 - Champion, DaBella: service area; DaBella window brands offered
 - Windows USA: states served, whether windows are made in-house, product lines

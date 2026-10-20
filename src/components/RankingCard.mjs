@@ -45,11 +45,19 @@ export function RankingCard(props) {
       ${featured ? '' : reviewToggle(uid, exp.reviewLabel)}
     </div>
   </div>
-  ${featured ? reviewToggle(uid, exp.featuredReviewLabel, ' rc__toggle--bar') : ''}
-  ${BrandReview({ brand, site, base, draft, uid, placement })}
+  ${featured ? featuredReviewLink(brand, uid, exp.featuredReviewLabel) : ''}
+  ${brand.deepReview ? '' : BrandReview({ brand, site, base, draft, uid, placement })}
 </article>`;
 
   return inList ? html`<li class="rc-item">${card}</li>` : card;
+}
+
+// Brands with an in-page review link down to it; others open the dropdown panel.
+function featuredReviewLink(brand, uid, label) {
+  if (!brand.deepReview) return reviewToggle(uid, label, ' rc__toggle--bar');
+  return html`<a class="rc__toggle rc__toggle--bar" href="#${brand.deepReview.anchor}" data-review-jump>
+        <span>${label}</span>${icon('arrow-down', { size: 18, className: 'rc__toggle-icon' })}
+      </a>`;
 }
 
 function reviewToggle(uid, label, modifier = '') {

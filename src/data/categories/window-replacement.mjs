@@ -19,7 +19,7 @@ export default {
     title: 'Best Window Replacement Companies of 2026 | Affordable Home',
     description:
       'Compare leading window replacement companies, explore ratings and reviews, and find the right window replacement provider for your home.',
-    ogImage: 'images/power-home-window-installation-1200.webp',
+    ogImage: 'images/power-home/install-1200.webp',
   },
 
   hero: {
@@ -44,6 +44,7 @@ export default {
       id: 'power-home-remodeling',
       rank: 1,
       name: 'Power Home Remodeling',
+      shortName: 'Power',
       score: 10.0,
       featured: true,
       distinction: 'Best Overall',
@@ -56,24 +57,103 @@ export default {
       ],
       summary:
         'A large full-service exterior remodeler that manages window projects from the first visit through installation.',
-      review: {
-        overview:
-          'Power Home Remodeling is a full-service exterior remodeling company founded in 1992. Window replacement sits alongside roofing, siding, doors and insulation, so homeowners planning more than one exterior project can work with a single company. Projects start with an in-home consultation, where the home is measured and a quote is prepared.',
-        strengths: [
-          'One point of contact from consultation through installation',
-          'Can coordinate windows with roofing, siding or door work',
-          'Established company with decades in exterior remodeling',
+      // In-page review (replaces the dropdown for this brand). "Read Full Review"
+      // on both Power cards jumps here.
+      deepReview: {
+        anchor: 'power-home-review',
+        eyebrow: 'In-Depth Review · Our #1 Pick',
+        title: 'Power Home Remodeling Review: Why It Earned Our Top Spot',
+        intro: [
+          "Most window companies sell you a window. Power sells you a finished project — and that difference shows up everywhere, from the first appointment to the final walkthrough. Since 1992 it has grown into one of the country's largest exterior remodelers by keeping the entire job in-house: the consultation, the measuring, the order and the installation.",
+          "That's the reason it sits at the top of our rankings. Homeowners deal with one company and one point of contact, and the people who show up on install day are trained Power crews, not whoever a middleman could book that week.",
         ],
-        considerations: [
-          'Available only in the markets Power serves — confirm your area first',
-          'Pricing is quoted after an in-home visit, so plan for an appointment',
+        heroImage: {
+          src: 'images/power-home/power-truck-1024.webp',
+          srcSmall: 'images/power-home/power-truck-640.webp',
+          width: 1024,
+          height: 683,
+          alt: 'Power Home Remodeling logo on the hood of a company service vehicle',
+        },
+        facts: [
+          { label: 'In business since', value: '1992' },
+          { label: 'Installation', value: 'In-house Power crews' },
+          { label: 'Warranty', value: 'Limited lifetime' },
+          { label: 'Also offers', value: 'Roofing, siding, doors & more' },
         ],
-        bestFor:
-          'Homeowners who want one company accountable for the whole project, especially if windows are part of a larger exterior upgrade.',
+        highlightsTitle: 'What Sets Power Home Remodeling Apart',
+        highlights: [
+          {
+            icon: 'users',
+            title: 'Installed by its own trained crews',
+            body: "Power employs and trains its own installers instead of handing jobs to subcontractors, so the quality you're promised in the consultation is the quality that shows up at your door.",
+          },
+          {
+            icon: 'shield-check',
+            title: 'Backed by a limited lifetime warranty',
+            body: "Coverage is built to last as long as you own the home — the kind of long-term protection that's hard to find when the seller and the installer are different companies.",
+          },
+          {
+            icon: 'zap',
+            title: 'Built with energy efficiency in mind',
+            body: 'Energy-efficient glass packages help keep heat where it belongs, so rooms stay more comfortable through hot summers and cold winters.',
+          },
+          {
+            icon: 'ruler',
+            title: 'Custom-made for your openings',
+            body: "Every window is measured for your home and offered in a range of styles and finishes, so the result fits your house instead of a stock size.",
+          },
+        ],
+        process: {
+          title: 'What a Power Project Looks Like',
+          image: {
+            src: 'images/power-home/install-1200.webp',
+            srcSmall: 'images/power-home/install-640.webp',
+            width: 1200,
+            height: 800,
+            alt: 'Two Power Home Remodeling installers fitting a new window into a home',
+          },
+          steps: [
+            { title: 'In-home consultation', body: 'A Power specialist walks through your goals, shows options in person and measures every opening.' },
+            { title: 'A clear, written quote', body: "You see the full project and price before anything is ordered — no surprises on install day." },
+            { title: 'Installation by Power crews', body: 'Trained Power installers remove the old windows, fit the new ones and seal everything properly.' },
+            { title: 'Cleanup and walkthrough', body: "The crew cleans up and walks you through the finished work before they leave." },
+          ],
+        },
+        app: {
+          logo: { src: 'images/power-home/project-pulse-logo.png', width: 111, height: 50, alt: 'Power Project Pulse' },
+          image: { src: 'images/power-home/project-pulse-phone.webp', width: 560, height: 560, alt: 'Project Pulse app showing window and door installation progress' },
+          title: 'Track Every Step with Project Pulse',
+          body: "Power's project-tracking app keeps you in the loop from contract to completion, so you're never left wondering what happens next.",
+          points: [
+            'See upcoming appointments',
+            'Get real-time project updates',
+            'Access documents and photos anytime',
+            'Sign paperwork from anywhere',
+          ],
+        },
+        pros: [
+          'One company handles everything, from consultation to cleanup',
+          'Installed by trained, in-house Power crews',
+          'Limited lifetime warranty for long-term peace of mind',
+          'Can bundle windows with roofing, siding or doors',
+          'Project Pulse app keeps you updated at every step',
+        ],
+        cons: [
+          "Not available in every market — check whether Power serves your area",
+          "Pricing comes from an in-home visit rather than an instant online estimate",
+        ],
+        verdict: {
+          title: 'The Bottom Line',
+          body: "If you want new windows without managing contractors, chasing updates or wondering who's actually doing the work, Power is the easiest recommendation on this list. It's the company we'd call first.",
+          bestFor: 'Homeowners who want energy-efficient, professionally installed windows and a single company accountable from start to finish.',
+        },
       },
       pending: [
-        'Window product lines and styles offered (confirm with Power)',
-        'Product and labor warranty terms',
+        'Confirm with Power (carried over from ServiceReview copy): limited lifetime warranty wording and what it covers',
+        'Confirm: installers are Power employees, not subcontractors',
+        'Confirm: energy-efficient glass package details',
+        'Confirm: Project Pulse app features listed',
+        'Window product lines and styles offered',
         'Financing options and terms',
         'Current service area / states served',
       ],

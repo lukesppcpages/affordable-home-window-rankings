@@ -2,6 +2,7 @@ import { html, raw } from '../lib/html.mjs';
 import { Header } from './Header.mjs';
 import { HeroSection } from './HeroSection.mjs';
 import { RankingsList } from './RankingsList.mjs';
+import { DeepReview } from './DeepReview.mjs';
 import { EducationSection } from './EducationSection.mjs';
 import { MethodologySection } from './MethodologySection.mjs';
 import { FAQSection } from './FAQSection.mjs';
@@ -88,6 +89,7 @@ ${Header(ctx)}
 <main id="main">
 ${HeroSection(ctx)}
 ${RankingsList(ctx)}
+${DeepReview(ctx)}
 ${EducationSection(ctx)}
 ${MethodologySection(ctx)}
 ${FAQSection(ctx)}

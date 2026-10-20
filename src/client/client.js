@@ -119,6 +119,24 @@
     toggles[t].setAttribute('data-label', toggles[t].querySelector('span').textContent);
   }
 
+  /* ---------- In-page review jump links ---------- */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('[data-review-jump]');
+    if (!link) return;
+    track('review_jump', brandProps(link.closest('[data-brand]')));
+  });
+  if ('IntersectionObserver' in window) {
+    var deep = document.querySelector('[data-placement="deep_review"]');
+    if (deep) {
+      var deepIo = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        track('deep_review_view', brandProps(deep), 'deep:' + deep.id);
+        deepIo.disconnect();
+      }, { threshold: 0.15 });
+      deepIo.observe(deep);
+    }
+  }
+
   /* ---------- Header menu: close on link click, outside click or Escape ---------- */
   var menu = document.querySelector('[data-site-menu]');
   if (menu) {

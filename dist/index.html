@@ -212,6 +212,8 @@ border-top: 1px solid var(--border); border-radius: 0;
 font-size: 16px; font-weight: 700;
 }
 .rc__toggle--bar:hover { background: var(--navy-50); }
+a.rc__toggle--bar { text-decoration: none; }
+.dr + .section { border-top: 1px solid var(--border); }
 .rc__toggle--bar span { text-decoration: none; }
 .rc__toggle-icon { transition: transform 0.2s ease; }
 .rc__toggle[aria-expanded='true'] .rc__toggle-icon { transform: rotate(180deg); }
@@ -227,6 +229,53 @@ font-size: 16px; font-weight: 700;
 .review__list--pro li::before { background: var(--green); }
 .review__list--con li::before { background: #94a3b8; }
 .review__footer { margin-top: 18px; }
+.dr { padding: 48px 0 56px; background: var(--white); border-top: 1px solid var(--border); scroll-margin-top: 0; }
+.dr__intro { display: grid; gap: 22px; }
+.dr__intro-media img, .dr__process-media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
+.dr__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--orange-cta); }
+.dr__title { margin-top: 8px; font-size: clamp(25px, 5.6vw, 34px); font-weight: 800; letter-spacing: -0.02em; color: var(--navy-900); }
+.dr__lead { margin-top: 12px; font-size: 16.5px; line-height: 1.65; color: #334155; }
+.dr__intro-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 20px; }
+.dr__intro-cta .btn--cta { width: auto; flex: 1 1 200px; }
+.dr__score { display: flex; align-items: baseline; gap: 8px; }
+.dr__score-value { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; color: var(--navy-900); }
+.dr__score-word { font-size: 14px; font-weight: 600; color: var(--muted); }
+.dr__facts { display: grid; grid-template-columns: 1fr 1fr; margin: 32px 0 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.dr__fact { padding: 14px 16px; border-top: 1px solid var(--border); }
+.dr__fact:nth-child(-n + 2) { border-top: 0; }
+.dr__fact:nth-child(odd) { border-right: 1px solid var(--border); }
+.dr__fact dt { font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.dr__fact dd { margin: 2px 0 0; font-size: 15.5px; font-weight: 700; color: var(--navy-900); }
+.dr__h3 { font-size: clamp(20px, 4.6vw, 24px); font-weight: 800; color: var(--navy-900); letter-spacing: -0.015em; }
+.dr__highlights + *, .dr__facts + .dr__h3 { margin-top: 40px; }
+.dr__facts + .dr__h3 { margin-bottom: 16px; }
+.dr__highlights { display: grid; gap: 12px; }
+.dr__highlight { display: flex; gap: 14px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+.dr__icon { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--navy); color: #fff; }
+.dr__highlight h4, .dr__steps h4 { font-size: 16.5px; font-weight: 700; color: var(--text); }
+.dr__highlight p, .dr__steps p { margin-top: 4px; font-size: 15px; line-height: 1.55; color: #475569; }
+.dr__process { display: grid; gap: 22px; margin-top: 44px; }
+.dr__steps { display: grid; gap: 16px; margin-top: 16px; }
+.dr__steps li { display: flex; gap: 14px; }
+.dr__step-num { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--navy-50); color: var(--navy); font-size: 15px; font-weight: 800; }
+.dr__app { display: grid; gap: 8px; align-items: center; margin-top: 44px; padding: 24px 20px; background: var(--navy-50); border-radius: var(--radius); }
+.dr__app-media img { width: 220px; margin: 0 auto; }
+.dr__app-logo { height: 34px; width: auto; margin-bottom: 10px; }
+.dr__app-copy > p { margin-top: 8px; font-size: 15.5px; color: #334155; }
+.dr__app-list { display: grid; gap: 8px; margin-top: 14px; }
+.dr__app-list li, .dr__pros li, .dr__cons li { display: flex; gap: 10px; font-size: 15.5px; line-height: 1.45; color: #334155; }
+.dr__app-list .icon, .dr__pros .icon { color: var(--green); margin-top: 1px; }
+.dr__cons .icon { color: #94a3b8; margin-top: 1px; }
+.dr__proscons { display: grid; gap: 14px; margin-top: 44px; }
+.dr__pros, .dr__cons { padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); }
+.dr__pros { border-top: 4px solid var(--green); }
+.dr__cons { border-top: 4px solid #cbd5e1; }
+.dr__pros ul, .dr__cons ul { display: grid; gap: 10px; margin-top: 12px; }
+.dr__verdict { display: grid; gap: 20px; margin-top: 44px; padding: 22px 20px; border: 2px solid var(--navy); border-radius: var(--radius); box-shadow: var(--shadow-featured); }
+.dr__verdict-copy > p { margin-top: 8px; font-size: 16px; line-height: 1.6; color: #334155; }
+.dr__verdict-copy .dr__bestfor { margin-top: 12px; padding: 12px 14px; background: var(--navy-50); border-radius: var(--radius-sm); font-size: 15px; color: var(--navy-900); }
+.dr__verdict-cta { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 14px; }
+.dr__verdict-cta .btn--cta { grid-column: 1 / -1; }
 .section { padding: 48px 0; }
 .section__head { max-width: 800px; margin-bottom: 24px; }
 .section__intro { max-width: 68ch; }
@@ -344,6 +393,16 @@ padding-right: 20px; border-right: 1px solid var(--border); align-self: stretch;
 .review__grid { grid-template-columns: 1.15fr 1fr; gap: 28px; }
 .review__footer .btn--cta { width: auto; min-width: 300px; }
 .section { padding: 64px 0; }
+.dr { padding: 64px 0 72px; }
+.dr__facts { grid-template-columns: repeat(4, 1fr); }
+.dr__fact { border-top: 0; border-right: 1px solid var(--border); }
+.dr__fact:last-child { border-right: 0; }
+.dr__highlights { grid-template-columns: 1fr 1fr; gap: 14px; }
+.dr__app { grid-template-columns: 260px 1fr; gap: 32px; padding: 28px 36px; }
+.dr__app-media img { width: 100%; }
+.dr__proscons { grid-template-columns: 1fr 1fr; gap: 18px; }
+.dr__pros, .dr__cons { padding: 22px 24px; }
+.dr__verdict { padding: 28px 32px; }
 .education__grid { grid-template-columns: 1fr 1fr; column-gap: 48px; }
 .methodology__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
 }
@@ -358,6 +417,10 @@ padding-right: 20px; border-right: 1px solid var(--border); align-self: stretch;
 .logo-box--mark { width: 70px; height: 84px; }
 .rc__summary { display: block; margin-top: 12px; font-size: 14.5px; color: var(--muted); line-height: 1.5; max-width: 62ch; }
 .methodology__grid { grid-template-columns: repeat(3, 1fr); }
+.dr__intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; }
+.dr__process { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.dr__verdict { grid-template-columns: minmax(0, 1fr) 280px; gap: 40px; align-items: center; }
+.dr__verdict-cta { padding-left: 32px; border-left: 1px solid var(--border); }
 .btn--cta { font-size: 17px; }
 }
 @media (min-width: 1200px) {
@@ -451,30 +514,10 @@ html { scroll-behavior: auto; }
       
     </div>
   </div>
-  <button type="button" class="rc__toggle rc__toggle--bar" aria-expanded="false" aria-controls="review-power-home-remodeling" data-review-toggle>
-        <span>Read Full Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
+  <a class="rc__toggle rc__toggle--bar" href="#power-home-review" data-review-jump>
+        <span>Read Full Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
   
-<div class="review" id="review-power-home-remodeling" role="region" aria-label="Power Home Remodeling review" hidden>
-  <div class="review__grid">
-    <div class="review__main">
-      <h4 class="review__heading">Overview</h4>
-      <p>Power Home Remodeling is a full-service exterior remodeling company founded in 1992. Window replacement sits alongside roofing, siding, doors and insulation, so homeowners planning more than one exterior project can work with a single company. Projects start with an in-home consultation, where the home is measured and a quote is prepared.</p>
-      <h4 class="review__heading">Best suited for</h4>
-      <p>Homeowners who want one company accountable for the whole project, especially if windows are part of a larger exterior upgrade.</p>
-    </div>
-    <div class="review__lists">
-      <h4 class="review__heading">Key strengths</h4>
-      <ul class="review__list review__list--pro"><li>One point of contact from consultation through installation</li><li>Can coordinate windows with roofing, siding or door work</li><li>Established company with decades in exterior remodeling</li></ul>
-      <h4 class="review__heading">Things to consider</h4>
-      <ul class="review__list review__list--con"><li>Available only in the markets Power serves — confirm your area first</li><li>Pricing is quoted after an in-home visit, so plan for an appointment</li></ul>
-    </div>
-  </div>
-  
-  <div class="review__footer">
-    <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="review_panel">Get Quote from Power Home Remodeling<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-  </div>
-</div>
 </article></li><li class="rc-item">
 <article class="rc" id="champion-windows" data-brand="champion-windows" data-rank="2" data-placement="list" aria-labelledby="champion-windows-name">
   
@@ -787,33 +830,107 @@ html { scroll-behavior: auto; }
       
     </div>
   </div>
-  <button type="button" class="rc__toggle rc__toggle--bar" aria-expanded="false" aria-controls="review-power-home-remodeling-repeat" data-review-toggle>
-        <span>Read Full Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
+  <a class="rc__toggle rc__toggle--bar" href="#power-home-review" data-review-jump>
+        <span>Read Full Review</span><svg class="icon rc__toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
   
-<div class="review" id="review-power-home-remodeling-repeat" role="region" aria-label="Power Home Remodeling review" hidden>
-  <div class="review__grid">
-    <div class="review__main">
-      <h4 class="review__heading">Overview</h4>
-      <p>Power Home Remodeling is a full-service exterior remodeling company founded in 1992. Window replacement sits alongside roofing, siding, doors and insulation, so homeowners planning more than one exterior project can work with a single company. Projects start with an in-home consultation, where the home is measured and a quote is prepared.</p>
-      <h4 class="review__heading">Best suited for</h4>
-      <p>Homeowners who want one company accountable for the whole project, especially if windows are part of a larger exterior upgrade.</p>
-    </div>
-    <div class="review__lists">
-      <h4 class="review__heading">Key strengths</h4>
-      <ul class="review__list review__list--pro"><li>One point of contact from consultation through installation</li><li>Can coordinate windows with roofing, siding or door work</li><li>Established company with decades in exterior remodeling</li></ul>
-      <h4 class="review__heading">Things to consider</h4>
-      <ul class="review__list review__list--con"><li>Available only in the markets Power serves — confirm your area first</li><li>Pricing is quoted after an in-home visit, so plan for an appointment</li></ul>
-    </div>
-  </div>
-  
-  <div class="review__footer">
-    <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="repeat_review_panel">Get Quote from Power Home Remodeling<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-  </div>
-</div>
 </article>
     </div>
     <p class="rankings__note">Scores are <a href="#methodology">Affordable Home editorial ratings</a>, not customer review averages. We may be compensated when you click partner links. <a href="#disclosure">Advertising Disclosure</a></p>
+  </div>
+</section>
+
+<section class="dr" id="power-home-review" aria-labelledby="power-home-review-title" data-brand="power-home-remodeling" data-rank="1" data-placement="deep_review">
+  <div class="container">
+    <div class="dr__intro">
+      <div class="dr__intro-media"><img src="images/power-home/power-truck-640.webp" srcset="images/power-home/power-truck-640.webp 640w, images/power-home/power-truck-1024.webp 1024w" sizes="(min-width: 1024px) 520px, 100vw" alt="Power Home Remodeling logo on the hood of a company service vehicle" width="1024" height="683" loading="lazy" decoding="async"></div>
+      <div class="dr__intro-copy">
+        <p class="dr__eyebrow">In-Depth Review · Our #1 Pick</p>
+        <h2 class="dr__title" id="power-home-review-title">Power Home Remodeling Review: Why It Earned Our Top Spot</h2>
+        <p class="dr__lead">Most window companies sell you a window. Power sells you a finished project — and that difference shows up everywhere, from the first appointment to the final walkthrough. Since 1992 it has grown into one of the country&#39;s largest exterior remodelers by keeping the entire job in-house: the consultation, the measuring, the order and the installation.</p><p class="dr__lead">That&#39;s the reason it sits at the top of our rankings. Homeowners deal with one company and one point of contact, and the people who show up on install day are trained Power crews, not whoever a middleman could book that week.</p>
+        <div class="dr__intro-cta">
+          <div class="dr__score"><span class="dr__score-value">10.0</span><span class="dr__score-word">Exceptional<span class="visually-hidden"> Affordable Home Score</span></span></div>
+          <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="deep_review_intro">Get Quote<span class="visually-hidden"> from Power Home Remodeling</span><svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <dl class="dr__facts">
+      <div class="dr__fact"><dt>In business since</dt><dd>1992</dd></div><div class="dr__fact"><dt>Installation</dt><dd>In-house Power crews</dd></div><div class="dr__fact"><dt>Warranty</dt><dd>Limited lifetime</dd></div><div class="dr__fact"><dt>Also offers</dt><dd>Roofing, siding, doors &amp; more</dd></div>
+    </dl>
+
+    <h3 class="dr__h3">What Sets Power Home Remodeling Apart</h3>
+    <div class="dr__highlights">
+      
+      <div class="dr__highlight">
+        <span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <div><h4>Installed by its own trained crews</h4><p>Power employs and trains its own installers instead of handing jobs to subcontractors, so the quality you&#39;re promised in the consultation is the quality that shows up at your door.</p></div>
+      </div>
+      <div class="dr__highlight">
+        <span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><h4>Backed by a limited lifetime warranty</h4><p>Coverage is built to last as long as you own the home — the kind of long-term protection that&#39;s hard to find when the seller and the installer are different companies.</p></div>
+      </div>
+      <div class="dr__highlight">
+        <span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+        <div><h4>Built with energy efficiency in mind</h4><p>Energy-efficient glass packages help keep heat where it belongs, so rooms stay more comfortable through hot summers and cold winters.</p></div>
+      </div>
+      <div class="dr__highlight">
+        <span class="dr__icon"><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg></span>
+        <div><h4>Custom-made for your openings</h4><p>Every window is measured for your home and offered in a range of styles and finishes, so the result fits your house instead of a stock size.</p></div>
+      </div>
+    </div>
+
+    <div class="dr__process">
+      <div class="dr__process-media"><img src="images/power-home/install-640.webp" srcset="images/power-home/install-640.webp 640w, images/power-home/install-1200.webp 1200w" sizes="(min-width: 1024px) 520px, 100vw" alt="Two Power Home Remodeling installers fitting a new window into a home" width="1200" height="800" loading="lazy" decoding="async"></div>
+      <div>
+        <h3 class="dr__h3">What a Power Project Looks Like</h3>
+        <ol class="dr__steps">
+          <li><span class="dr__step-num" aria-hidden="true">1</span><div><h4>In-home consultation</h4><p>A Power specialist walks through your goals, shows options in person and measures every opening.</p></div></li><li><span class="dr__step-num" aria-hidden="true">2</span><div><h4>A clear, written quote</h4><p>You see the full project and price before anything is ordered — no surprises on install day.</p></div></li><li><span class="dr__step-num" aria-hidden="true">3</span><div><h4>Installation by Power crews</h4><p>Trained Power installers remove the old windows, fit the new ones and seal everything properly.</p></div></li><li><span class="dr__step-num" aria-hidden="true">4</span><div><h4>Cleanup and walkthrough</h4><p>The crew cleans up and walks you through the finished work before they leave.</p></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="dr__app">
+      <div class="dr__app-media"><img src="images/power-home/project-pulse-phone.webp" alt="Project Pulse app showing window and door installation progress" width="560" height="560" loading="lazy" decoding="async"></div>
+      <div class="dr__app-copy">
+        <img class="dr__app-logo" src="images/power-home/project-pulse-logo.png" alt="Power Project Pulse" width="111" height="50" loading="lazy">
+        <h3 class="dr__h3">Track Every Step with Project Pulse</h3>
+        <p>Power&#39;s project-tracking app keeps you in the loop from contract to completion, so you&#39;re never left wondering what happens next.</p>
+        <ul class="dr__app-list"><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>See upcoming appointments</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Get real-time project updates</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Access documents and photos anytime</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Sign paperwork from anywhere</span></li></ul>
+      </div>
+    </div>
+
+    <div class="dr__proscons">
+      <div class="dr__pros">
+        <h3 class="dr__h3">Pros</h3>
+        <ul><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>One company handles everything, from consultation to cleanup</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Installed by trained, in-house Power crews</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Limited lifetime warranty for long-term peace of mind</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Can bundle windows with roofing, siding or doors</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Project Pulse app keeps you updated at every step</span></li></ul>
+      </div>
+      <div class="dr__cons">
+        <h3 class="dr__h3">Things to Know</h3>
+        <ul><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg><span>Not available in every market — check whether Power serves your area</span></li><li><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg><span>Pricing comes from an in-home visit rather than an instant online estimate</span></li></ul>
+      </div>
+    </div>
+
+    <div class="dr__verdict">
+      <div class="dr__verdict-copy">
+        <h3 class="dr__h3">The Bottom Line</h3>
+        <p>If you want new windows without managing contractors, chasing updates or wondering who&#39;s actually doing the work, Power is the easiest recommendation on this list. It&#39;s the company we&#39;d call first.</p>
+        <p class="dr__bestfor"><strong>Best for:</strong> Homeowners who want energy-efficient, professionally installed windows and a single company accountable from start to finish.</p>
+      </div>
+      <div class="dr__verdict-cta">
+        
+<div class="logo-box logo-box--mark">
+  <img src="images/brands/power-home.webp" alt="Power Home Remodeling logo" width="198" height="240" loading=&quot;lazy&quot; decoding="async">
+</div>
+        
+<div class="score">
+  <span class="score__word">Exceptional</span>
+  <span class="score__value">10.0<span class="visually-hidden"> Affordable Home Score</span></span>
+</div>
+        <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="deep_review_verdict">Get Quote from Power<svg class="icon btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    
   </div>
 </section>
 
