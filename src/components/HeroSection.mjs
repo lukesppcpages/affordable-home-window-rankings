@@ -15,6 +15,8 @@ export function HeroSection({ category, base }) {
       <p class="hero__intro">${hero.intro}</p>
       <p class="hero__meta">
         <span>Updated <time datetime="${updated.iso}">${updated.label}</time></span>
+        <span class="hero__meta-sep" aria-hidden="true"></span>
+        <a href="#disclosure">Advertising Disclosure</a>
       </p>
     </div>
     ${img ? html`
