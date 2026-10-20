@@ -61,11 +61,10 @@ export default {
       // on both Power cards jumps here.
       deepReview: {
         anchor: 'power-home-review',
-        eyebrow: 'In-Depth Review · Our #1 Pick',
-        title: 'Power Home Remodeling Review: Why It Earned Our Top Spot',
+        title: 'Why Power Home Earned Our Top Spot',
         intro: [
-          "Most window companies sell you a window. Power sells you a finished project — and that difference shows up everywhere, from the first appointment to the final walkthrough. Since 1992 it has grown into one of the country's largest exterior remodelers by keeping the entire job in-house: the consultation, the measuring, the order and the installation.",
-          "That's the reason it sits at the top of our rankings. Homeowners deal with one company and one point of contact, and the people who show up on install day are trained Power crews, not whoever a middleman could book that week.",
+          "Power earned our top spot the straightforward way: great windows, installed right. Each window is custom-built for its opening and engineered for energy efficiency, with heat-reflective glass and tight, leak-resistant seals that keep drafts out and comfort in.",
+          "Then there's the installation — where a lot of good windows go wrong. Power's own trained crews handle it, not subcontractors, so the craftsmanship matches the product. Add a limited lifetime warranty and one team accountable from the first visit to the final walkthrough, and it's easy to see why Power has grown into one of the country's largest exterior remodelers since 1992.",
         ],
         heroImage: {
           src: 'images/power-home/power-truck-1024.webp',
@@ -76,10 +75,36 @@ export default {
         },
         facts: [
           { label: 'In business since', value: '1992' },
+          { label: 'Windows', value: 'Custom, energy-efficient' },
           { label: 'Installation', value: 'In-house Power crews' },
           { label: 'Warranty', value: 'Limited lifetime' },
-          { label: 'Also offers', value: 'Roofing, siding, doors & more' },
         ],
+        quality: {
+          title: 'Quality You Can See and Feel',
+          intro: "A window is only as good as the product and the people who install it. Power delivers on both.",
+          columns: [
+            {
+              icon: 'app-window',
+              title: 'The Windows',
+              points: [
+                'Custom-built to the exact measurements of each opening',
+                'Energy-efficient, heat-reflective glass for year-round comfort',
+                'Leak-resistant construction that keeps drafts and moisture out',
+                'A wide range of styles, colors and finishes to match your home',
+              ],
+            },
+            {
+              icon: 'wrench',
+              title: 'The Installation & Service',
+              points: [
+                'Specialists who show you real options in your home, not just a brochure',
+                'Trained Power crews on install day — never subcontractors',
+                'Careful removal, a precise fit and proper sealing on every opening',
+                'Full cleanup and a final walkthrough before the crew leaves',
+              ],
+            },
+          ],
+        },
         highlightsTitle: 'What Sets Power Home Remodeling Apart',
         highlights: [
           {
@@ -93,14 +118,14 @@ export default {
             body: "Coverage is built to last as long as you own the home — the kind of long-term protection that's hard to find when the seller and the installer are different companies.",
           },
           {
-            icon: 'zap',
-            title: 'Built with energy efficiency in mind',
-            body: 'Energy-efficient glass packages help keep heat where it belongs, so rooms stay more comfortable through hot summers and cold winters.',
+            icon: 'messages-square',
+            title: 'Service that shows up as promised',
+            body: "From the first appointment to the final walkthrough, Power runs the project on a clear schedule — and keeps you informed at every step instead of leaving you to chase updates.",
           },
           {
-            icon: 'ruler',
-            title: 'Custom-made for your openings',
-            body: "Every window is measured for your home and offered in a range of styles and finishes, so the result fits your house instead of a stock size.",
+            icon: 'house',
+            title: 'One team for your whole exterior',
+            body: 'Planning more than windows? The same company can handle roofing, siding, doors and insulation, with the same standard of workmanship on every project.',
           },
         ],
         process: {
@@ -132,26 +157,27 @@ export default {
           ],
         },
         pros: [
+          'High-quality, energy-efficient windows custom-made for your home',
           'One company handles everything, from consultation to cleanup',
           'Installed by trained, in-house Power crews',
           'Limited lifetime warranty for long-term peace of mind',
           'Can bundle windows with roofing, siding or doors',
           'Project Pulse app keeps you updated at every step',
         ],
+        consTitle: 'Cons',
         cons: [
-          "Not available in every market — check whether Power serves your area",
-          "Pricing comes from an in-home visit rather than an instant online estimate",
+          'Pricing comes from an in-home visit rather than an instant online estimate. This helps Power provide accurate pricing and avoid surprises later on.',
         ],
         verdict: {
           title: 'The Bottom Line',
-          body: "If you want new windows without managing contractors, chasing updates or wondering who's actually doing the work, Power is the easiest recommendation on this list. It's the company we'd call first.",
-          bestFor: 'Homeowners who want energy-efficient, professionally installed windows and a single company accountable from start to finish.',
+          body: "If you want high-quality, energy-efficient windows installed by crews who take pride in the work — without managing contractors or chasing updates — Power is the easiest recommendation on this list. It's the company we'd call first.",
+          bestFor: 'Homeowners who want premium, energy-efficient windows, expert installation and one company accountable from start to finish.',
         },
       },
       pending: [
         'Confirm with Power (carried over from ServiceReview copy): limited lifetime warranty wording and what it covers',
         'Confirm: installers are Power employees, not subcontractors',
-        'Confirm: energy-efficient glass package details',
+        'Confirm: heat-reflective glass, leak-resistant construction, and range of styles/colors/finishes',
         'Confirm: Project Pulse app features listed',
         'Window product lines and styles offered',
         'Financing options and terms',

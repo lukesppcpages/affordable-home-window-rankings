@@ -22,7 +22,7 @@ export function DeepReview(ctx) {
     <div class="dr__intro">
       <div class="dr__intro-media">${img(r.heroImage, '(min-width: 1024px) 520px, 100vw')}</div>
       <div class="dr__intro-copy">
-        <p class="dr__eyebrow">${r.eyebrow}</p>
+        ${r.eyebrow ? html`<p class="dr__eyebrow">${r.eyebrow}</p>` : ''}
         <h2 class="dr__title" id="${r.anchor}-title">${r.title}</h2>
         ${r.intro.map((p) => html`<p class="dr__lead">${p}</p>`)}
         <div class="dr__intro-cta">
@@ -35,6 +35,19 @@ export function DeepReview(ctx) {
     <dl class="dr__facts">
       ${r.facts.map((f) => html`<div class="dr__fact"><dt>${f.label}</dt><dd>${f.value}</dd></div>`)}
     </dl>
+
+    ${r.quality ? html`
+    <div class="dr__quality">
+      <h3 class="dr__h3">${r.quality.title}</h3>
+      ${r.quality.intro ? html`<p class="dr__quality-intro">${r.quality.intro}</p>` : ''}
+      <div class="dr__quality-cols">
+        ${r.quality.columns.map((c) => html`
+        <div class="dr__quality-col">
+          <div class="dr__quality-head"><span class="dr__icon">${icon(c.icon, { size: 22 })}</span><h4>${c.title}</h4></div>
+          <ul>${c.points.map((p) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
+        </div>`)}
+      </div>
+    </div>` : ''}
 
     <h3 class="dr__h3">${r.highlightsTitle}</h3>
     <div class="dr__highlights">
@@ -71,7 +84,7 @@ export function DeepReview(ctx) {
         <ul>${r.pros.map((p) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
       </div>
       <div class="dr__cons">
-        <h3 class="dr__h3">Things to Know</h3>
+        <h3 class="dr__h3">${r.consTitle || 'Things to Know'}</h3>
         <ul>${r.cons.map((p) => html`<li>${icon('minus', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
       </div>
     </div>
