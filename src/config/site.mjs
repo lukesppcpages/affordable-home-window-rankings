@@ -11,6 +11,10 @@ export const site = {
   // Required for canonical URLs and Open Graph images.
   siteUrl: null,
 
+  // Where the build is currently hosted (GitHub Pages). Used for the review
+  // page's canonical URL until siteUrl is set.
+  deployedUrl: 'https://lukesppcpages.github.io/affordable-home-window-rankings',
+
   logo: {
     src: 'images/affordable-home-logo.svg',
     srcOnDark: 'images/affordable-home-logo-white.svg',

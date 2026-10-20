@@ -7,6 +7,8 @@ import { fileURLToPath } from 'node:url';
 import { site } from './src/config/site.mjs';
 import { categories, defaultCategory } from './src/data/categories/index.mjs';
 import { Page } from './src/components/Page.mjs';
+import { reviews } from './src/data/reviews/index.mjs';
+import { ReviewPage } from './src/components/review/ReviewPage.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const draft = process.argv.includes('--draft');
@@ -31,6 +33,22 @@ function validate(category) {
   if (category.brands.filter((b) => b.featured).length > 1) errors.push(`${category.slug}: only one brand can be featured`);
 }
 
+function validateReview(review) {
+  const where = review.slug;
+  const ids = review.services.map((s) => s.id);
+  if (new Set(ids).size !== ids.length) errors.push(`${where}: duplicate service id`);
+  for (const s of review.services) {
+    for (const k of ['label', 'cta', 'formHeading', 'submit', 'panel', 'overview']) if (!s[k]) errors.push(`${where} / ${s.id}: missing ${k}`);
+  }
+  for (const [k, v] of Object.entries(review.intents)) {
+    if (v.service && !ids.includes(v.service)) errors.push(`${where}: intent "${k}" points to unknown service "${v.service}"`);
+  }
+  if (review.form.endpoint && !/^https:\/\//.test(review.form.endpoint)) errors.push(`${where}: form.endpoint must be https`);
+  if (!review.form.endpoint) warnings.push(`${where}: form.endpoint not set — form uses the development-only handler (no leads are sent)`);
+  if (!review.form.consent.text) warnings.push(`${where}: form.consent.text not set — consent language needs legal review`);
+  if (review.pending?.length) warnings.push(`${where}: ${review.pending.length} item(s) pending verification`);
+}
+
 function validateSite() {
   if (!site.siteUrl) warnings.push('site.siteUrl not set — canonical URL and og:url/og:image omitted');
   for (const [k, v] of Object.entries(site.links)) if (!v) warnings.push(`site.links.${k} not set — link omitted from footer`);
@@ -40,6 +58,7 @@ function validateSite() {
 async function build() {
   validateSite();
   categories.forEach(validate);
+  reviews.forEach(validateReview);
   if (errors.length) {
     console.error('\nBuild failed:\n' + errors.map((e) => '  ✖ ' + e).join('\n'));
     process.exit(1);
@@ -68,6 +87,23 @@ async function build() {
       await writeFile(join(out, dir, 'index.html'), page);
       console.log(`  ✔ ${join(draft ? 'dist-draft' : 'dist', dir, 'index.html')}  (${(page.length / 1024).toFixed(1)} KB)`);
     }
+  }
+
+  // Company review pages: own stylesheet and client script.
+  const reviewCss = (await readFile(join(root, 'src/review.css'), 'utf8'))
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s*\n\s*/g, '\n')
+    .trim();
+  await cp(join(root, 'src/client/review.js'), join(out, 'assets/review.js'));
+  for (const review of reviews) {
+    // Canonical needs an absolute origin: the configured site URL, else the
+    // current GitHub Pages deployment.
+    const origin = site.siteUrl || site.deployedUrl;
+    const pageUrl = origin ? `${origin}/${review.slug}/` : null;
+    const page = String(ReviewPage({ site, review, css: reviewCss, base: '../', pageUrl, draft }));
+    await mkdir(join(out, review.slug), { recursive: true });
+    await writeFile(join(out, review.slug, 'index.html'), page);
+    console.log(`  ✔ ${join(draft ? 'dist-draft' : 'dist', review.slug, 'index.html')}  (${(page.length / 1024).toFixed(1)} KB)`);
   }
 
   if (warnings.length) console.warn('\nTo resolve before launch:\n' + warnings.map((w) => '  • ' + w).join('\n'));

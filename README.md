@@ -92,3 +92,47 @@ Second category built from the same components: `src/data/categories/home-remode
 - [ ] No promotional offer shown — add only if Power approves one for this page
 - [ ] Document the editorial rationale for the 10.0 / 9.7 / 9.5 scores
 - [ ] Re-verify Lowe's details directly on lowes.com before launch
+
+---
+
+## Power Home Remodeling review (`/power-home-remodeling-review/`)
+
+Branded-search company review for Google Ads traffic ("Power Home Remodeling reviews / cost / complaints"). Qualitative only — no score or star rating. Separate page type from the rankings: own components (`src/components/review/`), stylesheet (`src/review.css`, navy `#142544` / lime `#B1F726`) and client (`src/client/review.js`); shares site config, the `html` renderer, icons and images.
+
+| Path | What it holds |
+| --- | --- |
+| `src/data/reviews/power-home-remodeling.mjs` | **All copy + config**: the four services (labels, CTAs, panel + card copy, form headings), review sections, intents, form settings |
+| `src/data/reviews/power-home-remodeling.sources.md` | Research notes: every factual claim → source; flagged inferences |
+| `src/components/review/` | `SiteHeader`, `AdvertisingDisclosure`, `ReviewHero`, `ReviewSummary`, `ServiceSelector` + `DynamicServicePanel`, `InDepthReview`, `ServiceOverview`, `IdealCustomerSection`, `EstimateForm`, `MobileStickyCTA`, `SiteFooter` |
+
+**Service selection** is one state shared by the picker, service cards, every CTA label, the form's project field/heading/button and the sticky CTA; it persists for the session (`sessionStorage`). No redirects.
+
+**Search-intent variants:** add `?intent=` to the ad's final URL. `reviews` and `cost` swap the H1/intro (before first paint); `windows`/`roofing`/`siding`/`doors` preselect that service. Unknown values show the default.
+
+**Form:** service, first/last name, email, phone, ZIP (street address behind `form.requireAddress`). Inline validation, phone formatting, duplicate-submit guard, loading/error states; inputs are never cleared. `form.endpoint = null` runs the **development-only handler** — nothing is sent and the visitor sees a "not connected" notice. When set, the lead is POSTed as JSON (with attribution) and only a 2xx shows the success state.
+
+**Attribution** (session-stored, sent with the lead only): `gclid`, `gbraid`, `wbraid`, `msclkid`, `fbclid`, `utm_*`, `campaignid`, `adgroupid`, `keyword`, `matchtype`, `device`, `intent`, landing page, referrer. A new click ID replaces the stored set.
+
+### Events (`window.dataLayer`)
+| Event | When | Notes |
+| --- | --- | --- |
+| `ah_page_view` | load | |
+| `ah_service_select` | visitor picks a service | `service`, `select_source` (`selector` / `service_card` / `form`) |
+| `ah_cta_click` | any estimate CTA | `cta_position` (`header`, `summary`, `service_panel`, `after_pricing`, `service_card`, `sticky`, `hero_services`) |
+| `ah_form_view` | form 35% visible (once) | |
+| `ah_form_start` | first input (once) | |
+| `ah_form_validation_error` | submit blocked | `invalid_fields` (names only) |
+| `ah_form_submit` | valid submit | |
+| `ah_lead_success` | endpoint returned 2xx | **Primary Google Ads conversion** |
+| `ah_lead_error` | endpoint failed | `error_type` (`http_###` / `network` / `timeout`) |
+| `ah_lead_not_sent` | dev handler (no endpoint) | never counts as a conversion |
+
+Every event carries `page_type`, `page_slug`, `company`, `content_intent`, `selected_service`, `device_type`. No form values are ever pushed or logged. Service selections and CTA clicks are diagnostic — don't import them as conversions.
+
+### Before launch
+- [ ] `form.endpoint` — approved lead destination (and confirm whether Power needs street address)
+- [ ] `form.consent` — consent / contact-permission language from legal review (`checkbox: true` for a required checkbox)
+- [ ] `site.analytics.gtmId`; in GTM map `ah_lead_success` to the Google Ads conversion + GA4 key event
+- [ ] Confirm permission to use Power's logo and photos
+- [ ] Footer links (privacy policy required for Google Ads)
+- [ ] Re-check items in the data file's `pending` list and the flagged inferences in the sources file
