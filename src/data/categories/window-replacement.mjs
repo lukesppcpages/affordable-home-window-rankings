@@ -65,7 +65,7 @@ export default {
         anchor: 'power-home-review',
         title: 'Why Power Earned Our Top Spot',
         intro: [
-          "Power Home Remodeling earns our top spot because they deliver more than quality windows. They deliver a complete replacement experience homeowners can feel confident in. Their custom-made, energy-efficient windows are designed for lasting comfort, while their own trained installation teams help ensure the job is done right. With over 30 years of experience, a limited lifetime warranty, and one company accountable from start to finish, Power stands out for both the quality of its products and the people behind them.",
+          "Power Home Remodeling earns our top spot because they deliver more than quality windows. They deliver a complete replacement experience homeowners can feel confident in. Their custom-made, energy-efficient windows are designed for lasting comfort, while professionally trained installation teams help ensure the job is done right. With over 30 years of experience, a limited lifetime warranty, and one company accountable from start to finish, Power stands out for both the quality of its products and the people behind them.",
         ],
         heroImage: {
           src: 'images/power-home/power-truck-1024.webp',
@@ -89,7 +89,7 @@ export default {
               title: 'The Installation & Service',
               points: [
                 'Specialists who show you real options in your home, not just a brochure',
-                'Trained Power crews on install day — never subcontractors',
+                'Professionally trained installers who know local codes and regulations',
                 'Careful removal, a precise fit and proper sealing on every opening',
                 'Full cleanup and a final walkthrough before the crew leaves',
               ],
@@ -108,7 +108,7 @@ export default {
           steps: [
             { title: 'In-home consultation', body: 'A Power specialist walks through your goals, shows options in person and measures every opening.' },
             { title: 'A clear, written quote', body: "You see the full project and price before anything is ordered — no surprises on install day." },
-            { title: 'Installation by Power crews', body: 'Trained Power installers remove the old windows, fit the new ones and seal everything properly.' },
+            { title: 'Professional installation', body: 'Professionally trained installers remove the old windows, fit the new ones and seal everything properly.' },
             { title: 'Cleanup and walkthrough', body: "The crew cleans up and walks you through the finished work before they leave." },
           ],
         },
@@ -127,7 +127,7 @@ export default {
         pros: [
           'High-quality, energy-efficient windows custom-made for your home',
           'One company handles everything, from consultation to cleanup',
-          'Installed by trained, in-house Power crews',
+          'Installation by professionally trained teams',
           'Limited lifetime warranty for long-term peace of mind',
           'Can bundle windows with roofing, siding or doors',
           'Project Pulse app keeps you updated at every step',
@@ -139,7 +139,7 @@ export default {
       },
       pending: [
         'Confirm with Power (carried over from ServiceReview copy): limited lifetime warranty wording and what it covers',
-        'Confirm: installers are Power employees, not subcontractors',
+        'Installers: Power works with independent installation partners (powerhrg.com/careers/partner-with-power) — describe them as trained installers, never as in-house only',
         'Confirm: heat-reflective glass, leak-resistant construction, and range of styles/colors/finishes',
         'Confirm: Project Pulse app features listed',
         'Window product lines and styles offered',

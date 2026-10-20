@@ -54,7 +54,8 @@ Every event is pushed to `window.dataLayer` (GTM picks these up once `site.analy
 - [ ] Confirm all five CTA URLs (currently placeholders from the brief, `verified: false`) and add partner tracking parameters
 
 **Content to verify** (listed per brand under `pending` in the data file; visible in the draft build)
-- **Power in-page review** (`deepReview` in the data file) uses claims carried over from the ServiceReview partner section — confirm with Power before scaling spend: limited lifetime warranty (wording + coverage), installers are Power employees not subcontractors, energy-efficient glass packages, Project Pulse app features
+- **Installer wording:** Power partners with independent installation contractors (powerhrg.com/careers/partner-with-power). Describe them as professionally trained installers — never as in-house only or "no subcontractors".
+- **Power in-page review** (`deepReview` in the data file) uses claims carried over from the ServiceReview partner section — confirm with Power before scaling spend: limited lifetime warranty (wording + coverage), energy-efficient glass packages, Project Pulse app features
 - Warranty terms and financing for the other brands — deliberately not stated
 - Power Home: product lines/styles offered, current service area
 - Champion, DaBella: service area; DaBella window brands offered
