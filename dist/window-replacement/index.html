@@ -320,6 +320,18 @@ font-size: 16px; font-weight: 600; cursor: pointer; list-style: none;
 .faq__icon { color: var(--navy); transition: transform 0.2s ease; }
 .faq__item[open] .faq__icon { transform: rotate(45deg); }
 .faq__a { padding: 0 32px 18px 0; font-size: 15.5px; color: #475569; }
+.offer { padding: 40px 0; background: var(--white); }
+.offer__card {
+display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px;
+padding: 18px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+box-shadow: 0 10px 30px -14px rgba(15, 23, 42, 0.25);
+}
+.offer__logo { display: grid; place-items: center; width: 84px; height: 84px; border: 1px solid var(--border); border-radius: 12px; }
+.offer__logo .logo-box { width: 60px; height: 60px; }
+.offer__logo .logo-box img { object-position: center; }
+.offer__kicker { font-size: 15px; font-weight: 700; color: var(--navy); }
+.offer__text { margin-top: 2px; font-size: 18px; font-weight: 800; line-height: 1.3; color: var(--navy-900); }
+.offer__card .btn--cta { grid-column: 1 / -1; }
 .site-footer { background: var(--navy-900); color: #cbd5e1; padding: 40px 0 28px; font-size: 14px; text-align: center; }
 .site-footer__top { display: grid; justify-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
 .site-footer__brand img { height: 22px; width: auto; margin: 0 auto; }
@@ -413,6 +425,13 @@ grid-template-areas:
 .dr__proscons { grid-template-columns: 1fr 1fr; gap: 18px; }
 .dr__pros, .dr__cons { padding: 22px 24px; }
 .dr__verdict { padding: 28px 32px; }
+.offer { padding: 56px 0; }
+.offer__card { grid-template-columns: auto 1fr 260px; gap: 32px; padding: 24px 32px; }
+.offer__logo { width: 120px; height: 100px; }
+.offer__logo .logo-box { width: 72px; height: 76px; }
+.offer__kicker { font-size: 18px; }
+.offer__text { font-size: 22px; }
+.offer__card .btn--cta { grid-column: auto; min-height: 56px; font-size: 18px; }
 .education__grid { grid-template-columns: 1fr 1fr; column-gap: 48px; }
 .methodology__grid { grid-template-columns: 1fr 1fr; gap: 14px; }
 }
@@ -895,7 +914,7 @@ html { scroll-behavior: auto; }
       <div class="dr__intro-copy">
         
         <h2 class="dr__title" id="power-home-review-title">Why Power Earned Our Top Spot</h2>
-        <p class="dr__lead">Power Home Remodeling delivers on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.</p><p class="dr__lead">But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.</p>
+        <p class="dr__lead">Power Home Remodeling earns our top spot because they deliver more than quality windows. They deliver a complete replacement experience homeowners can feel confident in. Their custom-made, energy-efficient windows are designed for lasting comfort, while their own trained installation teams help ensure the job is done right. With over 30 years of experience, a limited lifetime warranty, and one company accountable from start to finish, Power stands out for both the quality of its products and the people behind them.</p>
       </div>
     </div>
 
@@ -1000,6 +1019,22 @@ html { scroll-behavior: auto; }
   </div>
 </section>
 
+
+<section class="offer" aria-label="Power Home Remodeling offer" data-brand="power-home-remodeling" data-rank="1" data-placement="offer_callout">
+  <div class="container">
+    <div class="offer__card">
+      <div class="offer__logo">
+<div class="logo-box logo-box--mark">
+  <img src="../images/brands/power-home.webp" alt="Power Home Remodeling logo" width="198" height="240" loading=&quot;lazy&quot; decoding="async">
+</div></div>
+      <div class="offer__copy">
+        <p class="offer__kicker">Limited Time Offer!</p>
+        <p class="offer__text">$0 Down + No Payments For 2 Years</p>
+      </div>
+      <a class="btn btn--cta " href="https://powerhrgdeals.com/" target="_blank" rel="sponsored noopener" data-outbound data-brand="power-home-remodeling" data-rank="1" data-position="offer_callout">Get Quote<span class="visually-hidden"> from Power Home Remodeling</span></a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">

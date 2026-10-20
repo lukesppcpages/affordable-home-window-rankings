@@ -57,14 +57,15 @@ export default {
       ],
       // Shown bold under the bullets on every screen size (replaces the summary).
       offer: '$0 Down + No Payments For 2 Years',
+      // Offer banner shown above the footer.
+      offerCallout: { kicker: 'Limited Time Offer!' },
       // In-page review (replaces the dropdown for this brand). "Read Full Review"
       // on both Power cards jumps here.
       deepReview: {
         anchor: 'power-home-review',
         title: 'Why Power Earned Our Top Spot',
         intro: [
-          "Power Home Remodeling delivers on what matters most in replacement windows: quality, energy efficiency, and professional installation. Their custom-made windows are designed to fit your home, improve year-round comfort, and help reduce energy loss.",
-          "But what really sets Power apart is their approach to installation. Rather than relying on subcontractors, Power uses its own trained installation teams to ensure the workmanship lives up to the quality of the windows themselves. Backed by a limited lifetime warranty and more than 30 years of home remodeling experience, Power offers homeowners something just as valuable as great windows: confidence that the job will be done right.",
+          "Power Home Remodeling earns our top spot because they deliver more than quality windows. They deliver a complete replacement experience homeowners can feel confident in. Their custom-made, energy-efficient windows are designed for lasting comfort, while their own trained installation teams help ensure the job is done right. With over 30 years of experience, a limited lifetime warranty, and one company accountable from start to finish, Power stands out for both the quality of its products and the people behind them.",
         ],
         heroImage: {
           src: 'images/power-home/power-truck-1024.webp',
