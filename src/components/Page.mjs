@@ -63,7 +63,7 @@ export function Page(ctx) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${meta.title}</title>
 <meta name="description" content="${meta.description}">
-${draft ? html`<meta name="robots" content="noindex, nofollow">` : ''}
+${draft || category.noindex ? html`<meta name="robots" content="noindex, nofollow">` : ''}
 ${pageUrl ? html`<link rel="canonical" href="${pageUrl}">` : ''}
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="${site.brandName}">

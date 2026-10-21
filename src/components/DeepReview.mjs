@@ -78,7 +78,7 @@ export function DeepReview(ctx) {
       </div>
     </div>
 
-    <div class="dr__app">
+    ${r.app ? html`<div class="dr__app">
       <div class="dr__app-media">${img(r.app.image, '(min-width: 768px) 280px, 220px')}</div>
       <div class="dr__app-copy">
         <img class="dr__app-logo" src="${base}${r.app.logo.src}" alt="${r.app.logo.alt}" width="${r.app.logo.width}" height="${r.app.logo.height}" loading="lazy">
@@ -86,7 +86,7 @@ export function DeepReview(ctx) {
         <p>${r.app.body}</p>
         <ul class="dr__app-list">${r.app.points.map((p) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${p}</span></li>`)}</ul>
       </div>
-    </div>
+    </div>` : ''}
 
     ${r.warranty ? html`
     <div class="dr__warranty">

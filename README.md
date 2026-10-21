@@ -136,3 +136,15 @@ Every event carries `page_type`, `page_slug`, `company`, `content_intent`, `sele
 - [ ] Confirm permission to use Power's logo and photos
 - [ ] Footer links (privacy policy required for Google Ads)
 - [ ] Re-check items in the data file's `pending` list and the flagged inferences in the sources file
+
+---
+
+## Window Replacement V2 (`/window-replacement-v2/`) — DaBella as top pick
+
+`src/data/categories/window-replacement-v2.mjs` inherits everything from the original window page and only swaps DaBella and Power: DaBella is #1 (10.0, featured, in-depth review, offer banners) and Power is #3 (9.6, dropdown review). Copy edits to the original flow into V2 automatically. The page is `noindex` (test variant) and events carry `page_variant: dabella-top-pick`.
+
+DaBella review sources: dabella.us, /windows (Fairfield & Glasswing, exclusive dealer, glass options, styles), /warranty (window: 1-yr DaBella + limited lifetime Alside manufacturer), homepage (process; financing via third-party lenders on approved credit).
+
+### Open items
+- [ ] Confirm "10% Off + No Payments for 12 Months" is current (taken from earlier DaBella landing pages; one version said it expired June 30, 2026) and add fine print
+- [ ] DaBella images are from the earlier DaBella landing pages — confirm usage rights
