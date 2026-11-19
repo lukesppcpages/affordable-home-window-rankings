@@ -15,7 +15,7 @@ const json = (value) => raw(JSON.stringify(value).replace(/</g, '\\u003c'));
 
 // Structured data limited to facts: the ordered list of companies and the FAQ (if any).
 // No Review/AggregateRating markup — scores are editorial, not customer reviews.
-function structuredData({ category, pageUrl }) {
+export function structuredData({ category, pageUrl }) {
   const brands = [...category.brands].sort((a, b) => a.rank - b.rank);
   return [
     {

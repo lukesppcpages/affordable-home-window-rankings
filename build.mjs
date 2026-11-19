@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { site } from './src/config/site.mjs';
 import { categories, defaultCategory } from './src/data/categories/index.mjs';
 import { Page } from './src/components/Page.mjs';
+import { EditorialPage } from './src/components/editorial/EditorialPage.mjs';
 import { reviews } from './src/data/reviews/index.mjs';
 import { ReviewPage } from './src/components/review/ReviewPage.mjs';
 
@@ -64,10 +65,10 @@ async function build() {
     process.exit(1);
   }
 
-  const css = (await readFile(join(root, 'src/styles.css'), 'utf8'))
-    .replace(/\/\*[\s\S]*?\*\//g, '')
-    .replace(/\s*\n\s*/g, '\n')
-    .trim();
+  const minify = (s) => s.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s*\n\s*/g, '\n').trim();
+  const css = minify(await readFile(join(root, 'src/styles.css'), 'utf8'));
+  // Editorial template: base styles plus its own layer (scoped under body.ed).
+  const editorialCss = css + '\n' + minify(await readFile(join(root, 'src/editorial.css'), 'utf8'));
 
   await rm(out, { recursive: true, force: true });
   await mkdir(join(out, 'assets'), { recursive: true });
@@ -82,7 +83,9 @@ async function build() {
       // A category can override site settings (e.g. CTA label, disclosure copy).
       const o = category.siteOverrides || {};
       const pageSite = { ...site, ...o, experiments: { ...site.experiments, ...(o.experiments || {}) } };
-      const page = String(Page({ site: pageSite, category, css, base, pageUrl, draft }));
+      const editorial = category.template === 'editorial';
+      const render = editorial ? EditorialPage : Page;
+      const page = String(render({ site: pageSite, category, css: editorial ? editorialCss : css, base, pageUrl, draft }));
       await mkdir(join(out, dir), { recursive: true });
       await writeFile(join(out, dir, 'index.html'), page);
       console.log(`  ✔ ${join(draft ? 'dist-draft' : 'dist', dir, 'index.html')}  (${(page.length / 1024).toFixed(1)} KB)`);

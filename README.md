@@ -167,3 +167,16 @@ leafguard.com (/how-it-works, /warranty, /installation, /our-story, /financing, 
 - [ ] Leafguard's warranty documents route clog claims through the installing dealer, while marketing says Leafguard cleans for free — the page states the guarantee as Leafguard publishes it
 - [ ] All American Gutter Protection lists both 18 and 20 states served
 - [ ] Gutter Helmet's $200-off dealer promotion is not shown (no dates published)
+
+## Gutter Protection — editorial redesign (`/gutter-protection-v3/`)
+
+A clone of page 1 (Leafguard #1) rebuilt from the "Gutter Protection Review Page Redesign" brief. It has the same brands, order, scores, offer and CTA destinations. It renders with its own template (`src/components/editorial/EditorialPage.mjs`, selected by `template: 'editorial'`) and its own stylesheet (`src/editorial.css`, scoped under `body.ed`), so no other page is affected. The page is `noindex` and uses the variant id `editorial-redesign`.
+
+- **Section order:** hero with eyebrow, methodology strip, three-column ranking cards, verdict ("Why Leafguard Earned Our Top Spot", replacing the repeated #1 card), buying guide with questions to ask, in-depth Leafguard review, methodology with score scale, closing offer.
+- **CTAs:** every card says "Get My Free Quote". All five companies advertise a free estimate or quote on their own sites (checked November 19, 2026).
+- **Tracking:** the template keeps the same hooks as the standard page. Placements: `featured_card`, `ranking_card`, `review_panel`, `deep_review_cta`, `offer_callout`, plus `verdict` for the review jump link.
+
+### Open items
+- The score methodology is not documented; scores are editorial and need a written rationale.
+- The site has no About, Contact or Privacy pages yet. Footer links are omitted until they exist.
+- The Leafguard financing is shown as "Subject to credit approval" (Home Design Credit Card). Confirm the offer dates.
