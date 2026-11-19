@@ -329,7 +329,7 @@ export function buildGutterPage({ slug, topId, order, scores, noindex = false, v
       rank: i + 1,
       score: scores[i],
       featured: top,
-      distinction: top ? 'Best Overall' : b.distinction,
+      distinction: top ? 'Best Overall' : i === 1 ? b.distinction : undefined,
       deepReview: top ? b.deepReview : undefined,
       review: top ? undefined : b.review,
       summary: top && b.offer ? undefined : b.summary,
@@ -354,11 +354,11 @@ export function buildGutterPage({ slug, topId, order, scores, noindex = false, v
 
     hero: {
       image: {
-        src: 'images/hero-home-1100.webp',
-        srcSmall: 'images/hero-home-640.webp',
+        src: 'images/gutter-hero-1100.webp',
+        srcSmall: 'images/gutter-hero-640.webp',
         width: 1100,
         height: 619,
-        alt: 'Two-story suburban home with clean, free-flowing gutters',
+        alt: 'Sunlit craftsman-style home with a covered front porch',
       },
       headline: 'Best Gutter Protection Companies of 2027',
       intro:
