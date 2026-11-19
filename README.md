@@ -148,3 +148,22 @@ DaBella review sources: dabella.us, /windows (Fairfield & Glasswing, exclusive d
 ### Open items
 - [ ] Confirm "10% Off + No Payments for 12 Months" is current (taken from earlier DaBella landing pages; one version said it expired June 30, 2026) and add fine print
 - [ ] DaBella images are from the earlier DaBella landing pages — confirm usage rights
+
+---
+
+## Gutter Protection (`/gutter-protection/` and `/gutter-protection-v2/`)
+
+Both pages are built from `src/data/categories/gutter-protection-brands.mjs` by `buildGutterPage()`; the only difference is the top pick.
+- **Page 1** (`gutter-protection.mjs`): Leafguard #1 — in-depth review, 0% financing offer line and offer banners.
+- **Page 2** (`gutter-protection-v2.mjs`, noindex): LeafFilter #1 — in-depth review with a free-estimate closing CTA (no verified LeafFilter promotion, so no offer banners).
+- Order 2–5: the other of Leafguard/LeafFilter, Gutter Helmet, All American Gutter Protection, Thompson Creek. Scores 10.0 / 9.7 / 9.6 / 9.5 / 9.4.
+
+### Sources (company sites, read November 2026)
+leafguard.com (/how-it-works, /warranty, /installation, /our-story, /financing, /resources/faq) · leaffilter.com (/why-leaffilter/leaffilter, /purchase/warranty, /purchase/purchase-process, /company, /locations) · gutterhelmet.com (/our-products, /our-promise, /our-process, /dealers) · allamericangutterprotection.com (/gutter-guards, /lifetime-warranty-performance, /about, /locations, /faq) · thompsoncreek.com/gutters
+
+### Open items
+- [ ] All five CTAs point to the companies' main sites — replace with approved campaign/affiliate links
+- [ ] Confirm Leafguard's 0% / 18-month financing offer is current for the campaign (Home Design Credit Card, subject to credit approval)
+- [ ] Leafguard's warranty documents route clog claims through the installing dealer, while marketing says Leafguard cleans for free — the page states the guarantee as Leafguard publishes it
+- [ ] All American Gutter Protection lists both 18 and 20 states served
+- [ ] Gutter Helmet's $200-off dealer promotion is not shown (no dates published)

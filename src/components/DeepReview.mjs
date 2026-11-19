@@ -20,8 +20,8 @@ export function DeepReview(ctx) {
   return html`
 <section class="dr" id="${r.anchor}" aria-labelledby="${r.anchor}-title" data-brand="${brand.id}" data-rank="${brand.rank}" data-placement="deep_review">
   <div class="container">
-    <div class="dr__intro">
-      <div class="dr__intro-media">${img(r.heroImage, '(min-width: 1024px) 520px, 100vw')}</div>
+    <div class="dr__intro${r.heroImage ? '' : ' dr__intro--text'}">
+      ${r.heroImage ? html`<div class="dr__intro-media">${img(r.heroImage, '(min-width: 1024px) 520px, 100vw')}</div>` : ''}
       <div class="dr__intro-copy">
         ${r.eyebrow ? html`<p class="dr__eyebrow">${r.eyebrow}</p>` : ''}
         <h2 class="dr__title" id="${r.anchor}-title">${r.title}</h2>
@@ -68,8 +68,8 @@ export function DeepReview(ctx) {
       </div>`)}
     </div>` : ''}
 
-    <div class="dr__process">
-      <div class="dr__process-media">${img(r.process.image, '(min-width: 1024px) 520px, 100vw')}</div>
+    <div class="dr__process${r.process.image ? '' : ' dr__process--text'}">
+      ${r.process.image ? html`<div class="dr__process-media">${img(r.process.image, '(min-width: 1024px) 520px, 100vw')}</div>` : ''}
       <div>
         <h3 class="dr__h3">${r.process.title}</h3>
         <ol class="dr__steps">
