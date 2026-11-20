@@ -14,6 +14,8 @@ export default {
   // Ranking cards: logo carries the brand (name kept for screen readers),
   // no summary line under the bullets.
   hideBrandName: true,
+  // Green replaces the orange accent (CTAs, offer kicker, numbers, focus ring).
+  accent: { color: '#17803D', hover: '#126632', glow: 'rgba(23, 128, 61, 0.45)' },
   // "How We Evaluate" uses the editorial redesign's section (gutter-protection-v3).
   editorialMethodology: true,
   siteOverrides: {

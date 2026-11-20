@@ -44,6 +44,13 @@ export function structuredData({ category, pageUrl }) {
   ].filter(Boolean);
 }
 
+// Per-page accent override (replaces the orange CTA color), e.g.
+// accent: { color: '#17803D', hover: '#126632', glow: 'rgba(23,128,61,0.45)' }
+function accentCss({ color, hover, glow }) {
+  return `:root{--orange:${color};--orange-cta:${color};--orange-cta-hover:${hover}}`
+    + `.rc--featured .btn--cta{box-shadow:0 6px 16px -6px ${glow}}`;
+}
+
 export function Page(ctx) {
   const { site, category, css, base, pageUrl, draft } = ctx;
   const { meta } = category;
@@ -81,6 +88,7 @@ ${gtm ? raw(`<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':n
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
 <style>${raw(css)}</style>
+${category.accent ? html`<style>${raw(accentCss(category.accent))}</style>` : ''}
 ${structuredData({ category, pageUrl }).map((d) => html`<script type="application/ld+json">${json(d)}</script>`)}
 <script src="${base}assets/client.js" defer></script>
 </head>
