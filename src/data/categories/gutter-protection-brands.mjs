@@ -158,6 +158,12 @@ export const GUTTER_BRANDS = {
         'LeafFilter earns our top spot by solving clogged gutters without replacing the gutters you already have. Its patented three-piece system pairs a 275-micron, surgical-grade stainless steel micromesh, fine enough to stop pine needles and shingle grit, with a uPVC frame that will not warp, a built-in pitch that helps debris slide off, and hidden structural hangers fastened into your fascia.',
         'Before installation, LeafFilter’s trained crews clean, seal and realign your existing gutters, so the system starts on gutters that are working properly. It is backed by a lifetime, transferable no-clog warranty: if your gutters clog and overflow, the manufacturer will repair the problem or refund 100% of the material price. Founded in 2005 and now part of Leaf Home, LeafFilter lists service in 46 states.',
       ],
+      heroImage: {
+        src: 'images/leaffilter/micromesh-592.webp',
+        width: 592,
+        height: 444,
+        alt: 'Gutter guard covering the gutter along the roof edge of a home',
+      },
       quality: {
         columns: [
           {
@@ -184,6 +190,13 @@ export const GUTTER_BRANDS = {
       },
       process: {
         title: 'What a LeafFilter Installation Looks Like',
+        image: {
+          src: 'images/leaffilter/installer-1200.webp',
+          srcSmall: 'images/leaffilter/installer-640.webp',
+          width: 1200,
+          height: 615,
+          alt: 'LeafFilter installer on a ladder checking a home’s gutter',
+        },
         steps: [
           { title: 'Free estimate', body: 'Schedule by phone or online; a LeafFilter professional comes out to look at your home.' },
           { title: 'Inspect & measure', body: 'Your gutters are inspected and measured, and you get a custom quote that is good for one full year.' },
