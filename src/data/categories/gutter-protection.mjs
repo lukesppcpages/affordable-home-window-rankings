@@ -16,8 +16,8 @@ export default {
   hideBrandName: true,
   // Green replaces the orange accent (CTAs, offer kicker, numbers, focus ring).
   accent: { color: '#19C37D', hover: '#14A86A', glow: 'rgba(25, 195, 125, 0.45)',
-    blue: { color: '#122A22', tint: '#EEF2F0', tint2: '#DCE4E0', shadow: 'rgba(18, 42, 34, 0.4)' },
-    footer: '#122A22' },
+    blue: { color: '#243F6A', tint: '#EEF1F6', tint2: '#DCE2EC', shadow: 'rgba(36, 63, 106, 0.4)' },
+    footer: '#243F6A' },
   meta: { ...page.meta, title: 'Best Clog-Free Gutter Systems of 2027 | Affordable Home' },
   hero: { ...page.hero, headline: 'Best Clog-Free Gutter Systems of 2027' },
   // "How We Evaluate" uses the editorial redesign's section (gutter-protection-v3).
