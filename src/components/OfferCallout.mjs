@@ -1,12 +1,17 @@
 import { html } from '../lib/html.mjs';
 import { BrandLogo } from './BrandLogo.mjs';
 import { CtaButton } from './CtaButton.mjs';
+import { OfferModule } from './editorial/OfferModule.mjs';
 
 // Offer banner for the brand with `offerCallout` data. Rendered at the end of
 // the in-depth review (OfferCard) and again above the footer (OfferCallout).
 export const offerBrand = (category) => category.brands.find((b) => b.offerCallout && b.offer);
 
 export function OfferCard({ brand, site, base, position, kicker = brand.offerCallout?.kicker, text = brand.offer, label, variant = '' }) {
+  // offerCallout.style 'card': the editorial offer card (white, navy border).
+  if (brand.offerCallout?.style === 'card' && !variant) {
+    return html`<div class="ed">${OfferModule({ brand, site, base, position, kicker, lead: brand.offerCallout.note })}</div>`;
+  }
   return html`
     <div class="offer__card${variant ? ` offer__card--${variant}` : ''}">
       <div class="offer__logo">${BrandLogo({ brand, base })}</div>

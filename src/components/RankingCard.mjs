@@ -32,7 +32,7 @@ export function RankingCard(props) {
     </div>
     <div class="rc__body">
       ${brand.distinction ? html`<p class="rc__distinction">${brand.distinction}</p>` : ''}
-      <h3 class="rc__name" id="${uid}-name">${brand.name}</h3>
+      <h3 class="rc__name${category.hideBrandName ? ' visually-hidden' : ''}" id="${uid}-name">${brand.name}</h3>
       ${brand.services?.length ? html`<p class="rc__services"><span>Services:</span> ${serviceLabels(brand.services).join(' · ')}</p>` : ''}
       <ul class="rc__bullets">
         ${brand.bullets.map((b) => html`<li>${icon('check', { size: 18, strokeWidth: 2.5 })}<span>${b}</span></li>`)}

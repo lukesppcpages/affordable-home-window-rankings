@@ -84,8 +84,10 @@ async function build() {
       const o = category.siteOverrides || {};
       const pageSite = { ...site, ...o, experiments: { ...site.experiments, ...(o.experiments || {}) } };
       const editorial = category.template === 'editorial';
+      // Standard pages that borrow editorial sections also need its styles.
+      const needsEditorialCss = editorial || category.editorialMethodology || category.brands.some((b) => b.offerCallout?.style === 'card');
       const render = editorial ? EditorialPage : Page;
-      const page = String(render({ site: pageSite, category, css: editorial ? editorialCss : css, base, pageUrl, draft }));
+      const page = String(render({ site: pageSite, category, css: needsEditorialCss ? editorialCss : css, base, pageUrl, draft }));
       await mkdir(join(out, dir), { recursive: true });
       await writeFile(join(out, dir, 'index.html'), page);
       console.log(`  ✔ ${join(draft ? 'dist-draft' : 'dist', dir, 'index.html')}  (${(page.length / 1024).toFixed(1)} KB)`);

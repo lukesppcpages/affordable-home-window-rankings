@@ -7,6 +7,7 @@ import { OfferCallout } from './OfferCallout.mjs';
 import { DisclosureDialog } from './DisclosureDialog.mjs';
 import { EducationSection } from './EducationSection.mjs';
 import { MethodologySection } from './MethodologySection.mjs';
+import { Methodology as EditorialMethodology } from './editorial/Methodology.mjs';
 import { FAQSection } from './FAQSection.mjs';
 import { Footer } from './Footer.mjs';
 
@@ -93,7 +94,7 @@ ${HeroSection(ctx)}
 ${RankingsList(ctx)}
 ${EducationSection(ctx)}
 ${DeepReview(ctx)}
-${MethodologySection(ctx)}
+${category.editorialMethodology ? html`<div class="ed">${EditorialMethodology(ctx)}</div>` : MethodologySection(ctx)}
 ${category.faqs?.length ? FAQSection(ctx) : ''}
 ${OfferCallout(ctx)}
 </main>
