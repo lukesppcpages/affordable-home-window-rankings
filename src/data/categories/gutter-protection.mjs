@@ -15,7 +15,8 @@ export default {
   // no summary line under the bullets.
   hideBrandName: true,
   // Green replaces the orange accent (CTAs, offer kicker, numbers, focus ring).
-  accent: { color: '#17803D', hover: '#126632', glow: 'rgba(23, 128, 61, 0.45)' },
+  accent: { color: '#17803D', hover: '#126632', glow: 'rgba(23, 128, 61, 0.45)',
+    blue: { color: '#1E56CD', tint: '#EEF3FC', tint2: '#DDE6F8', shadow: 'rgba(30, 86, 205, 0.4)' } },
   // "How We Evaluate" uses the editorial redesign's section (gutter-protection-v3).
   editorialMethodology: true,
   siteOverrides: {

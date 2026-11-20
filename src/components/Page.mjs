@@ -46,9 +46,13 @@ export function structuredData({ category, pageUrl }) {
 
 // Per-page accent override (replaces the orange CTA color), e.g.
 // accent: { color: '#17803D', hover: '#126632', glow: 'rgba(23,128,61,0.45)' }
-function accentCss({ color, hover, glow }) {
-  return `:root{--orange:${color};--orange-cta:${color};--orange-cta-hover:${hover}}`
-    + `.rc--featured .btn--cta{box-shadow:0 6px 16px -6px ${glow}}`;
+// Optional `blue: { color, tint, tint2, shadow }` replaces the navy accent
+// (links, borders, badges, featured ribbon); dark heading text is unchanged.
+function accentCss({ color, hover, glow, blue }) {
+  return `:root{--orange:${color};--orange-cta:${color};--orange-cta-hover:${hover}`
+    + (blue ? `;--navy:${blue.color};--navy-50:${blue.tint};--navy-100:${blue.tint2};`
+      + `--shadow-featured:0 1px 2px rgba(15,23,42,0.05),0 16px 40px -20px ${blue.shadow}` : '')
+    + `}.rc--featured .btn--cta{box-shadow:0 6px 16px -6px ${glow}}`;
 }
 
 export function Page(ctx) {
