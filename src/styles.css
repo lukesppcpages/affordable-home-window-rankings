@@ -114,6 +114,8 @@ button { font: inherit; color: inherit; }
   color: var(--navy-900);
   max-width: 20ch;
 }
+/* Mobile-only subheadline (hero.mobileSub); hidden from 768px up. */
+.hero__sub { margin-top: 10px; font-size: 15px; line-height: 1.55; color: #475569; max-width: 62ch; }
 .hero__intro { display: none; margin-top: 10px; font-size: 15px; line-height: 1.55; color: #475569; max-width: 62ch; }
 .hero__meta {
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
@@ -449,6 +451,7 @@ a.rc__toggle--bar { text-decoration: none; }
   .site-header__logo img { height: 26px; }
   .hero { padding: 36px 0 30px; }
   .hero__title { font-size: clamp(34px, 4.4vw, 44px); }
+  .hero__sub { display: none; }
   .hero__intro { display: block; font-size: 17px; margin-top: 14px; }
   .hero__meta { margin-top: 16px; }
   .rankings { padding: 28px 0 56px; }

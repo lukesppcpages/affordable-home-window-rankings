@@ -12,6 +12,7 @@ export function HeroSection({ category, base }) {
   <div class="container hero__inner">
     <div class="hero__copy">
       <h1 id="page-title" class="hero__title">${hero.headline}</h1>
+      ${hero.mobileSub ? html`<p class="hero__sub">${hero.mobileSub}</p>` : ''}
       <p class="hero__intro">${hero.intro}</p>
       <p class="hero__meta">
         <span>Updated <time datetime="${updated.iso}">${updated.label}</time></span>

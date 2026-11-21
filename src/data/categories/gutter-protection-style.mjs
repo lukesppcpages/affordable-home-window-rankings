@@ -12,7 +12,12 @@ export function clogFreeStyle(page) {
       blue: { color: '#243F6A', tint: '#EEF1F6', tint2: '#DCE2EC', shadow: 'rgba(36, 63, 106, 0.4)' },
       footer: '#243F6A' },
     meta: { ...page.meta, title: 'Best Gutter Protection Systems of 2027 | Affordable Home' },
-    hero: { ...page.hero, headline: 'Best Gutter Protection Systems of 2027' },
+    hero: {
+      ...page.hero,
+      headline: 'Best Gutter Protection Systems of 2027',
+      // Shown under the headline on phones only (<768px); desktop keeps `intro`.
+      mobileSub: 'Compare top-rated gutter protection companies, explore pricing and warranties, and find the right solution to prevent clogs, reduce maintenance, and protect your home.',
+    },
     // "How We Evaluate" uses the editorial redesign's section (gutter-protection-v3).
     editorialMethodology: true,
     siteOverrides: {
