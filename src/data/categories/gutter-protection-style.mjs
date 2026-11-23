@@ -6,6 +6,24 @@ const OFFER_URLS = {
   leaffilter: 'https://www.leaffilter.com/partner/',
 };
 
+// Brand offers (pages 1 & 2). Unverified: confirm terms/dates before launch.
+const OFFERS = {
+  leafguard: {
+    text: 'Limited-Time Deal: 75% Off Installation + $200 Off!',
+    note: 'Start with a free in-home estimate and a written quote the same visit.',
+    popupLines: ['75% Off', 'Installation +', '$200 Off!'],
+    pending: 'Confirm the "75% Off Installation + $200 Off" offer terms, eligibility and dates',
+    drop: ['Confirm the 0% financing'],
+  },
+  leaffilter: {
+    text: 'Save Up to $500 + $0 Down',
+    note: 'Start with a free, no-obligation estimate. Your custom quote stays valid for a full year.',
+    popupLines: ['Save Up to $500', '+ $0 Down'],
+    pending: 'Confirm the "Save Up to $500 + $0 Down" offer terms, eligibility and dates',
+    drop: ['No verified LeafFilter promotion'],
+  },
+};
+
 export function clogFreeStyle(page) {
   return {
     ...page,
@@ -41,22 +59,15 @@ export function clogFreeStyle(page) {
         brand.cta = { ...b.cta, url: OFFER_URLS[b.id], verified: true };
         brand.pending = b.pending.filter((p) => !p.startsWith('CTA: replace'));
       }
-      // Leafguard's offer only shows where it is the #1 pick (b.offer is set).
-      if (b.id !== 'leafguard' || !b.offer) return brand;
+      const offer = OFFERS[b.id];
+      if (!offer) return brand;
       return {
         ...brand,
-        // Unverified: confirm terms/dates with Leafguard before launch.
-        offer: 'Limited-Time Deal: 75% Off Installation + $200 Off!',
-        offerCallout: {
-          kicker: 'Current Offer',
-          style: 'card',
-          note: 'Start with a free in-home estimate and a written quote the same visit.',
-          popupLines: ['75% Off', 'Installation +', '$200 Off!'],
-        },
-        pending: [
-          'Confirm the "75% Off Installation + $200 Off" offer terms, eligibility and dates',
-          ...brand.pending.filter((p) => !p.startsWith('Confirm the 0% financing')),
-        ],
+        // Offer line shows in the ranking card at any rank; the offer cards and
+        // popup only for the #1 pick.
+        offer: offer.text,
+        offerCallout: b.featured ? { kicker: 'Current Offer', style: 'card', note: offer.note, popupLines: offer.popupLines } : undefined,
+        pending: [offer.pending, ...brand.pending.filter((p) => !offer.drop.some((d) => p.startsWith(d)))],
       };
     }),
   };
