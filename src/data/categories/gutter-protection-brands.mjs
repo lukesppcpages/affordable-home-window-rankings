@@ -241,35 +241,35 @@ export const GUTTER_BRANDS = {
     id: 'gutter-savings',
     name: 'Gutter Savings',
     shortName: 'Gutter Savings',
-    distinction: 'Best for Installation Discounts',
+    distinction: 'Best for Debris and Pest Protection',
     logo: { src: 'images/brands/gutter-savings.webp', width: 400, height: 222 },
     cta: { url: 'https://guttersavings.com/v2/index.html', verified: true },
+    // Benefit-led (no promotional offer wording on the card).
     bullets: [
-      'Up to 75% off gutter guard installation, plus an extra $200 off, in qualifying zip codes',
-      'Free, no-obligation estimate; checking your zip code takes about 30 seconds',
-      'Works with your existing gutters, with a lifetime warranty on installations',
+      'Keeps out leaves, pine needles and roof grit, so you can stop cleaning your gutters',
+      'Custom-fit to your existing gutters by professional local installers',
+      'Lifetime warranty, plus protection against nesting birds, rodents and insects',
     ],
     summary:
-      'Gutter Savings connects homeowners with professional gutter guard installers and offers up to 75% off installation, plus an extra $200 off, in qualifying zip codes.',
+      'Gutter Savings connects homeowners with professional installers for custom-fit gutter guards that keep out debris and pests, backed by a lifetime warranty.',
     review: {
       overview:
-        'Gutter Savings is a matching service rather than an installer: you enter your zip code, and if your area qualifies it connects you with a professional gutter guard installer for a free in-home estimate. Qualifying projects get up to 75% off installation plus an extra $200 off with a purchase. The guards fit existing gutters and come with a lifetime warranty, according to Gutter Savings.',
+        'Gutter Savings is a matching service rather than an installer: you enter your zip code, and it connects you with a professional gutter guard installer in your area for a free, no-obligation estimate. The guards are measured and fitted to your existing gutters, keep out leaves, pine needles and roof grit, stop birds, rodents and insects from nesting, and come with a lifetime warranty, according to Gutter Savings.',
       strengths: [
-        'Large advertised discount on installation in qualifying areas',
-        'Free, no-obligation estimate',
-        'No need to replace gutters you already have',
+        'Ends seasonal gutter cleaning and ladder climbs',
+        'Blocks pests as well as debris',
+        'Fits the gutters you already have, with no roof modifications',
       ],
       considerations: [
         'It is a matching service, so ask which company will install your system and for its written warranty',
-        'Discounts apply to qualifying zip codes and projects, and restrictions apply',
+        'Availability depends on your zip code',
         'Submitting your number lets Gutter Savings and its partners contact you by phone, text and email',
       ],
       bestFor:
-        'Homeowners who want to check whether a gutter guard installation discount is available in their area.',
+        'Homeowners who want low-maintenance gutter protection that also keeps out pests, installed on their existing gutters.',
     },
     pending: [
-      'Confirm the "Up to 75% off + extra $200 off" terms and qualifying areas with Gutter Savings',
-      'Lifetime warranty and existing-gutter fit are Gutter Savings’ own statements',
+      'Debris-proof, pest-resistant, existing-gutter fit and lifetime warranty are Gutter Savings’ own statements',
     ],
   },
 
