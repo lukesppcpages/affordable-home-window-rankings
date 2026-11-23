@@ -235,6 +235,44 @@ export const GUTTER_BRANDS = {
     ],
   },
 
+  // Gutter Savings is a matching service (connects homeowners with local
+  // installers), not an installer. Facts from guttersavings.com/v2 (Nov 2026).
+  'gutter-savings': {
+    id: 'gutter-savings',
+    name: 'Gutter Savings',
+    shortName: 'Gutter Savings',
+    distinction: 'Best for Installation Discounts',
+    logo: { src: 'images/brands/gutter-savings.webp', width: 400, height: 222 },
+    cta: { url: 'https://guttersavings.com/v2/index.html', verified: true },
+    bullets: [
+      'Up to 75% off gutter guard installation, plus an extra $200 off, in qualifying zip codes',
+      'Free, no-obligation estimate; checking your zip code takes about 30 seconds',
+      'Works with your existing gutters, with a lifetime warranty on installations',
+    ],
+    summary:
+      'Gutter Savings connects homeowners with professional gutter guard installers and offers up to 75% off installation, plus an extra $200 off, in qualifying zip codes.',
+    review: {
+      overview:
+        'Gutter Savings is a matching service rather than an installer: you enter your zip code, and if your area qualifies it connects you with a professional gutter guard installer for a free in-home estimate. Qualifying projects get up to 75% off installation plus an extra $200 off with a purchase. The guards fit existing gutters and come with a lifetime warranty, according to Gutter Savings.',
+      strengths: [
+        'Large advertised discount on installation in qualifying areas',
+        'Free, no-obligation estimate',
+        'No need to replace gutters you already have',
+      ],
+      considerations: [
+        'It is a matching service, so ask which company will install your system and for its written warranty',
+        'Discounts apply to qualifying zip codes and projects, and restrictions apply',
+        'Submitting your number lets Gutter Savings and its partners contact you by phone, text and email',
+      ],
+      bestFor:
+        'Homeowners who want to check whether a gutter guard installation discount is available in their area.',
+    },
+    pending: [
+      'Confirm the "Up to 75% off + extra $200 off" terms and qualifying areas with Gutter Savings',
+      'Lifetime warranty and existing-gutter fit are Gutter Savings’ own statements',
+    ],
+  },
+
   'gutter-helmet': {
     id: 'gutter-helmet',
     name: 'Gutter Helmet',
@@ -423,3 +461,5 @@ export function buildGutterPage({ slug, topId, order, scores, noindex = false, v
 }
 
 export const SCORES = [10.0, 9.7, 9.6, 9.5, 9.4];
+// Pages 1 & 2 (six brands, Gutter Savings #3 at 9.6; the rest move down 0.1).
+export const SCORES_6 = [10.0, 9.7, 9.6, 9.5, 9.4, 9.3];

@@ -1,6 +1,11 @@
 // Shared restyle for the gutter ranking pages 1 and 2 (not the editorial clone):
 // colors, headline/title, logo-only ranking cards, "See Offer" CTAs and the
 // editorial "How We Evaluate" section. Ranking order comes from each page.
+const OFFER_URLS = {
+  leafguard: 'https://leafguard.deals/v3/',
+  leaffilter: 'https://www.leaffilter.com/partner/',
+};
+
 export function clogFreeStyle(page) {
   return {
     ...page,
@@ -31,6 +36,11 @@ export function clogFreeStyle(page) {
     },
     brands: page.brands.map((b) => {
       const brand = { ...b, summary: undefined };
+      // Approved offer pages (pages 1 & 2).
+      if (OFFER_URLS[b.id]) {
+        brand.cta = { ...b.cta, url: OFFER_URLS[b.id], verified: true };
+        brand.pending = b.pending.filter((p) => !p.startsWith('CTA: replace'));
+      }
       // Leafguard's offer only shows where it is the #1 pick (b.offer is set).
       if (b.id !== 'leafguard' || !b.offer) return brand;
       return {
@@ -45,7 +55,7 @@ export function clogFreeStyle(page) {
         },
         pending: [
           'Confirm the "75% Off Installation + $200 Off" offer terms, eligibility and dates',
-          ...b.pending.filter((p) => !p.startsWith('Confirm the 0% financing')),
+          ...brand.pending.filter((p) => !p.startsWith('Confirm the 0% financing')),
         ],
       };
     }),

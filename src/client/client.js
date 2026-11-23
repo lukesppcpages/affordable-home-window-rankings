@@ -152,17 +152,22 @@
     });
   }
 
-  /* ---------- Offer popup: exit intent (mouse/trackpad) or 75% depth (touch) ---------- */
+  /* ---------- Offer popup: opens once per session at 75% scroll depth ---------- */
   var popup = document.getElementById('exit-popup');
   if (popup && typeof popup.showModal === 'function') {
     var POPUP_KEY = 'ah_popup_seen:' + (cfg.category || '');
     var seen = function () { try { return sessionStorage.getItem(POPUP_KEY); } catch (e) { return null; } };
+    var onPopupScroll = function () {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable > 0 && window.scrollY / scrollable >= 0.75) openPopup('scroll_75');
+    };
     var openPopup = function (trigger) {
       if (popup.open || seen() || document.querySelector('dialog[open]')) return;
       try { sessionStorage.setItem(POPUP_KEY, '1'); } catch (e) {}
+      window.removeEventListener('scroll', onPopupScroll);
       popup.showModal();
       track('popup_view', { brand: popup.getAttribute('data-brand'), trigger: trigger });
-      cleanup();
     };
     var closePopup = function (how) {
       if (!popup.open) return;
@@ -172,31 +177,10 @@
     popup.addEventListener('click', function (e) {
       if (e.target.closest && e.target.closest('[data-popup-close]')) closePopup('button');
       else if (e.target === popup) closePopup('backdrop');
+      else if (e.target.closest && e.target.closest('.xp__link')) setTimeout(function () { closePopup('offer_click'); }, 0);
     });
     popup.addEventListener('cancel', function (e) { e.preventDefault(); closePopup('escape'); });
-
-    var desktop = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    var onMouseOut = function (e) {
-      if (!e.relatedTarget && e.clientY <= 0) openPopup('exit_intent');
-    };
-    var onPopupScroll = function () {
-      var doc = document.documentElement;
-      var scrollable = doc.scrollHeight - window.innerHeight;
-      if (scrollable > 0 && window.scrollY / scrollable >= 0.75) openPopup('scroll_75');
-    };
-    var cleanup = function () {
-      document.removeEventListener('mouseout', onMouseOut);
-      window.removeEventListener('scroll', onPopupScroll);
-    };
-    if (!seen()) {
-      if (desktop) document.addEventListener('mouseout', onMouseOut);
-      else window.addEventListener('scroll', onPopupScroll, { passive: true });
-      // Warm the popup images so they are ready when it opens.
-      window.addEventListener('load', function () {
-        var imgs = popup.querySelectorAll('img');
-        for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager';
-      });
-    }
+    if (!seen()) window.addEventListener('scroll', onPopupScroll, { passive: true });
   }
 
   /* ---------- Header menu: close on link click, outside click or Escape ---------- */
