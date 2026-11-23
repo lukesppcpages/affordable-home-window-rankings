@@ -20,6 +20,11 @@ export function clogFreeStyle(page) {
     },
     // "How We Evaluate" uses the editorial redesign's section (gutter-protection-v3).
     editorialMethodology: true,
+    // Offer popup for the #1 brand's offer (exit intent on desktop, 75% depth on mobile).
+    exitPopup: {
+      image: { src: 'images/gutter-popup-654.webp', width: 654, height: 668, alt: 'White gutter and downspout on a home' },
+      ctaLabel: 'View Offer →',
+    },
     siteOverrides: {
       ...page.siteOverrides,
       experiments: { ...page.siteOverrides?.experiments, ctaLabel: 'See Offer' },
@@ -36,6 +41,7 @@ export function clogFreeStyle(page) {
           kicker: 'Current Offer',
           style: 'card',
           note: 'Start with a free in-home estimate and a written quote the same visit.',
+          popupLines: ['75% Off', 'Installation +', '$200 Off!'],
         },
         pending: [
           'Confirm the "75% Off Installation + $200 Off" offer terms, eligibility and dates',

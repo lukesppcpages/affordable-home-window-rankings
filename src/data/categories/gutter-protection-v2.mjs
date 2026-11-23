@@ -25,6 +25,7 @@ export default {
       kicker: 'Current Offer',
       style: 'card',
       note: 'Start with a free, no-obligation estimate. Your custom quote stays valid for a full year.',
+      popupLines: ['Save Up to $500', '+ $0 Down'],
     },
     pending: [
       'Confirm the "Save Up to $500 + $0 Down" offer terms, eligibility and dates',

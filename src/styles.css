@@ -402,6 +402,37 @@ a.rc__toggle--bar { text-decoration: none; }
 }
 .modal__close:hover { background: var(--navy-50); color: var(--navy-900); }
 
+/* ---------- Offer popup (category.exitPopup) ---------- */
+.xp {
+  width: min(880px, calc(100% - 40px)); max-width: none; padding: 0; border: 0; border-radius: 18px;
+  overflow: hidden; color: var(--navy-900); box-shadow: 0 20px 70px rgba(11, 23, 59, 0.3);
+}
+.xp[open] { display: grid; grid-template-columns: 1fr; }
+.xp::backdrop { background: rgba(14, 28, 51, 0.58); }
+.xp__visual img { display: block; width: 100%; height: 180px; object-fit: cover; }
+.xp__content { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 26px 24px 28px; }
+.xp__logo { width: auto; max-width: 220px; height: 48px; object-fit: contain; margin-bottom: 20px; }
+.xp__title { margin: 0 0 24px; font-size: 30px; font-weight: 800; line-height: 1.12; letter-spacing: -0.025em; }
+.xp .xp__cta { min-height: 60px; font-size: 20px; font-weight: 800; border-radius: 9px; }
+.xp__close {
+  position: absolute; top: 10px; right: 10px; z-index: 2; display: grid; place-items: center;
+  width: 40px; height: 40px; border: 0; border-radius: 50%; background: #fff; color: #111;
+  font-size: 30px; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+}
+.xp__close:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+@media (max-width: 649px) {
+  .xp { width: min(420px, calc(100% - 30px)); max-height: calc(100dvh - 30px); overflow: auto; }
+}
+@media (min-width: 650px) {
+  .xp[open] { grid-template-columns: 1fr 1fr; min-height: 420px; }
+  .xp__visual img { height: 100%; min-height: 420px; }
+  .xp__content { justify-content: center; padding: 60px 35px 45px; }
+  .xp__logo { max-width: 260px; height: 56px; margin-bottom: 40px; }
+  .xp__title { font-size: clamp(30px, 3.6vw, 42px); margin-bottom: 40px; }
+  .xp .xp__cta { min-height: 66px; font-size: 22px; }
+  .xp__close { background: none; box-shadow: none; top: 12px; right: 14px; font-size: 34px; }
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-900); color: #cbd5e1; padding: 40px 0 28px; font-size: 14px; text-align: center; }
 .site-footer__top { display: grid; justify-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }

@@ -5,6 +5,7 @@ import { RankingsList } from './RankingsList.mjs';
 import { DeepReview } from './DeepReview.mjs';
 import { OfferCallout } from './OfferCallout.mjs';
 import { DisclosureDialog } from './DisclosureDialog.mjs';
+import { ExitPopup } from './ExitPopup.mjs';
 import { EducationSection } from './EducationSection.mjs';
 import { MethodologySection } from './MethodologySection.mjs';
 import { Methodology as EditorialMethodology } from './editorial/Methodology.mjs';
@@ -113,6 +114,7 @@ ${OfferCallout(ctx)}
 </main>
 ${Footer(ctx)}
 ${DisclosureDialog(ctx)}
+${ExitPopup(ctx)}
 </body>
 </html>
 `;
