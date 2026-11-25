@@ -22,9 +22,9 @@ export default {
   ...data,
   slug: 'top-gutter-brands',
   noindex: true,
-  // The round badge logo needs more height than the wide Affordable Home
-  // logo for its lettering to stay readable.
-  extraCss: '.site-header__logo img{height:60px;margin:4px 0}.site-footer__brand img{height:110px}@media(min-width:768px){.site-header__logo img{height:72px}}',
+  // The stacked logo (house above the wordmark) needs more height than the
+  // wide Affordable Home logo for its wordmark to stay readable.
+  extraCss: '.site-header__logo img{height:54px}.site-footer__brand img{height:80px}@media(min-width:768px){.site-header__logo img{height:66px}}',
   siteOverrides: {
     ...(data.siteOverrides || {}),
     brandName: TO,
@@ -33,10 +33,10 @@ export default {
     disclosureShort: rebrand(site.disclosureShort),
     logo: {
       src: 'images/top-gutter-brands-logo.svg',
-      // Green badge with white lettering: reads on light and dark backgrounds.
-      srcOnDark: 'images/top-gutter-brands-logo.svg',
-      width: 1445,
-      height: 1445,
+      // Black logo; all-white copy for the dark footer.
+      srcOnDark: 'images/top-gutter-brands-logo-white.svg',
+      width: 1500,
+      height: 684,
     },
   },
 };
