@@ -94,7 +94,7 @@ ${gtm ? raw(`<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':n
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
 <style>${raw(css)}</style>
-${category.accent ? html`<style>${raw(accentCss(category.accent))}</style>` : ''}
+${category.accent ? html`<style>${raw(accentCss(category.accent))}</style>` : ''}${category.extraCss ? html`<style>${raw(category.extraCss)}</style>` : ''}
 ${structuredData({ category, pageUrl }).map((d) => html`<script type="application/ld+json">${json(d)}</script>`)}
 <script src="${base}assets/client.js" defer></script>
 </head>

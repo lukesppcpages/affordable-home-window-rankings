@@ -12,7 +12,7 @@ export function RankingsList(ctx) {
       ${brands.map((brand) => (brand.featured ? FeaturedRankingCard : RankingCard)({ ...ctx, brand }))}
     </ol>
     ${TopPickRepeat(ctx, brands)}
-    <p class="rankings__note">Scores are <a href="#methodology">Affordable Home editorial ratings</a>, not customer review averages. We may be compensated when you click partner links. <a href="#disclosure">Advertising Disclosure</a></p>
+    <p class="rankings__note">Scores are <a href="#methodology">${ctx.site.brandName} editorial ratings</a>, not customer review averages. We may be compensated when you click partner links. <a href="#disclosure">Advertising Disclosure</a></p>
   </div>
 </section>`;
 }
