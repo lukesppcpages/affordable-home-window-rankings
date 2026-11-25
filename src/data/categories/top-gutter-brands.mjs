@@ -24,7 +24,7 @@ export default {
   noindex: true,
   // The stacked logo (house above the wordmark) needs more height than the
   // wide Affordable Home logo for its wordmark to stay readable.
-  extraCss: '.site-header__logo img{height:54px}.site-footer__brand img{height:80px}@media(min-width:768px){.site-header__logo img{height:66px}}',
+  extraCss: '.site-header__logo img{height:50px}.site-footer__brand img{height:76px}@media(min-width:768px){.site-header__logo img{height:60px}}',
   siteOverrides: {
     ...(data.siteOverrides || {}),
     brandName: TO,
@@ -35,8 +35,8 @@ export default {
       src: 'images/top-gutter-brands-logo.svg',
       // Black logo; all-white copy for the dark footer.
       srcOnDark: 'images/top-gutter-brands-logo-white.svg',
-      width: 1500,
-      height: 684,
+      width: 1440,
+      height: 630,
     },
   },
 };
