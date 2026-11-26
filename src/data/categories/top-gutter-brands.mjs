@@ -22,9 +22,9 @@ export default {
   ...data,
   slug: 'top-gutter-brands',
   noindex: true,
-  // The stacked logo (house above the wordmark) needs more height than the
-  // wide Affordable Home logo for its wordmark to stay readable.
-  extraCss: '.site-header__logo img{height:50px}.site-footer__brand img{height:76px}@media(min-width:768px){.site-header__logo img{height:60px}}',
+  // Wide shield + wordmark logo, sized a little larger than the
+  // Affordable Home logo so the lighter lettering stays readable.
+  extraCss: '.site-header__logo img{height:28px}.site-footer__brand img{height:30px}@media(min-width:768px){.site-header__logo img{height:34px}}',
   siteOverrides: {
     ...(data.siteOverrides || {}),
     brandName: TO,
@@ -33,10 +33,10 @@ export default {
     disclosureShort: rebrand(site.disclosureShort),
     logo: {
       src: 'images/top-gutter-brands-logo.svg',
-      // Black logo; all-white copy for the dark footer.
+      // Green logo; footer copy has white lettering (green shield kept).
       srcOnDark: 'images/top-gutter-brands-logo-white.svg',
-      width: 1440,
-      height: 630,
+      width: 1500,
+      height: 192,
     },
   },
 };
